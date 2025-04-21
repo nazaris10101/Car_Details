@@ -1,5 +1,8 @@
-<script >
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -47,17 +50,18 @@
                       <div :class="$style.socialMenuChild" />
                 </div>
                 <div :class="$style.available">
-                      <div :class="$style.darkMood">Dark Mood</div>
-                      <div :class="$style.on">
-                            <div :class="$style.rectangleParent">
-                                  <div :class="$style.groupChild" />
-                                  <div :class="$style.offParent">
-                                        <div :class="$style.off">Off</div>
-                                        <div :class="$style.groupItem" />
-                                  </div>
-                            </div>
-                      </div>
-                </div>
+                   <div :class="$style.darkMood">Dark Mood</div>
+                   <div :class="$style.on" @click="toggleDark()">
+      <div :class="$style.rectangleParent">
+        <div :class="$style.groupChild" />
+        <div :class="$style.offParent">
+          <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
+          <div :class="[$style.groupItem, isDark ? 'active' : '']" />
+      </div>
+</div>
+</div>
+</div>
+
           </div>
           <div :class="$style.textImgsParent">
                 <div :class="$style.textImgs">
@@ -370,19 +374,52 @@
                             </div>
                             </div>
                             </template>
-                            <script lang="ts">
-                                  import { defineComponent } from 'vue'
+                          <style  module> 
+                          body {
+  background-color: #fff;
+  color: #000;
+}
+.heroSectionChild {
+  background-color: #fff;
+}
+.card {
+  background-color: #fafafa;
+  color: #000;
+}                 
+html.dark body {
+  background-color: #141414;
+  color: #fff;
+}
+
+html.dark .heroSectionChild {
+  background-color: #1e1e1e;
+}
+
+html.dark .card {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+.card {
+  background-color: var(--card-bg);
+}
+                          .heroSectionChild {
+                               position: absolute;
+                               top: 0;
+                               left: 0;
+                               width: 613px;
+                               height: 710px;
+                               background-color: #000000; /* Світла тема за замовчуванням */
+                              }
+
+/* Темна тема */
+                          html.dark .heroSectionChild {
+                              background-color: #ffffff;
+                        }
                                   
-                                  
-                                  export default defineComponent({
-                                        name: "CarDetails"})</script><style  module>.heroSectionChild {
-                                        position: absolute;
-                                        top: 0px;
-                                        left: 0px;
-                                        background-color: #141414;
-                                        width: 613px;
-                                        height: 710px;
-                                  }
                                         .mainPictureIcon {
                                               position: absolute;
                                               top: 103.86px;
@@ -497,6 +534,7 @@
                                               color: #fe8400;
                                               font-family: 'Arial Black';
                                         }
+
                                         .socialMenuChild {
                                               width: 1px;
                                               position: relative;
@@ -614,13 +652,13 @@
                                               font-family: Montserrat;
                                         }
                                         .z {
-                                              position: relative;
-                                              text-transform: capitalize;
-                                              font-weight: 600;
-                                              overflow: hidden;
-                                              text-overflow: ellipsis;
-                                              white-space: nowrap;
-                                        }
+position: relative;
+text-transform: capitalize;
+font-weight: 600;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}                                      
                                         .zaDzie {
                                               position: relative;
                                               font-size: 16px;
@@ -791,7 +829,7 @@
                                         .card {
                                               width: 196px;
                                               border-radius: 12px;
-                                              background-color: #fafafa;
+                                              background-color: #ffffff;
                                               height: 148px;
                                               overflow: hidden;
                                               flex-shrink: 0;
@@ -1032,7 +1070,7 @@
                                         .banner1 {
                                               width: 1048px;
                                               border-radius: 40px;
-                                              background-color: #fe8400;
+                                              background-color: #ff9100;
                                               height: 802px;
                                               overflow: hidden;
                                               flex-shrink: 0;
@@ -1045,22 +1083,25 @@
                                               opacity: 0.96;
                                               text-align: center;
                                               font-size: 16px;
-                                              color: #fff;
+                                              color: #000000;
                                               font-family: 'Work Sans';
                                         }
+                                        /* Світла тема (за замовчуванням) */
                                         .banner {
-                                              align-self: stretch;
-                                              height: 956px;
-                                              display: flex;
-                                              flex-direction: column;
-                                              align-items: center;
-                                              justify-content: flex-start;
-                                              padding: 29px 0px 60px;
-                                              box-sizing: border-box;
-                                              font-size: 18px;
-                                              color: #000;
-                                              font-family: Poppins;
-                                        }
+  align-self: stretch;
+  height: 956px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 29px 0px 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Poppins;
+}
+                                        
                                         .groupIcon1 {
                                               width: 141.29%;
                                               position: absolute;
@@ -1170,7 +1211,7 @@
                                         .banner4 {
                                               width: 1296px;
                                               border-radius: 40px;
-                                              background-color: #fe8400;
+                                              background-color: #fe890a;
                                               overflow: hidden;
                                               display: flex;
                                               flex-direction: row;
@@ -1180,7 +1221,8 @@
                                               box-sizing: border-box;
                                               opacity: 0.96;
                                               z-index: 0;
-                                        }
+                                          }
+                                     
                                         .iphone1415Pro41 {
                                               position: absolute;
                                               top: 11px;
@@ -1453,30 +1495,38 @@
                                               color: #fff9f9;
                                         }
                                         .footer {
-                                              align-self: stretch;
-                                              background-color: #000;
-                                              display: flex;
-                                              flex-direction: column;
-                                              align-items: center;
-                                              justify-content: flex-start;
-                                              padding: 60px 72px 40px;
-                                              gap: 80px;
-                                              font-size: 16px;
-                                        }
-                                        .carDetails {
-                                              width: 100%;
-                                              position: relative;
-                                              background-color: #fff;
-                                              height: 4317px;
-                                              overflow: hidden;
-                                              display: flex;
-                                              flex-direction: column;
-                                              align-items: center;
-                                              justify-content: flex-start;
-                                              text-align: left;
-                                              font-size: 48px;
-                                              color: #fff;
-                                              font-family: 'Work Sans';
-                                        }
+  align-self: stretch;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 72px 40px;
+  gap: 80px;
+  font-size: 16px;
+}
+.carDetails {
+  width: 100%;
+  position: relative;
+  background-color: var(--car-bg);
+  color: var(--car-text);
+  height: 4317px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 48px;
+  font-family: 'Work Sans';
+}
+
+/* ДОДАЙ це нижче */
+html.dark .carDetails {
+  background-color: #000000; /* темна тема */
+  color: white;
+}
+                                        
                                   
                                   </style>
