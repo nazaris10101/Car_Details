@@ -1,5 +1,8 @@
-<script >
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -47,18 +50,18 @@
               <div :class="$style.socialMenuChild" />
           </div>
           <div :class="$style.available">
-              <div :class="$style.darkMood">Dark Mood</div>
-              <div :class="$style.on">
-                  <div :class="$style.rectangleParent">
-                      <div :class="$style.groupChild" />
-                      <div :class="$style.offParent">
-                          <div :class="$style.off">Off</div>
-                          <div :class="$style.groupItem" />
-                      </div>
-                  </div>
-              </div>
-          </div>
+                   <div :class="$style.darkMood">Dark Mood</div>
+                   <div :class="$style.on" @click="toggleDark()">
+      <div :class="$style.rectangleParent">
+        <div :class="$style.groupChild" />
+        <div :class="$style.offParent">
+          <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
+          <div :class="[$style.groupItem, isDark ? 'active' : '']" />
       </div>
+</div>
+</div>
+</div>
+</div>
       <div :class="$style.homeDetailsParent">
           <div :class="$style.homeDetailsContainer">
               <span>Home /</span>
@@ -363,12 +366,7 @@
       </div>
   </div>
 </template>
-<script lang="ts">
-  import { defineComponent } from 'vue'
-  
-  
-  export default defineComponent({
-      name: "CarDetails"})</script><style  module>.heroSectionChild {
+<style  module>.heroSectionChild {
       position: absolute;
       top: 0px;
       left: 0px;
@@ -467,13 +465,13 @@
         }
           .menu {
             width: 590px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #141414;
-            font-family: Poppins;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--menu-text-color);
+  font-family: Poppins;
       }
       .headMenu {
           position: absolute;
@@ -639,20 +637,20 @@
           color: #5937e0;
       }
       .teslaModelS {
-          position: relative;
-          text-transform: capitalize;
-          font-weight: 600;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+        position: relative;
+  text-transform: capitalize;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
       }
       .zaDzie {
-          position: relative;
-          font-size: 16px;
-          color: rgba(0, 0, 0, 0.6);
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+        position: relative;
+  font-size: 16px;
+  color: var(--subtle-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
       }
       .text1 {
           display: flex;
@@ -892,12 +890,15 @@
           align-items: center;
           justify-content: center;
       }
+      
       .abs {
-          position: relative;
-          text-transform: capitalize;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+  position: relative;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-color); /* додай це */
+
       }
       .instanceParent {
           display: flex;
@@ -1042,18 +1043,19 @@
           font-family: 'Work Sans';
       }
       .banner {
-          align-self: stretch;
-          height: 406px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 29px 0px 0px;
-          box-sizing: border-box;
-          font-size: 18px;
-          color: #000;
-          font-family: Poppins;
-      }
+  align-self: stretch;
+  height: 293px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 29px 0px 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: var(--text-color); /* Динамічний колір */
+  background-color: var(--bg-color); /* Якщо хочеш і фон динамічний */
+  font-family: Poppins;
+}
       .groupIcon1 {
           width: 141.29%;
           position: absolute;
@@ -1444,31 +1446,47 @@
           line-height: 26px;
           font-family: Inter;
           color: #fff9f9;
-      }
-      .footer {
-          background-color: #000;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 60px 72px 40px;
-          gap: 80px;
-          font-size: 16px;
+        }
+      
+         .footer {
+  align-self: stretch;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 72px 40px;
+  gap: 80px;
+  font-size: 16px;
       }
       .carDetails {
           width: 100%;
           position: relative;
-          background-color: #fff;
-          height: 3787px;
+          background-color: var(--bg-color);
+          height: 4000px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
+          gap: 63px;
           text-align: left;
-          font-size: 48px;
-          color: #fff;
+          font-size: 20px;
+          color: var(--text-color);
           font-family: 'Work Sans';
-      }
-  
+      }     
+      :root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --secondary-bg: #fafafa;
+  --highlight: #fe8400;
+}
+
+html.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --secondary-bg: #1e1e1e;
+  --highlight: #ff9e0c;
+}
   </style>
