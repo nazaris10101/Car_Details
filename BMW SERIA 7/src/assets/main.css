@@ -67,3 +67,31 @@ html.dark {
 	--car-bg: #000000;
 	--car-text: #ffffff;
   }
+  :root {
+	--icons-text-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  html.dark {
+	--icons-text-color: rgba(255, 255, 255, 0.7);
+  }
+  :root {
+	--menu-text-color: #000000;
+  }
+  
+  html.dark {
+	--menu-text-color: #ffffff;
+  }
+  :root {
+	--subtle-text-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  html.dark {
+	--subtle-text-color: rgba(255, 255, 255, 0.6);
+  }
+  :root {
+	--text-color: #000000;
+  }
+  
+  html.dark {
+	--text-color: #ffffff;
+  }

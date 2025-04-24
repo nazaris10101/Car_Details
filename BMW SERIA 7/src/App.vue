@@ -510,15 +510,16 @@ body {
                                            gap: 30px;
                                          }
                                           .menu {
-                                           width: 590px;
-                                           display: flex;
-                                           flex-direction: row;
-                                           align-items: center;
-                                           justify-content: center;
-                                           font-size: 16px;
-                                           color: #141414;
-                                           font-family: Poppins;
-                                        }
+  width: 590px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--menu-text-color);
+  font-family: Poppins;
+}
+                                        
                                         .headMenu {
                                               position: absolute;
                                               top: 31.96px;
@@ -900,12 +901,14 @@ white-space: nowrap;
                                               justify-content: center;
                                         }
                                         .abs {
-                                              position: relative;
-                                              text-transform: capitalize;
-                                              overflow: hidden;
-                                              text-overflow: ellipsis;
-                                              white-space: nowrap;
-                                        }
+  position: relative;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-color); /* додай це */
+}
+
                                         .instanceParent {
                                               display: flex;
                                               flex-direction: row;
