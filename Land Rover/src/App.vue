@@ -1,5 +1,8 @@
-<script>
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -55,18 +58,18 @@
               <div :class="$style.socialMenuChild" />
           </div>
           <div :class="$style.available">
-              <div :class="$style.darkMood">Dark Mood</div>
-              <div :class="$style.on">
-                  <div :class="$style.rectangleParent">
-                      <div :class="$style.groupChild" />
-                      <div :class="$style.offParent">
-                          <div :class="$style.off">Off</div>
-                          <div :class="$style.groupItem" />
-                      </div>
-                  </div>
-              </div>
-          </div>
+                   <div :class="$style.darkMood">Dark Mood</div>
+                   <div :class="$style.on" @click="toggleDark()">
+      <div :class="$style.rectangleParent">
+        <div :class="$style.groupChild" />
+        <div :class="$style.offParent">
+          <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
+          <div :class="[$style.groupItem, isDark ? 'active' : '']" />
       </div>
+</div>
+</div>
+</div>
+</div>
       <div :class="$style.textImgsParent">
           <div :class="$style.textImgs">
               <div :class="$style.textImg">
@@ -366,12 +369,7 @@
       </div>
   </div>
 </template>
-<script lang="ts">
-  import { defineComponent } from 'vue'
-  
-  
-  export default defineComponent({
-      name: "CarDetails"})</script><style  module>.span {
+<style  module>.span {
       color: #fff;
   }
       .details {
@@ -501,16 +499,16 @@
             justify-content: flex-start;
             gap: 30px;
       }
-        .menu {
-            width: 590px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #141414;
-            font-family: Poppins;
-      }
+      .menu {
+  width: 590px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--menu-text-color);
+  font-family: Poppins;
+}
       .headMenu {
           position: absolute;
           top: 29.11px;
@@ -580,7 +578,7 @@
           top: 0px;
           left: 0px;
           border-radius: 50px;
-          background-color: rgba(254, 132, 0, 0.05);
+          background-color: rgba(255, 132, 0, 0.05);
           width: 95.6px;
           height: 48px;
       }
@@ -623,7 +621,7 @@
           left: 101.69px;
           width: 95.6px;
           height: 48px;
-          color: #fff9f9;
+          color: #ffffff;
       }
       .available {
           position: absolute;
@@ -642,23 +640,24 @@
           height: 675px;
           font-size: 48px;
           font-family: Montserrat;
-      }
-      .landRover {
-          position: relative;
-          text-transform: capitalize;
-          font-weight: 600;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-      }
+        }
+        .landRover {
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
       .zaDzie {
-          position: relative;
-          font-size: 16px;
-          color: rgba(0, 0, 0, 0.6);
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-      }
+  position: relative;
+  font-size: 16px;
+  color: var(--subtle-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+      
       .text1 {
           display: flex;
           flex-direction: row;
@@ -821,7 +820,7 @@
       .card {
           width: 196px;
           border-radius: 12px;
-          background-color: #fafafa;
+          background-color: #ffffff;
           height: 148px;
           overflow: hidden;
           flex-shrink: 0;
@@ -920,8 +919,8 @@
           justify-content: flex-start;
           gap: 60px;
           font-size: 16px;
-          color: rgba(0, 0, 0, 0.6);
-      }
+          color: var(--icons-text-color);
+        }
       .textIcons {
           align-self: stretch;
           display: flex;
@@ -946,8 +945,9 @@
           padding: 60px 312px;
           gap: 24px;
           font-size: 24px;
-          color: #000;
+          color: #000000;
       }
+
       .landRoverRangeContainer {
           width: 1296px;
           position: relative;
@@ -1022,7 +1022,7 @@
       .banner1 {
           width: 1048px;
           border-radius: 40px;
-          background-color: #fe8400;
+          background-color: var(--secondary-bg);
           height: 802px;
           overflow: hidden;
           flex-shrink: 0;
@@ -1035,22 +1035,23 @@
           opacity: 0.96;
           text-align: center;
           font-size: 16px;
-          color: #fff;
+          color: var(--text-color);
           font-family: 'Work Sans';
       }
       .banner {
-          align-self: stretch;
-          height: 1293px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 29px 0px 60px;
-          box-sizing: border-box;
-          font-size: 18px;
-          color: #000;
-          font-family: Poppins;
-      }
+  align-self: stretch;
+  height: 1293px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 29px 0px 60px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: var(--text-color); /* Динамічний колір */
+  background-color: var(--bg-color); /* Якщо хочеш і фон динамічний */
+  font-family: Poppins;
+}
       .groupIcon1 {
           width: 141.29%;
           position: absolute;
@@ -1443,19 +1444,21 @@
           color: #fff9f9;
       }
       .footer {
-          background-color: #000;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 60px 72px 40px;
-          gap: 80px;
-          font-size: 16px;
+  align-self: stretch;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 72px 40px;
+  gap: 80px;
+  font-size: 16px;
       }
       .carDetails {
           width: 100%;
           position: relative;
-          background-color: #fff;
+          background-color: var(--bg-color);
           height: 4900px;
           overflow: hidden;
           display: flex;
@@ -1465,8 +1468,21 @@
           gap: 63px;
           text-align: left;
           font-size: 20px;
-          color: #fff;
+          color: var(--text-color);
           font-family: 'Work Sans';
-      }
+      }     
+      :root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --secondary-bg: #fafafa;
+  --highlight: #fe8400;
+}
+
+html.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --secondary-bg: #1e1e1e;
+  --highlight: #ff9e0c;
+}
   
   </style>
