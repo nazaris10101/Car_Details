@@ -4,14 +4,14 @@
     <img :src="car.imageUrl" :alt="`Фото ${car.make} ${car.model}`" width="400" />
     <p><strong>Опис:</strong> {{ car.description }}</p>
     <ul>
-      <li>Колір: {{ car.color }}</li>
-      <li>Тип кузова: {{ car.bodyType }}</li>
-      <li>Коробка: {{ car.gearboxType }}</li>
-      <li>Пробіг: {{ car.mileage }} км</li>
-      <li>Пальне: {{ car.fuelType }}</li>
-      <li>Ціна за годину: {{ car.hourlyPrice }} $</li>
+      <li>Kolor: {{ car.color }}</li>
+      <li>Typ nadwozia: {{ car.bodyType }}</li>
+      <li>Skrzynia biegów: {{ car.gearboxType }}</li>
+      <li>Przebieg samochodu: {{ car.mileage }} км</li>
+      <li>Paliwo: {{ car.fuelType }}</li>
+      <li>Cena: {{ car.hourlyPrice }} $</li>
     </ul>
-    <router-link to="/">← Назад</router-link>
+    <router-link to="/">← Z powrotem</router-link>
   </div>
 
   <div v-else-if="error">
@@ -19,7 +19,7 @@
   </div>
 
   <div v-else>
-    <p>Завантаження даних авто...</p>
+    <p>Ładowanie danych samochodu...</p>
   </div>
 </template>
 
@@ -45,10 +45,10 @@ export default {
       this.car = result.cars.find(car => car._id === carId);
 
       if (!this.car) {
-        this.error = 'Автомобіль не знайдено';
+        this.error = 'Samochód nie znaleziony';
       }
     } catch (err) {
-      this.error = 'Помилка завантаження авто';
+      this.error = 'Błąd pobierania';
       console.error(err);
     }
   }
