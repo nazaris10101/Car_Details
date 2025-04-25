@@ -1,11 +1,10 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
-import AllCars from '../components/AllCars.vue'
-import CarDetails from '../components/CarDetails.vue'
+import AllCars from '@/components/AllCars.vue'
+import CarDetails from '@/components/CarDetails.vue'
 
 const routes = [
-  { path: '/', component: AllCars }, 
-  { path: '/cars/:id', name: 'CarDetails', component: CarDetails, props: true }
+  { path: '/', name: 'AllCars', component: AllCars },
+  { path: '/cars/:carId', name: 'CarDetails', component: CarDetails }
 ]
 
 const router = createRouter({
