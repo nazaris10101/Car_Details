@@ -32,120 +32,132 @@ onMounted(async () => {
 </script>
 
 <template>
-<div :class="$style.carDetails">
-  <div :class="$style.heroSection">
-    <div :class="$style.heroSectionChild"></div>
-    <img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
+  <div :class="$style.carDetails">
+    <div :class="$style.heroSection">
+      <div :class="$style.heroSectionChild"></div>
+      <img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
 
-    <div :class="$style.headerText">
-      <div :class="$style.cieszSiYciemDzikiNaszymParent">
-        <div :class="$style.cieszSiYciemContainer">
-          <p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
-          <p :class="$style.cieszSiYciem">naszym wygodnym</p>
-          <p :class="$style.cieszSiYciem">samochodom.</p>
-        </div>
-        <div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
-      </div>
-      <div :class="$style.zalogujSiZarejestrujSiWrapper">
-        <div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
-      </div>
-    </div>
-
-    <div :class="$style.headMenu">
-      <div :class="$style.zalogujSi">CARENT</div>
-      <div :class="$style.menu">
-        <div :class="$style.menuItems">
-          <div :class="$style.zalogujSi">Główna</div>
-          <div :class="$style.oNas">O nas</div>
-          <div :class="$style.zalogujSi">Rezerwacja</div>
-          <div :class="$style.zalogujSi">Samochody</div>
-          <div :class="$style.zalogujSi">Kontakt</div>
-          <div :class="$style.cta">
-            <div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
+      <div :class="$style.headerText">
+        <div :class="$style.cieszSiYciemDzikiNaszymParent">
+          <div :class="$style.cieszSiYciemContainer">
+            <p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
+            <p :class="$style.cieszSiYciem">naszym wygodnym</p>
+            <p :class="$style.cieszSiYciem">samochodom.</p>
+          </div>
+          <div :class="$style.carentJestGotowy">
+            Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.
           </div>
         </div>
-      </div>
-    </div>
-
-    <div :class="$style.socialMenu">
-      <div :class="$style.socialMenuChild"></div>
-      <div :class="$style.socials">
-        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
-        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
-        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
-        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
-        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
-      </div>
-      <div :class="$style.socialMenuChild"></div>
-    </div>
-
-    <div :class="$style.rectangleParent">
-      <div :class="$style.groupChild"></div>
-      <div :class="$style.offParent">
-        <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
-        <div :class="[$style.groupItem, isDark ? 'active' : '']"></div>
-      </div>
-    </div>
-  </div>
-
-  <div v-if="car" :class="$style.textImgsParent">
-    <div :class="$style.textImgs">
-      <div :class="$style.textImg">
-        <div :class="$style.z">{{ car.make }} {{ car.model }}</div>
-        <div :class="$style.text1">
-          <div :class="$style.z">{{ car.hourlyPrice }} $</div>
-          <div :class="$style.zaDzie">/ za godzinę</div>
-        </div>
-        <img :class="$style.imgIcon" :src="car.imageUrl" :alt="`Zdjecie ${car.make} ${car.model}`" />
-        <div :class="$style.edytuj">
-          <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
-          <!-- Inputs or Booking form here -->
-          <div :class="$style.button">
-            <div :class="$style.zarezerwuj">Zarezerwuj</div>
-          </div>
+        <div :class="$style.zalogujSiZarejestrujSiWrapper">
+          <div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
         </div>
       </div>
-    </div>
 
-    <div :class="$style.textCardsButton">
-      <div :class="$style.textCards">
-        <div :class="$style.z">Specyfikacja techniczna</div>
-        <div :class="$style.cards">
-          <div :class="$style.card">
-            <img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-            <div :class="$style.text2">
-              <div :class="$style.z">Skrzynia biegów</div>
-              <div :class="$style.automat">{{ car.gearboxType }}</div>
-            </div>
-          </div>
-          <div :class="$style.card">
-            <img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-            <div :class="$style.text2">
-              <div :class="$style.z">Paliwo</div>
-              <div :class="$style.automat">{{ car.fuelType }}</div>
-            </div>
-          </div>
-          <div :class="$style.card">
-            <img :class="$style.g17Icon" alt="" src="@/assets/g3353.png" />
-            <div :class="$style.text2">
-              <div :class="$style.z">Drzwi</div>
-              <div :class="$style.automat">4</div>
+      <div :class="$style.headMenu">
+        <div :class="$style.zalogujSi">CARENT</div>
+        <div :class="$style.menu">
+          <div :class="$style.menuItems">
+            <div :class="$style.zalogujSi">Główna</div>
+            <div :class="$style.oNas">O nas</div>
+            <div :class="$style.zalogujSi">Rezerwacja</div>
+            <div :class="$style.zalogujSi">Samochody</div>
+            <div :class="$style.zalogujSi">Kontakt</div>
+            <div :class="$style.cta">
+              <div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
             </div>
           </div>
         </div>
       </div>
+
+      <div :class="$style.socialMenu">
+        <div :class="$style.socialMenuChild"></div>
+        <div :class="$style.socials">
+          <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+          <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+          <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+          <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+          <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
+        </div>
+        <div :class="$style.socialMenuChild"></div>
+      </div>
+
+      <div :class="$style.rectangleParent">
+        <div :class="$style.groupChild"></div>
+        <div :class="$style.offParent">
+          <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
+          <div :class="[$style.groupItem, isDark ? 'active' : '']"></div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="car">
+      <div :class="$style.textImgsParent">
+        <div :class="$style.textImgs">
+          <div :class="$style.textImg">
+            <div :class="$style.z">{{ car.make }} {{ car.model }}</div>
+            <div :class="$style.text1">
+              <div :class="$style.z">{{ car.hourlyPrice }} $</div>
+              <div :class="$style.zaDzie">/ za godzinę</div>
+            </div>
+            <img :class="$style.imgIcon" :src="car.imageUrl" :alt="`Zdjęcie ${car.make} ${car.model}`" />
+            <div :class="$style.edytuj">
+              <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
+              <div :class="$style.button">
+                <div :class="$style.zarezerwuj">Zarezerwuj</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div :class="$style.textCardsButton">
+          <div :class="$style.textCards">
+            <div :class="$style.z">Specyfikacja techniczna</div>
+            <div :class="$style.cards">
+              <div :class="$style.card">
+                <img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
+                <div :class="$style.text2">
+                  <div :class="$style.z">Skrzynia biegów</div>
+                  <div :class="$style.automat">{{ car.gearboxType }}</div>
+                </div>
+              </div>
+              <div :class="$style.card">
+                <img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
+                <div :class="$style.text2">
+                  <div :class="$style.z">Paliwo</div>
+                  <div :class="$style.automat">{{ car.fuelType }}</div>
+                </div>
+              </div>
+              <div :class="$style.card">
+                <img :class="$style.g17Icon" alt="" src="@/assets/g3353.png" />
+                <div :class="$style.text2">
+                  <div :class="$style.z">Drzwi</div>
+                  <div :class="$style.automat">4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div :class="$style.banner">
+        <div :class="$style.bmwSerii7Container">
+          <p :class="$style.cieszSiYciem">{{ car.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div v-else-if="error">
+      <p>{{ error }}</p>
+    </div>
+
+    <div v-else>
+      <p>Ładowanie danych samochodu...</p>
     </div>
   </div>
-
-  <div v-else-if="error">
-    <p>{{ error }}</p>
-  </div>
-
-  <div v-else>
-    <p>Ładowanie danych samochodu...</p>
-  </div>
-</div>
 </template>
+
+
+
 
 <style  module> 
 body {
