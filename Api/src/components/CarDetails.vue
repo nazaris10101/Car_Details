@@ -223,6 +223,88 @@ onMounted(async () => {
       <p>Ładowanie danych samochodu...</p>
     </div>
   </div>
+  <!-- FOOTER -->
+<div :class="$style.footer">
+  <div :class="$style.iconsTextButtons">
+    <div :class="$style.iconsText1">
+      <div :class="$style.logo2">
+        <img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
+        <div :class="$style.text10">
+          <b :class="$style.zalogujSi">CARENT</b>
+        </div>
+      </div>
+      <div :class="$style.iconsText2">
+        <img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2.svg" />
+        <div :class="$style.text11">
+          <div :class="$style.adres">Adres</div>
+          <div :class="$style.ulZota59Container">
+            <p :class="$style.cieszSiYciem">ul. Złota 59 00-120 Warszawa</p>
+            <p :class="$style.cieszSiYciem">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <div :class="$style.iconsText3">
+        <img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2m.svg" />
+        <div :class="$style.text12">
+          <div :class="$style.adres">Email</div>
+          <div :class="$style.carentgmailcom">carent@gmail.com</div>
+        </div>
+      </div>
+      <div :class="$style.iconsText3">
+        <img :class="$style.iconbg" alt="" src="@/assets/telefon+bg.svg" />
+        <div :class="$style.text13">
+          <div :class="$style.adres">Telefon</div>
+          <div :class="$style.carentgmailcom">+48 222 22 22 00</div>
+        </div>
+      </div>
+    </div>
+    <div :class="$style.textIcons1">
+      <div :class="$style.textIcons2">
+        <div :class="$style.cieszSiYciemContainer1">
+          <p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
+          <p :class="$style.cieszSiYciem">naszym wygodnym</p>
+          <p :class="$style.cieszSiYciem">samochodom.</p>
+        </div>
+        <div :class="$style.socialIcons">
+          <img :class="$style.groupIcon3" alt="" src="@/assets/Groupmeta.svg" />
+          <img :class="$style.groupIcon3" alt="" src="@/assets/Groupinst.svg" />
+          <img :class="$style.groupIcon3" alt="" src="@/assets/Groupx.svg" />
+          <img :class="$style.groupIcon3" alt="" src="@/assets/Groupyou.svg" />
+        </div>
+      </div>
+      <div :class="$style.text14">
+        <div :class="$style.przydatneLinki">Przydatne linki</div>
+        <div :class="$style.text15">
+          <div :class="$style.oNas1">O nas</div>
+          <div :class="$style.minivan">Główna</div>
+          <div :class="$style.minivan">Zaloguj się | Zarejestruj się</div>
+        </div>
+      </div>
+      <div :class="$style.text14">
+        <div :class="$style.przydatneLinki">Pojazdy</div>
+        <div :class="$style.text15">
+          <div :class="$style.adres">Sedan</div>
+          <div :class="$style.adres">Cabriolet</div>
+          <div :class="$style.adres">Pickup</div>
+          <div :class="$style.minivan">Minivan</div>
+          <div :class="$style.adres">SUV</div>
+        </div>
+      </div>
+      <div :class="$style.text14">
+        <div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
+        <div :class="$style.buttons2">
+          <img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+          <img :class="$style.googlePlayIcon" alt="" src="@/assets/Group-4.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div :class="$style.wsbMeritoTworzenieContainer">
+    <p :class="$style.cieszSiYciem">WSB MERITO Tworzenie aplikacji internetowych i mobilnych (Projekt zaliczeniowy)</p>
+    <p :class="$style.cieszSiYciem">Autorzy: Michał Michalski, Nazar Mykhailiuk, Miłosz Gajda</p>
+  </div>
+</div>
+<!-- END FOOTER -->
 </template>
 
 <style module>
