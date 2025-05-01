@@ -145,7 +145,6 @@ onMounted(async () => {
         </div>
       </div>
 
-      <!-- ВСТАВЛЕНІ КОМПОНЕНТИ -->
       <div :class="$style.banner1">
         <div :class="$style.textCards">
           <div :class="$style.text8">
@@ -154,7 +153,9 @@ onMounted(async () => {
               <div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
               <b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
             </div>
-            <div :class="$style.dzikiNaszejAplikacji">Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!</div>
+            <div :class="$style.dzikiNaszejAplikacji">
+              Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!
+            </div>
           </div>
           <div :class="$style.buttons">
             <img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
@@ -186,6 +187,32 @@ onMounted(async () => {
           </div>
         </div>
       </div>
+
+      <div :class="$style.banner3">
+        <div :class="$style.banner4">
+          <div :class="$style.textCards">
+            <div :class="$style.text8">
+              <img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              <div :class="$style.pobierzNaszAplikacjParent">
+                <div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
+                <b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
+              </div>
+              <div :class="$style.dzikiNaszejAplikacji">
+                Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!
+              </div>
+            </div>
+            <div :class="$style.buttons">
+              <img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+              <img :class="$style.googlePlayIcon" alt="" src="@/assets/Google Play.svg" />
+            </div>
+          </div>
+        </div>
+        <div :class="$style.img">
+          <div :class="$style.iphone1415Pro41" />
+          <img :class="$style.imgIcon1" alt="" src="@/assets/iPhone 14.png" />
+          <div :class="$style.logo1">CARENT</div>
+        </div>
+      </div>
     </div>
 
     <div v-else-if="error">
@@ -201,6 +228,8 @@ onMounted(async () => {
 <style module>
 /* Тут додається твій CSS з усіма секціями, темною темою та повним стилем */
 </style>
+
+
 
 
 
