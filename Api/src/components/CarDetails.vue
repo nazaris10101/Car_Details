@@ -144,6 +144,48 @@ onMounted(async () => {
           <p :class="$style.cieszSiYciem">{{ car.description }}</p>
         </div>
       </div>
+
+      <!-- ВСТАВЛЕНІ КОМПОНЕНТИ -->
+      <div :class="$style.banner1">
+        <div :class="$style.textCards">
+          <div :class="$style.text8">
+            <img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+            <div :class="$style.pobierzNaszAplikacjParent">
+              <div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
+              <b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
+            </div>
+            <div :class="$style.dzikiNaszejAplikacji">Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!</div>
+          </div>
+          <div :class="$style.buttons">
+            <img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+            <img :class="$style.googlePlayIcon" alt="" src="@/assets/Google Play.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div :class="$style.banner2">
+        <div :class="$style.frameParent">
+          <div :class="$style.frameGroup">
+            <div :class="$style.groupParent">
+              <img :class="$style.groupIcon1" alt="" src="@/assets/Group.svg" />
+              <b :class="$style.zarejestrujSiI">Zarejestruj się i odbierz 10% rabatu!</b>
+              <div :class="$style.doczDoNaszejContainer">
+                <p :class="$style.cieszSiYciem">Dołącz do naszej społeczności i ciesz się wyjątkowymi korzyściami! Zarejestruj się na naszej stronie już dziś, a otrzymasz 10% zniżki na pierwszy wynajem samochodu.</p>
+                <p :class="$style.cieszSiYciem">✅ Szybka i prosta rejestracja</p>
+                <p :class="$style.cieszSiYciem">✅ Ekskluzywne rabaty i oferty specjalne</p>
+                <p :class="$style.cieszSiYciem">✅ Wygodne zarządzanie rezerwacjami</p>
+                <p :class="$style.cieszSiYciem">Nie czekaj – załóż konto i ruszaj w podróż taniej!</p>
+              </div>
+            </div>
+            <div :class="$style.button2">
+              <div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
+            </div>
+          </div>
+          <div :class="$style.discountlabelfr2Wrapper">
+            <img :class="$style.discountlabelfr2Icon" alt="" src="@/assets/discountLabelfr 2.png" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div v-else-if="error">
@@ -155,6 +197,11 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style module>
+/* Тут додається твій CSS з усіма секціями, темною темою та повним стилем */
+</style>
+
 
 
 
