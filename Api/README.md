@@ -1,5 +1,12 @@
 # Api
+
+https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
+
+##Server 
 https://cors-anywhere.herokuapp.com/corsdemo
+
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
