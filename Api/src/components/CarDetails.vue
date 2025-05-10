@@ -81,14 +81,22 @@ onMounted(async () => {
         <div :class="$style.socialMenuChild"></div>
       </div>
 
+                     <div :class="$style.available">
+                   <div :class="$style.darkMood">Dark Mood</div>
+                   <div :class="$style.on" @click="toggleDark()">
       <div :class="$style.rectangleParent">
-        <div :class="$style.groupChild"></div>
+        <div :class="$style.groupChild" />
         <div :class="$style.offParent">
           <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
-          <div :class="[$style.groupItem, isDark ? 'active' : '']"></div>
-        </div>
+          <div :class="[$style.groupItem, isDark ? 'active' : '']" />
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      
+    
+
 
     <div v-if="car">
       <div :class="$style.textImgsParent">
