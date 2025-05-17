@@ -149,7 +149,7 @@ onMounted(async () => {
 
       <div :class="$style.banner">
         <div :class="$style.bmwSerii7Container">
-          <p :class="$style.cieszSiYciem">{{ car.description }}</p>
+          <p :class="$style.cieszSiYciemdescription">{{ car.description }}</p>
         </div>
       </div>
 
@@ -390,6 +390,15 @@ html.dark .heroSectionChild {
     margin: 0;
     
 }
+ .cieszSiYciemdescription {
+    margin: 0;
+    font-size: 18px; /* Задайте бажаний розмір тексту */
+    line-height: 1.5; /* Оптимальний міжрядковий інтервал */
+    color: var(--text-color); /* Використовує змінну кольору */
+}
+
+
+
               .cieszSiYciemContainer {
                     position: relative;
                     font-weight: 800;
@@ -625,7 +634,7 @@ font-family: Poppins;
               .zaDzie {
                     position: relative;
                     font-size: 16px;
-                    color: rgba(0, 0, 0, 0.6);
+                    color: #fe8400;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -966,7 +975,7 @@ color: var(--text-color); /* додай це */
                     position: relative;
                     line-height: 32px;
                     display: inline-block;
-                    height: 898px;
+                    height: auto;
                     flex-shrink: 0;
               }
               .groupIcon {
@@ -1154,7 +1163,7 @@ font-family: Poppins;
                     top: 147px;
                     left: 636px;
                     height: 272px;
-                    background-image: url('assets/Frame 130.png');
+                    background-image: url('@/assets/Frame.png');
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: top;
