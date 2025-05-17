@@ -535,15 +535,17 @@ font-family: Poppins;
                     justify-content: center;
                     gap: 16px;
               }
-              .darkMood {
-                    position: absolute;
-                    height: 58.33%;
-                    width: 44.35%;
-                    top: 20.83%;
-                    left: 0%;
-                    line-height: 28px;
-                    display: inline-block;
-              }
+.darkMood {
+    position: absolute;
+    height: 58.33%;
+    width: 44.35%;
+    top: 20.83%;
+    left: 0%;
+    line-height: 28px;
+    display: inline-block;
+    color:  #ffffff !important;  
+}
+              
               .groupChild {
                     position: absolute;
                     top: 0px;
