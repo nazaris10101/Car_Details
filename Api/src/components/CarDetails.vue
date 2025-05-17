@@ -162,10 +162,10 @@ onMounted(async () => {
                 </div>
               </div>
               <div :class="$style.card">
-                <img :class="$style.g17Icon" alt="" src="@/assets/g3353.png" />
-                <div :class="$style.text2">
-                  <div :class="$style.z1">Drzwi</div>
-                  <div :class="$style.automat">4</div>
+              <img :class="$style.g17Icon" alt="" src="@/assets/g3353.png" />
+              <div :class="$style.text2">
+              <div :class="$style.z1">Kolor</div>
+              <div :class="$style.automat">{{ car.color || 'Nieznany' }}</div>
                 </div>
               </div>
             </div>
