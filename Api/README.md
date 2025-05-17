@@ -1,8 +1,6 @@
-# Api
-
+# 🌐 Link do API
 https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
-
-##Server 
+# 🌐 Serwer Proxy CORS
 https://cors-anywhere.herokuapp.com/corsdemo
 
 
