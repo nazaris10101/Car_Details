@@ -37,7 +37,7 @@ npm run dev
 ```sh
 npm run build
 ```
-### 
+### Link Uzyskanie informacji o konkretnym aucie na podstawie ID.
 ```sh
 http://localhost:5173/cars/6651cc3e267c1ffd4a93621f
 ```
