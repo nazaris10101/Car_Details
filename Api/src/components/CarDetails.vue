@@ -109,11 +109,37 @@ onMounted(async () => {
             </div>
             <img :class="$style.imgIcon" :src="car.imageUrl" :alt="`Zdjęcie ${car.make} ${car.model}`" />
             <div :class="$style.edytuj">
-              <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
-              <div :class="$style.button">
-                <div :class="$style.zarezerwuj">Zarezerwuj</div>
-              </div>
-            </div>
+                                  <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
+                                  <div :class="$style.inputs">
+                                        <div :class="$style.input">
+                                              <div :class="$style.content">
+                                                    <div :class="$style.placeholder">Data wynajmu</div>
+                                                    <img :class="$style.endAdornmentIcon" alt="" src="@/assets/end-adornment.svg" />
+                                              </div>
+                                        </div>
+                                        <div :class="$style.input">
+                                              <div :class="$style.content">
+                                                    <div :class="$style.placeholder">Data powrotu</div>
+                                                    <img :class="$style.endAdornmentIcon" alt="" src="@/assets/end-adornment.svg" />
+                                              </div>
+                                        </div>
+                                        <div :class="$style.input">
+                                              <div :class="$style.content">
+                                                    <div :class="$style.placeholder">Miejsce wynajmu</div>
+                                                    <img :class="$style.selectarrowIcon" alt="" src="@/assets/selectarrow.svg" />
+                                              </div>
+                                        </div>
+                                        <div :class="$style.input3">
+                                              <div :class="$style.content">
+                                                    <div :class="$style.placeholder3">imię i nazwisko</div>
+                                                    <img :class="$style.selectarrowIcon" alt="" src="@/assets/selectarrow.svg" />
+                                              </div>
+                                        </div>
+                                  </div>
+                                  <div :class="$style.button">
+                                        <div :class="$style.zarezerwuj">Zarezerwuj</div>
+                                  </div>
+                            </div>
           </div>
         </div>
 
