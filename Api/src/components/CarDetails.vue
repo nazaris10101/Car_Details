@@ -40,9 +40,9 @@ onMounted(async () => {
       <div :class="$style.headerText">
         <div :class="$style.cieszSiYciemDzikiNaszymParent">
           <div :class="$style.cieszSiYciemContainer">
-            <p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
-            <p :class="$style.cieszSiYciem">naszym wygodnym</p>
-            <p :class="$style.cieszSiYciem">samochodom.</p>
+            <p :class="$style.cieszSiYciemText">Ciesz się życiem dzięki</p>
+            <p :class="$style.cieszSiYciemText">naszym wygodnym</p>
+            <p :class="$style.cieszSiYciemText">samochodom.</p>
           </div>
           <div :class="$style.carentJestGotowy">
             Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.
@@ -124,21 +124,21 @@ onMounted(async () => {
               <div :class="$style.card">
                 <img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 <div :class="$style.text2">
-                  <div :class="$style.z">Skrzynia biegów</div>
+                  <div :class="$style.z1">Skrzynia biegów</div>
                   <div :class="$style.automat">{{ car.gearboxType }}</div>
                 </div>
               </div>
               <div :class="$style.card">
                 <img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 <div :class="$style.text2">
-                  <div :class="$style.z">Paliwo</div>
+                  <div :class="$style.z1">Paliwo</div>
                   <div :class="$style.automat">{{ car.fuelType }}</div>
                 </div>
               </div>
               <div :class="$style.card">
                 <img :class="$style.g17Icon" alt="" src="@/assets/g3353.png" />
                 <div :class="$style.text2">
-                  <div :class="$style.z">Drzwi</div>
+                  <div :class="$style.z1">Drzwi</div>
                   <div :class="$style.automat">4</div>
                 </div>
               </div>
@@ -379,9 +379,16 @@ html.dark .heroSectionChild {
                     height: 544.3px;
                     object-fit: cover;
               }
+
+
+              .cieszSiYciemText{
+              margin: 0;
+                  color: #ffffff !important; /* Завжди білий текст */
+}
+                  
              .cieszSiYciem {
     margin: 0;
-    color: #ffffff !important; /* Завжди білий текст */
+    
 }
               .cieszSiYciemContainer {
                     position: relative;
@@ -605,13 +612,14 @@ font-family: Poppins;
                     font-family: Montserrat;
               }
               .z {
-position: relative;
-text-transform: capitalize;
-font-weight: 600;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-}                                      
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-color); /* Використання змінної для кольору */
+}                                    
               .zaDzie {
                     position: relative;
                     font-size: 16px;
