@@ -1,3 +1,11 @@
+## 🖼️ Figma
+https://www.figma.com/design/vxDZbK8cN5KkHHtZ062ZHZ/Wypo%C5%BCyczalnia-sam-V0.1?node-id=1-16422&t=jpkr2IiJNhcOWrSW-1
+
+https://www.figma.com/design/kpzfaTC8tAaOpjRRMG2wFx/Konto-u%C5%BCytkownika?node-id=33-126&t=jpkr2IiJNhcOWrSW-1
+
+https://www.figma.com/design/MyjRz0G3Waov18l9CXqKdo/Administrator-systemu?node-id=0-1&t=jpkr2IiJNhcOWrSW-1
+
+ 
 ## 🌐 Link do API
 https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 ## 🌐 Serwer Proxy CORS
