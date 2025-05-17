@@ -169,6 +169,51 @@ onMounted(async () => {
                 </div>
               </div>
             </div>
+             <div :class="$style.textIcons">
+                            <div :class="$style.z">Wyposażenie samochodu</div>
+                            <div :class="$style.iconsText">
+                                  <div :class="$style.column">
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">ABS</div>
+                                        </div>
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">Air Bags</div>
+                                        </div>
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">Cruise Control</div>
+                                        </div>
+                                  </div>
+                                  <div :class="$style.column">
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">ABS</div>
+                                        </div>
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">Air Bags</div>
+                                        </div>
+                                        <div :class="$style.instanceParent">
+                                              <div :class="$style.vectorWrapper">
+                                                    <img :class="$style.vectorIcon" alt="" src="@/assets/Vector.svg" />
+                                              </div>
+                                              <div :class="$style.abs">Air Conditioner</div>
+                                        </div>
+                                  </div>
+                            </div>
+                      </div>
           </div>
         </div>
       </div>
