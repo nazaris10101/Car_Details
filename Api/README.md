@@ -2,10 +2,15 @@
 https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 ## 🌐 Serwer Proxy CORS
 https://cors-anywhere.herokuapp.com/corsdemo
+## 🚀 Główne funkcje
+Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
 
-
-
-This template should help get you started developing with Vue 3 in Vite.
+##🛠️ Technologie
+ • Frontend: Vue 3 z Vite
+ • Backend: Node.js + Express
+ • Baza danych: MongoDB
+ • Hosting: Azure
+ • Omijanie CORS: CORS Anywhere
 
 ## Recommended IDE Setup
 
