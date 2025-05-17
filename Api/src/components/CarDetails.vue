@@ -379,9 +379,10 @@ html.dark .heroSectionChild {
                     height: 544.3px;
                     object-fit: cover;
               }
-              .cieszSiYciem {
-                    margin: 0;
-              }
+             .cieszSiYciem {
+    margin: 0;
+    color: #ffffff !important; /* Завжди білий текст */
+}
               .cieszSiYciemContainer {
                     position: relative;
                     font-weight: 800;
