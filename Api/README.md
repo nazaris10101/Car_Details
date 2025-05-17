@@ -5,7 +5,7 @@ https://cors-anywhere.herokuapp.com/corsdemo
 ## 🚀 Główne funkcje
 Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
 
-##🛠️ Technologie
+##    🛠️ Technologie
  • Frontend: Vue 3 z Vite
  • Backend: Node.js + Express
  • Baza danych: MongoDB
