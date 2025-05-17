@@ -104,7 +104,7 @@ onMounted(async () => {
           <div :class="$style.textImg">
             <div :class="$style.z">{{ car.make }} {{ car.model }}</div>
             <div :class="$style.text1">
-              <div :class="$style.z">{{ car.hourlyPrice }} $</div>
+              <div :class="$style.z">{{ car.hourlyPrice }} zł </div>
               <div :class="$style.zaDzie">/ za godzinę</div>
             </div>
             <img :class="$style.imgIcon" :src="car.imageUrl" :alt="`Zdjęcie ${car.make} ${car.model}`" />
@@ -1089,7 +1089,7 @@ color: var(--text-color); /* додай це */
               /* Світла тема (за замовчуванням) */
               .banner {
 align-self: stretch;
-height: 956px;
+height: 356px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -1511,7 +1511,7 @@ width: 100%;
 position: relative;
 background-color: var(--car-bg);
 color: var(--car-text);
-height: 3817px;
+height: 3217px;
 overflow: hidden;
 display: flex;
 flex-direction: column;
