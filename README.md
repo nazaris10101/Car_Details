@@ -4,7 +4,7 @@ https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 https://cors-anywhere.herokuapp.com/corsdemo
 ## 🚀 Główne funkcje
 Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
-
+##
 ##    🛠️ Technologie
  • Frontend: Vue 3 z Vite
  • Backend: Node.js + Express
@@ -12,15 +12,15 @@ Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
  • Hosting: Azure
  • Omijanie CORS: CORS Anywhere
 
-## Recommended IDE Setup
+## Zalecana konfiguracja IDE
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (i wyłączyć Vetur).
 
-## Customize configuration
+## Dostosuj konfigurację
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Widzieć [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+## Konfiguracja projektu
 
 ```sh
 npm install
