@@ -1215,7 +1215,7 @@ font-family: Poppins;
                     position: absolute;
                     margin: 0 !important;
                     top: 40px;
-                    left: 241px;
+                    left: 450px;
                     height: 540px;
                     z-index: 1;
                     text-align: left;
@@ -1230,7 +1230,7 @@ font-family: Poppins;
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
-                    padding: 200px 0px 60px;
+                    padding: 100px 0px 60px;
                     box-sizing: border-box;
                     position: relative;
                     text-align: center;
@@ -1238,7 +1238,7 @@ font-family: Poppins;
               }
               .banner2 {
                     align-self: stretch;
-                    height: 1145px;
+                    height: 545px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -1468,7 +1468,7 @@ flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 padding: 60px 72px 40px;
-gap: 80px;
+gap: 0px;
 font-size: 16px;
 }
 .carDetails {
@@ -1476,7 +1476,7 @@ width: 100%;
 position: relative;
 background-color: var(--car-bg);
 color: var(--car-text);
-height: 4317px;
+height: 3817px;
 overflow: hidden;
 display: flex;
 flex-direction: column;
