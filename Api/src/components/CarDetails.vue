@@ -81,19 +81,22 @@ onMounted(async () => {
         <div :class="$style.socialMenuChild"></div>
       </div>
 
-                     <div :class="$style.available">
-                   <div :class="$style.darkMood">Dark Mood</div>
-                   <div :class="$style.on" @click="toggleDark()">
-      <div :class="$style.rectangleParent">
-        <div :class="$style.groupChild" />
-        <div :class="$style.offParent">
-          <div :class="$style.off">{{ isDark ? 'On' : 'Off' }}</div>
-          <div :class="[$style.groupItem, isDark ? 'active' : '']" />
+<div :class="$style.available">
+  <div :class="$style.darkMood">Dark Mode</div>
+  <div :class="$style.on" @click="toggleDark()">
+    <div :class="$style.rectangleParent">
+      <div :class="$style.groupChild"></div>
+      <div :class="$style.offParent">
+        <!-- Текст, який рухається протилежно кнопці -->
+        <div :class="[$style.off, isDark ? $style.textRight : $style.textLeft]">{{ isDark ? 'On' : 'Off' }}</div>
+        <div :class="[$style.groupItem, isDark ? $style.active : '']"></div>
       </div>
-      </div>
-      </div>
-      </div>
-      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
       
     
 
@@ -301,7 +304,7 @@ onMounted(async () => {
     <div v-else>
       <p>Ładowanie danych samochodu...</p>
     </div>
-  </div>
+</div>
   <!-- FOOTER -->
 <div :class="$style.footer">
   <div :class="$style.iconsTextButtons">
@@ -636,22 +639,40 @@ font-family: Poppins;
                     height: 48px;
               }
               .off {
-                    position: absolute;
-                    height: 70.59%;
-                    width: 32.88%;
-                    top: 14.71%;
-                    left: 67.16%;
-                    display: inline-block;
-              }
-              .groupItem {
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    border-radius: 50px;
-                    background-color: #fe8400;
-                    width: 34.6px;
-                    height: 34px;
-              }
+  position: absolute;
+  height: 70.59%;
+  width: 32.88%;
+  top: 14.71%;
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.textLeft {
+  left: 45px; /* Початкове розташування ліворуч */
+}
+.textRight {
+  right: 40px; /* Розташування праворуч у темному режимі */
+}
+.groupItem {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50px;
+  background-color: #fe8400;
+  width: 34.6px;
+  height: 34px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.active {
+  transform: translateX(48px); /* Зміщення вправо при активному стані */
+}
               .offParent {
                     position: absolute;
                     height: 70.83%;
