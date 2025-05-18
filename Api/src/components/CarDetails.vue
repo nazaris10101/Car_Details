@@ -3,13 +3,26 @@ import { useDark, useToggle } from '@vueuse/core'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
+
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
 const route = useRoute()
 const car = ref(null)
 const error = ref(null)
-
+const startDate = ref('');
+const returnDate = ref('');
+const fullName = ref('');
+const rentalPlace = ref('');
+const reservationSuccess = ref(false);
+const reserveCar = () => {
+  if (startDate.value && returnDate.value && fullName.value && rentalPlace.value) {
+    reservationSuccess.value = true;
+    alert(`Rezerwacja potwierdzona!\nImię: ${fullName.value}\nData wynajmu: ${startDate.value}\nData powrotu: ${returnDate.value}\nMiejsce: ${rentalPlace.value}`);
+  } else {
+    alert('Proszę wypełnić wszystkie pola.');
+  }
+};
 onMounted(async () => {
   const carId = route.params.carId
   const corsProxy = 'https://cors-anywhere.herokuapp.com/'
@@ -29,6 +42,8 @@ onMounted(async () => {
     console.error(err)
   }
 })
+
+
 </script>
 
 <template>
@@ -114,31 +129,39 @@ onMounted(async () => {
             <div :class="$style.edytuj">
                                   <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
                                   <div :class="$style.inputs">
-                                        <div :class="$style.input">
-                                              <div :class="$style.content">
-                                                    <div :class="$style.placeholder">Data wynajmu</div>
-                                                    <img :class="$style.endAdornmentIcon" alt="" src="@/assets/end-adornment.svg" />
-                                              </div>
-                                        </div>
-                                        <div :class="$style.input">
-                                              <div :class="$style.content">
-                                                    <div :class="$style.placeholder">Data powrotu</div>
-                                                    <img :class="$style.endAdornmentIcon" alt="" src="@/assets/end-adornment.svg" />
-                                              </div>
-                                        </div>
-                                        <div :class="$style.input">
-                                              <div :class="$style.content">
-                                                    <div :class="$style.placeholder">Miejsce wynajmu</div>
-                                                    <img :class="$style.selectarrowIcon" alt="" src="@/assets/selectarrow.svg" />
-                                              </div>
-                                        </div>
-                                        <div :class="$style.input3">
-                                              <div :class="$style.content">
-                                                    <div :class="$style.placeholder3">imię i nazwisko</div>
-                                                    <img :class="$style.selectarrowIcon" alt="" src="@/assets/selectarrow.svg" />
-                                              </div>
-                                        </div>
+                                  <div :class="$style.input">
+                                  <div :class="$style.content">
+                                 <div :class="$style.placeholder">Data wynajmu</div>
+                                 <input type="date" v-model="startDate" :class="$style.dateInput" />
+                               
+                                 </div>
                                   </div>
+                                        <div :class="$style.input">
+                                        <div :class="$style.content">
+                                        <div :class="$style.placeholder">Data powrotu</div>
+                                        <input type="date" v-model="returnDate" :class="$style.dateInput" />
+                                        </div>
+                                       </div>
+                                    <div :class="$style.input">
+                                        <div :class="$style.content">
+                                        <div :class="$style.placeholder">Miejsce wynajmu</div>
+                                    <select v-model="rentalPlace" :class="$style.selectInput">
+                                       <option disabled value="">Wybierz miejsce</option>
+                                       <option value="Warszawa">Warszawa</option>
+                                       <option value="Kraków">Kraków</option>
+                                      <option value="Wrocław">Wrocław</option>
+                                      <option value="Gdańsk">Gdańsk</option>
+                                     </select>
+                                       
+                                    </div>
+                                    </div>
+                                         <div :class="$style.input3">
+                                         <div :class="$style.content">
+                                         <div :class="$style.placeholder3">Imię i nazwisko</div>
+                                         <input type="text" v-model="fullName" :class="$style.textInput" placeholder="Wprowadź imię i nazwisko" />
+                                    </div>
+                             </div>
+                        </div>
                                   <div :class="$style.button">
                                         <div :class="$style.zarezerwuj">Zarezerwuj</div>
                                   </div>
@@ -390,7 +413,7 @@ onMounted(async () => {
 </template>
 
 <style module>
-/* Тут додається твій CSS з усіма секціями, темною темою та повним стилем */
+
 </style>
 
 
@@ -437,10 +460,10 @@ background-color: var(--card-bg);
      left: 0;
      width: 613px;
      height: 710px;
-     background-color: #000000; /* Світла тема за замовчуванням */
+     background-color: #000000; 
     }
 
-/* Темна тема */
+
 html.dark .heroSectionChild {
     background-color: #ffffff;
 }
@@ -457,7 +480,7 @@ html.dark .heroSectionChild {
 
               .cieszSiYciemText{
               margin: 0;
-                  color: #ffffff !important; /* Завжди білий текст */
+                  color: #ffffff !important; 
 }
                   
              .cieszSiYciem {
@@ -466,9 +489,9 @@ html.dark .heroSectionChild {
 }
  .cieszSiYciemdescription {
     margin: 0;
-    font-size: 18px; /* Задайте бажаний розмір тексту */
-    line-height: 1.5; /* Оптимальний міжрядковий інтервал */
-    color: var(--text-color); /* Використовує змінну кольору */
+    font-size: 18px;
+    line-height: 1.5; 
+    color: var(--text-color); 
 }
 
 
@@ -650,10 +673,10 @@ font-family: Poppins;
 }
 
 .textLeft {
-  left: 45px; /* Початкове розташування ліворуч */
+  left: 45px; 
 }
 .textRight {
-  right: 40px; /* Розташування праворуч у темному режимі */
+  right: 40px; 
 }
 .groupItem {
   position: absolute;
@@ -671,7 +694,7 @@ font-family: Poppins;
   color: #ffffff;
 }
 .active {
-  transform: translateX(48px); /* Зміщення вправо при активному стані */
+  transform: translateX(48px); 
 }
               .offParent {
                     position: absolute;
@@ -721,7 +744,7 @@ font-family: Poppins;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: var(--text-color); /* Використання змінної для кольору */
+    color: var(--text-color); 
 }                                    
               .zaDzie {
                     position: relative;
@@ -969,7 +992,7 @@ text-transform: capitalize;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
-color: var(--text-color); /* додай це */
+color: var(--text-color); 
 }
 
               .instanceParent {
@@ -1152,7 +1175,7 @@ color: var(--text-color); /* додай це */
                     color: #000000;
                     font-family: 'Work Sans';
               }
-              /* Світла тема (за замовчуванням) */
+              
               .banner {
 align-self: stretch;
 height: 356px;
@@ -1588,10 +1611,74 @@ font-size: 48px;
 font-family: 'Work Sans';
 }
 
-/* ДОДАЙ це нижче */
+
 html.dark .carDetails {
-background-color: #000000; /* темна тема */
+background-color: #000000; 
 color: white;
+}
+
+
+.dateInput, .textInput, .selectInput {
+  width: calc(100% - 250px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 35px;
+}
+
+.selectInput {
+  appearance: none;
+  background-color: #fff;
+}
+
+.endAdornmentIcon, .selectarrowIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.reservationMessage {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border: 1px solid #b2ffb2;
+  border-radius: 4px;
+  color: #2d2d2d;
+}
+
+.zarezerwujSamochd {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #fe8400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e67300;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder, .placeholder3 {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
               
         
