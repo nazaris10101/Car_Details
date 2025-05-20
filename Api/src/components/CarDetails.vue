@@ -3,31 +3,30 @@ import { useDark, useToggle } from '@vueuse/core'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
-
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
 const route = useRoute()
 const car = ref(null)
 const error = ref(null)
-const startDate = ref('');
-const returnDate = ref('');
-const fullName = ref('');
-const rentalPlace = ref('');
-const reservationSuccess = ref(false);
+const startDate = ref('')
+const returnDate = ref('')
+const fullName = ref('')
+const rentalPlace = ref('')
+const reservationSuccess = ref(false)
+
 const reserveCar = () => {
   if (startDate.value && returnDate.value && fullName.value && rentalPlace.value) {
-    reservationSuccess.value = true;
-    alert(`Rezerwacja potwierdzona!\nImię: ${fullName.value}\nData wynajmu: ${startDate.value}\nData powrotu: ${returnDate.value}\nMiejsce: ${rentalPlace.value}`);
+    reservationSuccess.value = true
+    alert(`Rezerwacja potwierdzona!\nImię: ${fullName.value}\nData wynajmu: ${startDate.value}\nData powrotu: ${returnDate.value}\nMiejsce: ${rentalPlace.value}`)
   } else {
-    alert('Proszę wypełnić wszystkie pola.');
+    alert('Proszę wypełnić wszystkie pola.')
   }
-};
+}
+
 onMounted(async () => {
   const carId = route.params.carId
-  const corsProxy = 'https://cors-anywhere.herokuapp.com/'
-  const targetUrl = 'https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars'
-  const url = corsProxy + targetUrl
+  const url = 'https://carent.site/proxy.php'
 
   try {
     const response = await fetch(url)
@@ -42,8 +41,6 @@ onMounted(async () => {
     console.error(err)
   }
 })
-
-
 </script>
 
 <template>
