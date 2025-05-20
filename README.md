@@ -7,8 +7,8 @@ https://www.figma.com/design/MyjRz0G3Waov18l9CXqKdo/Administrator-systemu?node-i
 
 ## 🌐 Link do API
 https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
-## 🌐 Serwer Proxy CORS
-https://cors-anywhere.herokuapp.com/corsdemo
+## 🌐 Link
+https://carent.site
 ## 🚀 Główne funkcje
 Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
 ##
