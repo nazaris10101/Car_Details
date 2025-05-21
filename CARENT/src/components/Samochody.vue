@@ -1,3 +1,10 @@
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+</script>
+
 <template>
   	<div :class="$style.content">
     		<div :class="$style.heroSection">
@@ -32,17 +39,18 @@
     </div>
   </div>
       			<div :class="$style.available">
-        				<div :class="$style.darkMood">Dark Mood</div>
-        				<div :class="$style.on">
-          					<div :class="$style.rectangleParent">
-            						<div :class="$style.groupChild" />
-            						<div :class="$style.offParent">
-              							<div :class="$style.off">Off</div>
-              							<div :class="$style.groupItem" />
-            						</div>
-          					</div>
-        				</div>
-      			</div>
+  <div :class="$style.darkMood">Dark Mode</div>
+  <div :class="$style.on" @click="toggleDark()">
+    <div :class="$style.rectangleParent">
+      <div :class="$style.groupChild"></div>
+      <div :class="$style.offParent">
+        <!-- Текст, який рухається протилежно кнопці -->
+        <div :class="[$style.off, isDark ? $style.textRight : $style.textLeft]">{{ isDark ? 'On' : 'Off' }}</div>
+        <div :class="[$style.groupItem, isDark ? $style.active : '']"></div>
+      </div>
+    </div>
+  </div>
+</div>
     		</div>
     		<div :class="$style.socialMenu">
       			<div :class="$style.socialMenuChild" />
