@@ -262,10 +262,10 @@
                     										<p :class="$style.cieszSiYciem">samochodom.</p>
                   									</div>
                   									<div :class="$style.socialIcons">
-                    										<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
-                    										<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
-                    										<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
-                    										<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
+                    										 <img :class="$style.groupIcon3" alt="" src="@/assets/Groupmeta.svg" />
+                                                             <img :class="$style.groupIcon3" alt="" src="@/assets/Groupinst.svg" />
+                                                             <img :class="$style.groupIcon3" alt="" src="@/assets/Groupx.svg" />
+                                                             <img :class="$style.groupIcon3" alt="" src="@/assets/Groupyou.svg" />
                   									</div>
                 								</div>
                 								<div :class="$style.text17">
