@@ -2,7 +2,7 @@
   	<div :class="$style.carDetails">
     		<div :class="$style.heroSection">
       			<div :class="$style.heroSectionChild" />
-      			<img :class="$style.mainPictureIcon" alt="" src="Main Picture.png" />
+      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
@@ -34,11 +34,11 @@
       			<div :class="$style.socialMenu">
         				<div :class="$style.socialMenuChild" />
         				<div :class="$style.socials">
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
+          				<img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
         				</div>
         				<div :class="$style.socialMenuChild" />
       			</div>
@@ -57,10 +57,9 @@
     		</div>
     		<div :class="$style.desktop13Wrapper">
       			<div :class="$style.desktop13">
-        				<img :class="$style.backgroundIcon" alt="" src="background.svg" />
         				<div :class="$style.leftSide">
           					<div :class="$style.submit">
-            						<img :class="$style.submitBackgroundIcon" alt="" src="Submit Background.svg" />
+            						<img :class="$style.submitBackgroundIcon" alt="" src="@/assets/background.svg" />
             						<div :class="$style.submit1">Wysłać</div>
           					</div>
           					<div :class="$style.inputFields">
@@ -88,7 +87,7 @@
           					<div :class="$style.describtion">
             						<div :class="$style.introduction">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</div>
             						<div :class="$style.location">
-              							<img :class="$style.mapsIcon" alt="" src="Maps.png" />
+              							<img :class="$style.mapsIcon" alt="" src="@/assets/Maps.png" />
               							<div :class="$style.text">
                 								<div :class="$style.carent">CARENT </div>
                 								<b :class="$style.ulZota59">ul. Złota 59</b>
@@ -101,24 +100,24 @@
             						</div>
             						<div :class="$style.informations">
               							<div :class="$style.email2">
-                								<img :class="$style.emailIcon" alt="" src="Email Icon.svg" />
+                								<img :class="$style.emailIcon" alt="" src="@/assets/Email Icon.svg" />
                 								<b :class="$style.zalogujSi">carent@gmail.com</b>
               							</div>
               							<div :class="$style.phone">
-                								<img :class="$style.phoneIcon" alt="" src="Phone Icon.svg" />
+                								<img :class="$style.phoneIcon" alt="" src="@/assets/Phone Icon.svg" />
                 								<b :class="$style.zalogujSi">+48 22 222 22 00</b>
               							</div>
               							<div :class="$style.location1">
-                								<img :class="$style.locationIcon" alt="" src="Location Icon.svg" />
+                								<img :class="$style.locationIcon" alt="" src="@/assets/Location Icon.svg" />
                 								<b :class="$style.zalogujSi">ul. Złota 59 00-120 Warszawa</b>
               							</div>
             						</div>
           					</div>
           					<div :class="$style.socialMediaIcons">
-            						<img :class="$style.instagramIcon" alt="" src="Instagram.svg" />
-            						<img :class="$style.twitterIcon" alt="" src="Twitter.svg" />
-            						<img :class="$style.facebookIcon" alt="" src="Facebook.svg" />
-            						<img :class="$style.youtubeIcon" alt="" src="Youtube.svg" />
+            						<img :class="$style.instagramIcon" alt="" src="@/assets/Instagram.svg" />
+            						<img :class="$style.twitterIcon" alt="" src="@/assets/Twitter.svg" />
+            						<img :class="$style.facebookIcon" alt="" src="@/assets/Facebook.svg" />
+            						<img :class="$style.youtubeIcon" alt="" src="@/assets/Youtube.svg" />
           					</div>
         				</div>
       			</div>
@@ -126,7 +125,7 @@
     		<div :class="$style.frameParent">
       			<div :class="$style.frameGroup">
         				<div :class="$style.groupParent">
-          					<img :class="$style.groupIcon" alt="" src="Group.svg" />
+          					<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
           					<b :class="$style.zarejestrujSiI">Zarejestruj się i odbierz 10% rabatu!</b>
           					<div :class="$style.doczDoNaszejContainer">
             						<p :class="$style.cieszSiYciem">Dołącz do naszej społeczności i ciesz się wyjątkowymi korzyściami! Zarejestruj się na naszej stronie już dziś, a otrzymasz 10% zniżki na pierwszy wynajem samochodu.</p>
@@ -143,14 +142,14 @@
         				</div>
       			</div>
       			<div :class="$style.discountlabelfr2Wrapper">
-        				<img :class="$style.discountlabelfr2Icon" alt="" src="discountLabelfr 2.png" />
+        				<img :class="$style.discountlabelfr2Icon" alt="" src="@/assets/discountLabelfr 2.png" />
       			</div>
     		</div>
     		<div :class="$style.banner">
       			<div :class="$style.banner1">
         				<div :class="$style.textButtons">
           					<div :class="$style.text1">
-            						<img :class="$style.groupIcon1" alt="" src="Group.svg" />
+            						<img :class="$style.groupIcon1" alt="" src="@/assets/Group.svg" />
             						<div :class="$style.pobierzNaszAplikacjParent">
               							<div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
               							<b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
@@ -158,14 +157,14 @@
             						<div :class="$style.dzikiNaszejAplikacji">Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!</div>
           					</div>
           					<div :class="$style.buttons">
-            						<img :class="$style.appStoreIcon" alt="" src="App Store.svg" />
-            						<img :class="$style.googlePlayIcon" alt="" src="Google Play.svg" />
+            						<img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+            						<img :class="$style.googlePlayIcon" alt="" src="@/assets/Google Play.svg" />
           					</div>
         				</div>
       			</div>
       			<div :class="$style.img">
         				<div :class="$style.iphone1415Pro41" />
-        				<img :class="$style.imgIcon" alt="" src="Img.png" />
+        				<img :class="$style.imgIcon" alt="" src="@/assets/iPhone 14.png" />
         				<div :class="$style.logo1">CARENT</div>
       			</div>
     		</div>
@@ -181,13 +180,13 @@
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText">
           					<div :class="$style.logo2">
-            						<img :class="$style.car31Icon" alt="" src="car(3) 1.svg" />
+            						<img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
             						<div :class="$style.text2">
               							<b :class="$style.zalogujSi">CARENT </b>
             						</div>
           					</div>
           					<div :class="$style.iconsText1">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text3">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -197,14 +196,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text4">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text5">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -219,10 +218,10 @@
               							<p :class="$style.cieszSiYciem">samochodom.</p>
             						</div>
             						<div :class="$style.socialIcons">
-              							<img :class="$style.groupIcon2" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon2" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon2" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon2" alt="" src="Group.svg" />
+              							<img :class="$style.groupIcon2" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon2" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon2" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon2" alt="" src="@/assets/Group.svg" />
             						</div>
           					</div>
           					<div :class="$style.text6">
@@ -247,10 +246,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons1">
               							<div :class="$style.appStoreIcon">
-                								<img :class="$style.groupIcon6" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon6" alt="" src="@/assets/Group.svg" />
               							</div>
               							<div :class="$style.googlePlayIcon">
-                								<img :class="$style.groupIcon6" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon6" alt="" src="@/assets/Group.svg" />
               							</div>
             						</div>
           					</div>
@@ -884,7 +883,7 @@
     		top: 147px;
     		left: 636px;
     		height: 272px;
-    		background-image: url('Frame 130.png');
+    		background-image: url('@/assets/Frame 130.png');
     		background-size: cover;
     		background-repeat: no-repeat;
     		background-position: top;
