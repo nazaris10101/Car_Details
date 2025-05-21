@@ -1,7 +1,62 @@
 <template>
   	<div :class="$style.home">
+    		<div :class="$style.heroSection">
+      			<div :class="$style.heroSectionChild" />
+      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
+      			<div :class="$style.headerText">
+        				<div :class="$style.cieszSiYciemDzikiNaszymParent">
+          					<div :class="$style.cieszSiYciemContainer">
+            						<p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
+            						<p :class="$style.cieszSiYciem">naszym wygodnym</p>
+            						<p :class="$style.cieszSiYciem">samochodom.</p>
+          					</div>
+          					<div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
+        				</div>
+        				<div :class="$style.zalogujSiZarejestrujSiWrapper">
+          					<div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
+        				</div>
+      			</div>
+      			 <div :class="$style.headMenu">
+    <div :class="$style.kuphalLlc">CARENT</div>
+    <div :class="$style.menu">
+      <div :class="$style.menuItems">
+        <router-link :to="'/'" :class="$style.kuphalLlc">Główna</router-link>
+        <router-link :to="'/o-nas'" :class="$style.oNas1">O nas</router-link>
+        <router-link :to="'/rezerwacja'" :class="$style.kuphalLlc">Rezerwacja</router-link>
+        <router-link :to="'/samochody'" :class="$style.kuphalLlc">Samochody</router-link>
+        <router-link :to="'/kontakt'" :class="$style.kuphalLlc">Kontakt</router-link>
+        <div :class="$style.cta">
+          <div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
+        </div>
+      </div>
+    </div>
+  </div>
+      			<div :class="$style.socialMenu">
+        				<div :class="$style.socialMenuChild" />
+        				<div :class="$style.socials">
+          					<img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
+        				</div>
+        				<div :class="$style.socialMenuChild" />
+      			</div>
+      			<div :class="$style.available">
+        				<div :class="$style.darkMood">Dark Mood</div>
+        				<div :class="$style.on">
+          					<div :class="$style.rectangleParent">
+            						<div :class="$style.groupChild" />
+            						<div :class="$style.offParent">
+              							<div :class="$style.off">Off</div>
+              							<div :class="$style.groupItem" />
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+    		</div>
     		<div :class="$style.brand">
-      			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW2.png" />
+      			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW.png" />
       			<img :class="$style.lexusLogoIcon" alt="" src="@/assets/lexus-logo.png" />
       			<img :class="$style.bmwIcon" alt="" src="@/assets/Marcedes.png" />
       			<img :class="$style.hondaIcon" alt="" src="@/assets/Honda.png" />
@@ -19,15 +74,15 @@
           					<div :class="$style.dostpno">Dostępność</div>
         				</div>
         				<div :class="$style.naszaPrzestrzeJestContainer">
-          					<p :class="$style.naszaPrzestrzeJest">Nasza przestrzeń jest zawsze na wyciągnięcie ręki, z łatwym dojazdem, elastycznymi godzinami wynajmu oraz możliwością rezerwacji i zarządzania wynajmem przez wygodny panel online.</p>
+          					<p :class="$style.cieszSiYciem">Nasza przestrzeń jest zawsze na wyciągnięcie ręki, z łatwym dojazdem, elastycznymi godzinami wynajmu oraz możliwością rezerwacji i zarządzania wynajmem przez wygodny panel online.</p>
         				</div>
       			</div>
       			<div :class="$style.iconText">
         				<div :class="$style.iconText1">
           					<div :class="$style.car21">
             						<div :class="$style.g582">
-              							
-              							
+              							<img :class="$style.g584Icon" alt="" src="@/assets/car(2) 1.svg" />
+              							<img :class="$style.g588Icon" alt="" src="@/assets/car(2) 1.svg" />
             						</div>
           					</div>
           					<div :class="$style.dostpno">Komfort</div>
@@ -67,7 +122,7 @@
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -101,7 +156,7 @@
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								>
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -135,7 +190,7 @@
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -169,7 +224,7 @@
                 								<div :class="$style.automat">Elektro</div>
               							</div>
               							<div :class="$style.iconText6">
-                								
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -203,7 +258,7 @@
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -237,7 +292,7 @@
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -251,54 +306,41 @@
     		<div :class="$style.button6">
       			<div :class="$style.zobaczSzczegy">Zobacz wszystkie samochody</div>
     		</div>
-    		<div :class="$style.available">
-      			<div :class="$style.on">
-        				<div :class="$style.on">
-          					<div :class="$style.groupChild" />
-          					<div :class="$style.offParent">
-            						<div :class="$style.off">Off</div>
-            						<div :class="$style.groupItem" />
-          					</div>
-        				</div>
-      			</div>
-    		</div>
     		<div :class="$style.testimonials">
       			<b :class="$style.opinieNaszychKlientw">Opinie naszych klientów</b>
       			<div :class="$style.cards1">
         				<div :class="$style.card6">
           					<div :class="$style.textbg">
             						<div :class="$style.wynajcieAutaWContainer">
-              							<p :class="$style.naszaPrzestrzeJest"> Wynajęcie auta w tej firmie to czysta przyjemność! Proces rezerwacji online był szybki i intuicyjny, a samochód (Porsche 911) w idealnym stanie – czysty, zatankowany i gotowy do jazdy. Obsługa bardzo profesjonalna i pomocna. Zdecydowanie skorzystam ponownie!</p>
+              							<p :class="$style.cieszSiYciem"> Wynajęcie auta w tej firmie to czysta przyjemność! Proces rezerwacji online był szybki i intuicyjny, a samochód (Porsche 911) w idealnym stanie – czysty, zatankowany i gotowy do jazdy. Obsługa bardzo profesjonalna i pomocna. Zdecydowanie skorzystam ponownie!</p>
             						</div>
           					</div>
           					<div :class="$style.textBg">
-            						<div :class="$style.kuphalLlc">Kuphal LLC</div>
+            						<div :class="$style.zalogujSi">Kuphal LLC</div>
             						<div :class="$style.emanuelBoyle">Emanuel Boyle</div>
           					</div>
           					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
-          					<img :class="$style.icon" alt="" src="@/assets/Img.png" />
+          					
         				</div>
         				<div :class="$style.card6">
           					<div :class="$style.textbg">
             						<div :class="$style.wynajemPorsche911Container">
-              							<p :class="$style.naszaPrzestrzeJest"> Wynająłem Porsche 911 na weekend i to było niesamowite doświadczenie! Auto w perfekcyjnym stanie, elastyczne warunki wynajmu i przystępna cena jak na taki luksus. Polecam każdemu, kto chce poczuć prawdziwe emocje za kierownicą!</p>
+              							<p :class="$style.cieszSiYciem"> Wynająłem Porsche 911 na weekend i to było niesamowite doświadczenie! Auto w perfekcyjnym stanie, elastyczne warunki wynajmu i przystępna cena jak na taki luksus. Polecam każdemu, kto chce poczuć prawdziwe emocje za kierownicą!</p>
             						</div>
           					</div>
           					<div :class="$style.textBg">
-            						<div :class="$style.kuphalLlc">Glover - Orn</div>
+            						<div :class="$style.zalogujSi">Glover - Orn</div>
             						<div :class="$style.emanuelBoyle">River Graves</div>
           					</div>
           					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
-          					<img :class="$style.icon" alt="" src="@/assets/Img.png" />
-        				</div>
-							" />
+          					
         				</div>
         				<div :class="$style.card6">
           					<div :class="$style.textbg">
             						<div :class="$style.bardzoDobrySerwis"> Bardzo dobry serwis – szybka rezerwacja online, brak ukrytych opłat i doskonały kontakt z obsługą. Samochód spełnił wszystkie moje oczekiwania, a nawet je przewyższył! Jeśli szukasz sprawdzonej firmy do wynajmu luksusowego auta, to nie ma lepszego miejsca!</div>
           					</div>
           					<div :class="$style.textBg">
-            						<div :class="$style.kuphalLlc">Haag LLC</div>
+            						<div :class="$style.zalogujSi">Haag LLC</div>
             						<div :class="$style.emanuelBoyle">Ryder Malone</div>
           					</div>
           					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
@@ -306,35 +348,109 @@
         				</div>
       			</div>
     		</div>
+    		<div :class="$style.frameParent">
+      			<div :class="$style.frameGroup">
+        				<div :class="$style.groupParent">
+          					<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+          					<b :class="$style.zarejestrujSiI">Zarejestruj się i odbierz 10% rabatu!</b>
+          					<div :class="$style.doczDoNaszejContainer">
+            						<p :class="$style.cieszSiYciem">Dołącz do naszej społeczności i ciesz się wyjątkowymi korzyściami! Zarejestruj się na naszej stronie już dziś, a otrzymasz 10% zniżki na pierwszy wynajem samochodu.</p>
+            						<p :class="$style.cieszSiYciem">&nbsp;</p>
+            						<p :class="$style.cieszSiYciem">✅ Szybka i prosta rejestracja</p>
+            						<p :class="$style.cieszSiYciem">✅ Ekskluzywne rabaty i oferty specjalne</p>
+            						<p :class="$style.cieszSiYciem">✅ Wygodne zarządzanie rezerwacjami</p>
+            						<p :class="$style.cieszSiYciem">&nbsp;</p>
+            						<p :class="$style.cieszSiYciem">Nie czekaj – załóż konto i ruszaj w podróż taniej!</p>
+          					</div>
+        				</div>
+        				<div :class="$style.button7">
+          					<div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
+        				</div>
+      			</div>
+      			<div :class="$style.discountlabelfr2Wrapper">
+        				<img :class="$style.discountlabelfr2Icon" alt="" src="@/assets/discountLabelfr 2.png" />
+      			</div>
+    		</div>
+    		<div :class="$style.banner">
+      			<div :class="$style.img">
+        				<div :class="$style.iphone1415Pro41" />
+      			</div>
+      			<div :class="$style.banner1">
+        				<div :class="$style.banner2">
+          					<div :class="$style.textButtons">
+            						<div :class="$style.text18">
+              							<img :class="$style.groupIcon1" alt="" src="@/assets/Group.svg" />
+              							<div :class="$style.pobierzNaszAplikacjParent">
+                								<div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
+                								<b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
+              							</div>
+              							<div :class="$style.dzikiNaszejAplikacji">Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!</div>
+            						</div>
+            						<div :class="$style.buttons">
+              							<img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+              							<img :class="$style.googlePlayIcon" alt="" src="@/assets/Google Play.svg" />
+            						</div>
+          					</div>
+        				</div>
+        				<div :class="$style.img1">
+          					<div :class="$style.iphone1415Pro411" />
+          					<img :class="$style.imgIcon9" alt="" src="@/assets/iPhone 14.png" />
+          					<div :class="$style.logo1">CARENT</div>
+        				</div>
+      			</div>
+      			<div :class="$style.banner3">
+        				<div :class="$style.banner2">
+          					<div :class="$style.textButtons">
+            						<div :class="$style.text18">
+              							<img :class="$style.groupIcon1" alt="" src="@/assets/Group.svg" />
+              							<div :class="$style.pobierzNaszAplikacjParent">
+                								<div :class="$style.pobierzNaszAplikacj">Pobierz naszą aplikację</div>
+                								<b :class="$style.pobierzNaszAplikacj1">Pobierz naszą aplikację</b>
+              							</div>
+              							<div :class="$style.dzikiNaszejAplikacji">Dzięki naszej aplikacji możesz szybko i wygodnie rezerwować auta, zarządzać wynajmami i korzystać z ekskluzywnych promocji. Wszystko w jednym miejscu!</div>
+            						</div>
+            						<div :class="$style.buttons">
+              							<img :class="$style.appStoreIcon" alt="" src="@/assets/App Store.svg" />
+              							<img :class="$style.googlePlayIcon" alt="" src="@/assets/Google Play.svg" />
+            						</div>
+          					</div>
+        				</div>
+        				<div :class="$style.img1">
+          					<div :class="$style.iphone1415Pro411" />
+          					<img :class="$style.imgIcon9" alt="" src="@/assets/Img.png" />
+          					<div :class="$style.logo1">CARENT</div>
+        				</div>
+      			</div>
+    		</div>
     		<div :class="$style.footer">
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText6">
-          					<div :class="$style.logo">
+          					<div :class="$style.logo3">
             						<img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
-            						<div :class="$style.text18">
-              							<b :class="$style.kuphalLlc">CARENT </b>
+            						<div :class="$style.text20">
+              							<b :class="$style.zalogujSi">CARENT </b>
             						</div>
           					</div>
           					<div :class="$style.iconsText7">
             						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
-            						<div :class="$style.text19">
+            						<div :class="$style.text21">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
-                								<p :class="$style.naszaPrzestrzeJest">ul. Złota 59 00-120 Warszawa</p>
-                								<p :class="$style.naszaPrzestrzeJest">&nbsp;</p>
+                								<p :class="$style.cieszSiYciem">ul. Złota 59 00-120 Warszawa</p>
+                								<p :class="$style.cieszSiYciem">&nbsp;</p>
               							</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
             						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
-            						<div :class="$style.text20">
+            						<div :class="$style.text22">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
             						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
-            						<div :class="$style.text21">
+            						<div :class="$style.text23">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
             						</div>
@@ -342,140 +458,312 @@
         				</div>
         				<div :class="$style.textIcons6">
           					<div :class="$style.textIcons7">
-            						<div :class="$style.cieszSiYciemContainer">
-              							<p :class="$style.naszaPrzestrzeJest">Ciesz się życiem dzięki</p>
-              							<p :class="$style.naszaPrzestrzeJest">naszym wygodnym</p>
-              							<p :class="$style.naszaPrzestrzeJest">samochodom.</p>
+            						<div :class="$style.cieszSiYciemContainer1">
+              							<p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
+              							<p :class="$style.cieszSiYciem">naszym wygodnym</p>
+              							<p :class="$style.cieszSiYciem">samochodom.</p>
             						</div>
             						<div :class="$style.socialIcons">
-              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon3" alt="" src="@/assets/Group.svg" />
             						</div>
           					</div>
-          					<div :class="$style.textButtons">
+          					<div :class="$style.text24">
             						<div :class="$style.przydatneLinki">Przydatne linki</div>
-            						<div :class="$style.text23">
-              							<div :class="$style.oNas">O nas  </div>
-              							<div :class="$style.gwna">Główna</div>
-              							<div :class="$style.gwna">Zaloguj się | Zarejestruj się</div>
+            						<div :class="$style.text25">
+              							<div :class="$style.oNas1">O nas  </div>
+              							<div :class="$style.minivan">Główna</div>
+              							<div :class="$style.minivan">Zaloguj się | Zarejestruj się</div>
             						</div>
           					</div>
-          					<div :class="$style.textButtons">
+          					<div :class="$style.text24">
             						<div :class="$style.przydatneLinki">Pojazdy</div>
-            						<div :class="$style.text23">
+            						<div :class="$style.text25">
               							<div :class="$style.adres">Sedan</div>
               							<div :class="$style.adres">Cabriolet</div>
               							<div :class="$style.adres">Pickup</div>
-              							<div :class="$style.gwna">Minivan</div>
+              							<div :class="$style.minivan">Minivan</div>
               							<div :class="$style.adres">SUV</div>
             						</div>
           					</div>
-          					<div :class="$style.textButtons">
+          					<div :class="$style.text24">
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
-            						<div :class="$style.buttons">
-              							<div :class="$style.appStore">
-                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
+            						<div :class="$style.buttons2">
+              							<div :class="$style.appStoreIcon">
+                								<img :class="$style.groupIcon7" alt="" src="@/assets/Group.svg" />
               							</div>
-              							<div :class="$style.googlePlay">
-                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
+              							<div :class="$style.googlePlayIcon">
+                								<img :class="$style.groupIcon7" alt="" src="@/assets/Group.svg" />
               							</div>
             						</div>
           					</div>
         				</div>
       			</div>
       			<div :class="$style.wsbMeritoTworzenieContainer">
-        				<p :class="$style.naszaPrzestrzeJest"> WSB MERITO Tworzenie aplikacji internetowych i mobilnych (Projekt zaliczeniowy)</p>
-        				<p :class="$style.naszaPrzestrzeJest">Autorzy: Michał Michalski, Nazar Mykhailiuk, Miłosz Gajda</p>
+        				<p :class="$style.cieszSiYciem"> WSB MERITO Tworzenie aplikacji internetowych i mobilnych (Projekt zaliczeniowy)</p>
+        				<p :class="$style.cieszSiYciem">Autorzy: Michał Michalski, Nazar Mykhailiuk, Miłosz Gajda</p>
       			</div>
     		</div>
-    		<div :class="$style.frameParent">
-      			<div :class="$style.frameGroup">
-        				<div :class="$style.groupParent">
-          					<img :class="$style.groupIcon6" alt="" src="@/assets/Group.svg" />
-          					<b :class="$style.zarejestrujSiI">Zarejestruj się i odbierz 10% rabatu!</b>
-          					<div :class="$style.doczDoNaszejContainer">
-            						<p :class="$style.naszaPrzestrzeJest">Dołącz do naszej społeczności i ciesz się wyjątkowymi korzyściami! Zarejestruj się na naszej stronie już dziś, a otrzymasz 10% zniżki na pierwszy wynajem samochodu.</p>
-            						<p :class="$style.naszaPrzestrzeJest">&nbsp;</p>
-            						<p :class="$style.naszaPrzestrzeJest">✅ Szybka i prosta rejestracja</p>
-            						<p :class="$style.naszaPrzestrzeJest">✅ Ekskluzywne rabaty i oferty specjalne</p>
-            						<p :class="$style.naszaPrzestrzeJest">✅ Wygodne zarządzanie rezerwacjami</p>
-            						<p :class="$style.naszaPrzestrzeJest">&nbsp;</p>
-            						<p :class="$style.naszaPrzestrzeJest">Nie czekaj – załóż konto i ruszaj w podróż taniej!</p>
-          					</div>
-        				</div>
-        				<div :class="$style.button7">
-          					<div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
-        				</div>
-      			</div>
-      			<div :class="$style.discountlabelfr2Wrapper">
-        				<img :class="$style.discountlabelfr2Icon" alt="" src="@/assets/discountLabelfr 2.png" />
-      			</div>
-    		</div>
-    		<div :class="$style.heroSection">
-      			<div :class="$style.heroSectionChild" />
-      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
-      			<div :class="$style.headerText">
-        				<div :class="$style.cieszSiYciemDzikiNaszymParent">
-          					<div :class="$style.cieszSiYciemContainer1">
-            						<p :class="$style.naszaPrzestrzeJest">Ciesz się życiem dzięki</p>
-            						<p :class="$style.naszaPrzestrzeJest">naszym wygodnym</p>
-            						<p :class="$style.naszaPrzestrzeJest">samochodom.</p>
-          					</div>
-          					<div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
-        				</div>
-        				<div :class="$style.zalogujSiZarejestrujSiWrapper">
-          					<div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
-        				</div>
-      			</div>
-      			  <div :class="$style.headMenu">
-    <div :class="$style.kuphalLlc">CARENT</div>
-    <div :class="$style.menu">
-      <div :class="$style.menuItems">
-        <router-link :to="'/'" :class="$style.kuphalLlc">Główna</router-link>
-        <router-link :to="'/o-nas'" :class="$style.oNas1">O nas</router-link>
-        <router-link :to="'/rezerwacja'" :class="$style.kuphalLlc">Rezerwacja</router-link>
-        <router-link :to="'/samochody'" :class="$style.kuphalLlc">Samochody</router-link>
-        <router-link :to="'/kontakt'" :class="$style.kuphalLlc">Kontakt</router-link>
-        <div :class="$style.cta">
-          <div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
-        </div>
-      </div>
-    </div>
-  </div>
-      			<div :class="$style.socialMenu">
-        				<div :class="$style.socialMenuChild" />
-        				<div :class="$style.socials">
-          					<img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
-                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
-                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
-                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
-                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
-        				</div>
-        				<div :class="$style.socialMenuChild" />
-      			</div>
-      			<div :class="$style.available1">
-        				<div :class="$style.darkMood">Dark Mood</div>
-        				<div :class="$style.on1">
-          					<div :class="$style.rectangleGroup">
-            						<div :class="$style.groupInner" />
-            						<div :class="$style.offGroup">
-              							<div :class="$style.off1">Off</div>
-              							<div :class="$style.rectangleDiv" />
-            						</div>
+    		<div :class="$style.available1">
+      			<div :class="$style.rectangleGroup">
+        				<div :class="$style.rectangleGroup">
+          					<div :class="$style.groupInner" />
+          					<div :class="$style.offGroup">
+            						<div :class="$style.off1">Off</div>
+            						<div :class="$style.rectangleDiv" />
           					</div>
         				</div>
       			</div>
     		</div>
-  
+  	</div>
 </template>
-<style  module>.bmwIcon {
-  	width: 47px;
-  	position: relative;
-  	height: 47px;
-  	object-fit: cover;
+<style  module>.heroSectionChild {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #141414;
+  	width: 613px;
+  	height: 741px;
 }
+  	.mainPictureIcon {
+    		position: absolute;
+    		top: 103.86px;
+    		left: 531px;
+    		width: 909px;
+    		height: 544.3px;
+    		object-fit: cover;
+  	}
+  	.cieszSiYciem {
+    		margin: 0;
+  	}
+  	.cieszSiYciemContainer {
+    		position: relative;
+    		font-weight: 800;
+  	}
+  	.carentJestGotowy {
+    		width: 453px;
+    		position: relative;
+    		font-size: 24px;
+    		line-height: 40px;
+    		font-weight: 500;
+    		font-family: Poppins;
+    		color: rgba(255, 255, 255, 0.85);
+    		display: inline-block;
+  	}
+  	.cieszSiYciemDzikiNaszymParent {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 16px;
+  	}
+  	.zalogujSi {
+    		position: relative;
+  	}
+  	.zalogujSiZarejestrujSiWrapper {
+    		width: 256px;
+    		border-radius: 4px;
+    		background-color: #fe8400;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: center;
+    		padding: 12px 24px;
+    		box-sizing: border-box;
+    		font-size: 16px;
+    		color: #141414;
+    		font-family: Poppins;
+  	}
+  	.headerText {
+    		position: absolute;
+    		top: 148.8px;
+    		left: 160px;
+    		background-color: rgba(0, 0, 0, 0.15);
+    		width: 615px;
+    		height: 472.4px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		padding: 32px 32px 32px 0px;
+    		box-sizing: border-box;
+    		gap: 48px;
+  	}
+  	.oNas {
+    		position: relative;
+    		white-space: pre-wrap;
+  	}
+  	.cta {
+    		width: 220px;
+    		border-radius: 4px;
+    		background-color: #fe8400;
+    		height: 40px;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: center;
+    		padding: 8px;
+    		box-sizing: border-box;
+  	}
+  	.menuItems {
+    		width: 670px;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: flex-start;
+    		gap: 32px;
+  	}
+  	.menu {
+    		width: 643px;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: center;
+    		font-size: 16px;
+    		color: #141414;
+    		font-family: Poppins;
+  	}
+  	.headMenu {
+    		position: absolute;
+    		top: 31.96px;
+    		left: calc(50% - 560px);
+    		width: 1152px;
+    		height: 39.9px;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: space-between;
+    		gap: 0px;
+    		font-size: 26px;
+    		color: #fe8400;
+    		font-family: 'Arial Black';
+  	}
+  	.socialMenuChild {
+    		width: 1px;
+    		position: relative;
+    		border-right: 1px solid #fe8400;
+    		box-sizing: border-box;
+    		height: 39px;
+  	}
+  	.socialMediaLogo {
+    		width: 16px;
+    		position: relative;
+    		height: 16px;
+    		object-fit: cover;
+  	}
+  	.socialMediaLogo1 {
+    		width: 16px;
+    		position: relative;
+    		height: 16px;
+    		overflow: hidden;
+    		flex-shrink: 0;
+    		object-fit: cover;
+  	}
+  	.socials {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 12px;
+  	}
+  	.socialMenu {
+    		position: absolute;
+    		top: calc(50% - 117.84px);
+    		left: 72px;
+    		width: 16px;
+    		height: 235.7px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: center;
+    		gap: 16px;
+  	}
+  	.darkMood {
+    		position: absolute;
+    		height: 58.33%;
+    		width: 44.35%;
+    		top: 20.83%;
+    		left: 0%;
+    		line-height: 28px;
+    		display: inline-block;
+  	}
+  	.groupChild {
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		border-radius: 50px;
+    		background-color: rgba(254, 132, 0, 0.05);
+    		width: 95.6px;
+    		height: 48px;
+  	}
+  	.off {
+    		position: absolute;
+    		height: 70.59%;
+    		width: 32.88%;
+    		top: 14.71%;
+    		left: 67.16%;
+    		display: inline-block;
+  	}
+  	.groupItem {
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		border-radius: 50px;
+    		background-color: #fe8400;
+    		width: 34.6px;
+    		height: 34px;
+  	}
+  	.offParent {
+    		position: absolute;
+    		height: 70.83%;
+    		width: 77.62%;
+    		top: 14.58%;
+    		right: 7.49%;
+    		bottom: 14.58%;
+    		left: 14.89%;
+  	}
+  	.rectangleParent {
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		width: 95.6px;
+    		height: 48px;
+  	}
+  	.on {
+    		position: absolute;
+    		top: 0px;
+    		left: 101.69px;
+    		width: 95.6px;
+    		height: 48px;
+    		color: #fff9f9;
+  	}
+  	.available {
+    		position: absolute;
+    		height: 6.48%;
+    		width: 13.7%;
+    		top: 3.78%;
+    		right: 60.59%;
+    		bottom: 89.74%;
+    		left: 25.71%;
+    		font-size: 16px;
+    		font-family: Poppins;
+  	}
+  	.heroSection {
+    		width: 1440px;
+    		position: relative;
+    		height: 741px;
+    		z-index: 0;
+    		font-size: 48px;
+    		font-family: Montserrat;
+  	}
+  	.bmwIcon {
+    		width: 47px;
+    		position: relative;
+    		height: 47px;
+    		object-fit: cover;
+  	}
   	.lexusLogoIcon {
     		width: 54.8px;
     		position: relative;
@@ -513,10 +801,7 @@
     		object-fit: cover;
   	}
   	.brand {
-    		position: absolute;
-    		top: 715px;
-    		left: -1px;
-    		width: 1440px;
+    		align-self: stretch;
     		height: 177px;
     		display: flex;
     		flex-direction: row;
@@ -524,6 +809,7 @@
     		justify-content: center;
     		gap: 32.9px;
     		opacity: 0.35;
+    		z-index: 1;
   	}
   	.location1Icon {
     		width: 64px;
@@ -549,9 +835,6 @@
     		align-items: center;
     		justify-content: flex-start;
     		gap: 20px;
-  	}
-  	.naszaPrzestrzeJest {
-    		margin: 0;
   	}
   	.naszaPrzestrzeJestContainer {
     		width: 357px;
@@ -638,10 +921,7 @@
     		-webkit-box-orient: vertical;
   	}
   	.infoBlock {
-    		position: absolute;
-    		top: 852px;
-    		left: -1px;
-    		width: 1440px;
+    		align-self: stretch;
     		height: 329px;
     		display: flex;
     		flex-direction: row;
@@ -650,6 +930,7 @@
     		padding: 60px 72px;
     		box-sizing: border-box;
     		gap: 0px;
+    		z-index: 2;
     		text-align: center;
     		font-size: 24px;
     		color: #000;
@@ -835,9 +1116,6 @@
     		object-fit: cover;
   	}
   	.cards {
-    		position: absolute;
-    		top: 1183px;
-    		left: 65px;
     		width: 1296px;
     		height: 1051px;
     		display: flex;
@@ -847,76 +1125,25 @@
     		flex-wrap: wrap;
     		align-content: flex-start;
     		gap: 24px;
+    		z-index: 3;
     		font-size: 24px;
     		color: #000;
   	}
   	.button6 {
-    		position: absolute;
-    		top: 2263px;
-    		left: 581px;
+    		width: 264px;
     		border-radius: 12px;
     		background-color: #fe8400;
-    		width: 264px;
     		height: 50px;
     		overflow: hidden;
+    		flex-shrink: 0;
     		display: flex;
     		flex-direction: row;
     		align-items: center;
     		justify-content: center;
     		padding: 13px 28px;
     		box-sizing: border-box;
+    		z-index: 4;
     		font-family: Inter;
-  	}
-  	.groupChild {
-    		position: absolute;
-    		top: 0px;
-    		left: 0px;
-    		border-radius: 50px;
-    		background-color: rgba(254, 132, 0, 0.05);
-    		width: 94px;
-    		height: 48px;
-  	}
-  	.off {
-    		position: absolute;
-    		height: 71.47%;
-    		width: 35.85%;
-    		top: 16.14%;
-    		left: 64.14%;
-    		display: inline-block;
-  	}
-  	.groupItem {
-    		position: absolute;
-    		top: 0px;
-    		left: 0px;
-    		border-radius: 50px;
-    		background-color: #fe8400;
-    		width: 34px;
-    		height: 34px;
-  	}
-  	.offParent {
-    		position: absolute;
-    		height: 70.83%;
-    		width: 70.32%;
-    		top: 14.58%;
-    		right: 14.79%;
-    		bottom: 14.58%;
-    		left: 14.89%;
-  	}
-  	.on {
-    		position: absolute;
-    		top: 0px;
-    		left: 0px;
-    		width: 94px;
-    		height: 48px;
-  	}
-  	.available {
-    		position: absolute;
-    		top: 54px;
-    		left: 488px;
-    		width: 94px;
-    		height: 48px;
-    		color: #fff9f9;
-    		font-family: Poppins;
   	}
   	.opinieNaszychKlientw {
     		width: 773px;
@@ -945,9 +1172,6 @@
     		position: relative;
     		overflow: hidden;
     		z-index: 0;
-  	}
-  	.kuphalLlc {
-    		position: relative;
   	}
   	.emanuelBoyle {
     		position: relative;
@@ -1042,10 +1266,7 @@
     		font-size: 20px;
   	}
   	.testimonials {
-    		position: absolute;
-    		top: 2322px;
-    		left: 0px;
-    		width: 1440px;
+    		align-self: stretch;
     		height: 639px;
     		display: flex;
     		flex-direction: column;
@@ -1054,258 +1275,12 @@
     		padding: 60px 72px;
     		box-sizing: border-box;
     		gap: 40px;
+    		z-index: 5;
     		text-align: center;
     		font-size: 50px;
     		color: #000;
   	}
-  	.car31Icon {
-    		width: 48px;
-    		position: relative;
-    		height: 48px;
-    		overflow: hidden;
-    		flex-shrink: 0;
-  	}
-  	.text18 {
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-  	}
-  	.logo {
-    		width: 180px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 12px;
-    		font-family: Inter;
-  	}
-  	.iconbg {
-    		width: 40px;
-    		position: relative;
-    		border-radius: 50px;
-    		height: 40px;
-    		overflow: hidden;
-    		flex-shrink: 0;
-  	}
-  	.adres {
-    		position: relative;
-    		line-height: 26px;
-  	}
-  	.ulZota59Container {
-    		width: 244px;
-    		position: relative;
-    		line-height: 26px;
-    		font-weight: 600;
-    		display: inline-block;
-    		height: 40px;
-    		flex-shrink: 0;
-  	}
-  	.text19 {
-    		width: 234px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: center;
-    		gap: 12px;
-  	}
-  	.iconsText7 {
-    		width: 286px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 12px;
-  	}
-  	.carentgmailcom {
-    		position: relative;
-    		line-height: 26px;
-    		font-weight: 600;
-  	}
-  	.text20 {
-    		align-self: stretch;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: center;
-    		gap: 12px;
-  	}
-  	.iconsText8 {
-    		width: 180px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 12px;
-  	}
-  	.text21 {
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: center;
-    		gap: 12px;
-  	}
-  	.iconsText6 {
-    		width: 1296px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: space-between;
-    		gap: 0px;
-  	}
-  	.cieszSiYciemContainer {
-    		align-self: stretch;
-    		position: relative;
-    		font-weight: 800;
-    		display: -webkit-inline-box;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		-webkit-line-clamp: 4;
-    		-webkit-box-orient: vertical;
-  	}
   	.groupIcon {
-    		width: 24px;
-    		position: relative;
-    		height: 24px;
-  	}
-  	.socialIcons {
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 20px;
-  	}
-  	.textIcons7 {
-    		align-self: stretch;
-    		width: 280px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: space-between;
-    		gap: 0px;
-    		font-size: 16px;
-    		font-family: Montserrat;
-  	}
-  	.przydatneLinki {
-    		position: relative;
-    		font-weight: 600;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		white-space: nowrap;
-  	}
-  	.oNas {
-    		position: relative;
-    		line-height: 26px;
-    		white-space: pre-wrap;
-    		display: -webkit-inline-box;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		-webkit-line-clamp: 3;
-    		-webkit-box-orient: vertical;
-  	}
-  	.gwna {
-    		position: relative;
-    		line-height: 26px;
-    		display: -webkit-inline-box;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		-webkit-line-clamp: 3;
-    		-webkit-box-orient: vertical;
-  	}
-  	.text23 {
-    		align-self: stretch;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		gap: 16px;
-    		font-size: 16px;
-  	}
-  	.pobierzAplikacj {
-    		width: 233px;
-    		position: relative;
-    		font-weight: 600;
-    		display: inline-block;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		white-space: nowrap;
-    		height: 48px;
-    		flex-shrink: 0;
-  	}
-  	.groupIcon4 {
-    		position: absolute;
-    		height: 100%;
-    		width: 100%;
-    		top: 0%;
-    		right: 0%;
-    		bottom: 0%;
-    		left: 0%;
-    		max-width: 100%;
-    		overflow: hidden;
-    		max-height: 100%;
-  	}
-  	.appStore {
-    		width: 171.4px;
-    		position: relative;
-    		height: 50px;
-  	}
-  	.googlePlay {
-    		width: 137.1px;
-    		position: relative;
-    		height: 40px;
-  	}
-  	.buttons {
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		gap: 24px;
-  	}
-  	.textButtons {
-    		width: 180px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		gap: 24px;
-  	}
-  	.textIcons6 {
-    		width: 1296px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: space-between;
-    		gap: 0px;
-    		font-size: 20px;
-  	}
-  	.iconsTextButtons {
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 60px;
-  	}
-  	.wsbMeritoTworzenieContainer {
-    		position: relative;
-    		font-size: 14px;
-    		line-height: 26px;
-    		font-family: Inter;
-  	}
-  	.footer {
-    		position: absolute;
-    		top: 4203px;
-    		left: 0px;
-    		background-color: #000;
-    		width: 1440px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		padding: 60px 72px 40px;
-    		box-sizing: border-box;
-    		gap: 80px;
-  	}
-  	.groupIcon6 {
     		width: 141.29%;
     		position: absolute;
     		margin: 0 !important;
@@ -1392,19 +1367,16 @@
     		top: 147px;
     		left: 636px;
     		height: 272px;
-    		background-image: url('Frame 130.png');
+    		background-image: url('@/assets/Frame 130.png');
     		background-size: cover;
     		background-repeat: no-repeat;
     		background-position: top;
     		z-index: 1;
   	}
   	.frameParent {
-    		position: absolute;
-    		top: 3049px;
-    		left: 72px;
+    		width: 1296px;
     		border-radius: 20px;
     		background-color: #fe890a;
-    		width: 1296px;
     		height: 427px;
     		display: flex;
     		flex-direction: row;
@@ -1412,171 +1384,417 @@
     		justify-content: flex-start;
     		padding: 58px 86px;
     		box-sizing: border-box;
+    		position: relative;
+    		z-index: 6;
     		font-size: 50px;
   	}
-  	.heroSectionChild {
+  	.iphone1415Pro41 {
     		position: absolute;
     		top: 0px;
     		left: 0px;
-    		background-color: #141414;
-    		width: 613px;
-    		height: 741px;
+    		border-radius: 20px;
+    		background-color: #fff;
+    		width: 236px;
+    		height: 512px;
   	}
-  	.mainPictureIcon {
+  	.img {
+    		width: 236px;
     		position: absolute;
-    		top: 103.86px;
-    		left: 531px;
-    		width: 909px;
-    		height: 544.3px;
+    		margin: 0 !important;
+    		top: 51px;
+    		left: 257px;
+    		height: 512px;
+    		z-index: 0;
+  	}
+  	.groupIcon1 {
+    		width: 219.93%;
+    		position: absolute;
+    		margin: 0 !important;
+    		height: 86.34%;
+    		top: -23.2%;
+    		right: -90.77%;
+    		bottom: 36.86%;
+    		left: -29.17%;
+    		max-width: 100%;
+    		overflow: hidden;
+    		max-height: 100%;
+    		z-index: 0;
+  	}
+  	.pobierzNaszAplikacj {
+    		position: relative;
+    		text-transform: uppercase;
+  	}
+  	.pobierzNaszAplikacj1 {
+    		position: relative;
+    		font-size: 50px;
+  	}
+  	.pobierzNaszAplikacjParent {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 4px;
+    		z-index: 1;
+  	}
+  	.dzikiNaszejAplikacji {
+    		width: 600px;
+    		position: relative;
+    		line-height: 24px;
+    		text-align: left;
+    		display: inline-block;
+    		z-index: 2;
+  	}
+  	.text18 {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		position: relative;
+    		gap: 40px;
+  	}
+  	.appStoreIcon {
+    		width: 171.4px;
+    		position: relative;
+    		height: 50px;
+  	}
+  	.googlePlayIcon {
+    		width: 137.1px;
+    		position: relative;
+    		height: 40px;
+  	}
+  	.buttons {
+    		display: flex;
+    		flex-direction: row;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 24px;
+  	}
+  	.textButtons {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 40px;
+  	}
+  	.banner2 {
+    		width: 1296px;
+    		border-radius: 40px;
+    		background-color: #fe8400;
+    		overflow: hidden;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: flex-end;
+    		padding: 80px 136px;
+    		box-sizing: border-box;
+    		opacity: 0.96;
+    		z-index: 0;
+  	}
+  	.iphone1415Pro411 {
+    		position: absolute;
+    		top: 11px;
+    		left: 16px;
+    		border-radius: 20px;
+    		background-color: #fff;
+    		width: 236px;
+    		height: 512px;
+  	}
+  	.imgIcon9 {
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		width: 267px;
+    		height: 540px;
     		object-fit: cover;
   	}
-  	.cieszSiYciemContainer1 {
-    		position: relative;
-    		font-weight: 800;
+  	.logo1 {
+    		position: absolute;
+    		top: 251px;
+    		left: 74px;
   	}
-  	.carentJestGotowy {
-    		width: 453px;
-    		position: relative;
-    		font-size: 24px;
-    		line-height: 40px;
-    		font-weight: 500;
-    		font-family: Poppins;
-    		color: rgba(255, 255, 255, 0.85);
-    		display: inline-block;
+  	.img1 {
+    		width: 267px;
+    		position: absolute;
+    		margin: 0 !important;
+    		top: 40px;
+    		left: 241px;
+    		height: 540px;
+    		z-index: 1;
+    		text-align: left;
+    		font-size: 26px;
+    		color: #fe8400;
+    		font-family: 'Arial Black';
   	}
-  	.cieszSiYciemDzikiNaszymParent {
+  	.banner1 {
+    		align-self: stretch;
+    		height: 694px;
     		display: flex;
     		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    		padding: 200px 0px 60px;
+    		box-sizing: border-box;
+    		position: relative;
+    		z-index: 1;
+  	}
+  	.banner3 {
+    		width: 1459px;
+    		height: 629px;
+    		display: none;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    		padding: 200px 0px 60px;
+    		box-sizing: border-box;
+    		position: relative;
+    		z-index: 2;
+  	}
+  	.banner {
+    		align-self: stretch;
+    		height: 694px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    		padding: 0px 0px 60px;
+    		box-sizing: border-box;
+    		position: relative;
+    		z-index: 7;
+    		text-align: center;
+  	}
+  	.car31Icon {
+    		width: 48px;
+    		position: relative;
+    		height: 48px;
+    		overflow: hidden;
+    		flex-shrink: 0;
+  	}
+  	.text20 {
+    		display: flex;
+    		flex-direction: row;
     		align-items: flex-start;
     		justify-content: flex-start;
-    		gap: 16px;
   	}
-  	.zalogujSiZarejestrujSiWrapper {
-    		width: 256px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
+  	.logo3 {
+    		width: 180px;
     		display: flex;
     		flex-direction: row;
     		align-items: center;
-    		justify-content: center;
-    		padding: 12px 24px;
-    		box-sizing: border-box;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
-  	}
-  	.headerText {
-    		position: absolute;
-    		top: 148.8px;
-    		left: 160px;
-    		background-color: rgba(0, 0, 0, 0.15);
-    		width: 615px;
-    		height: 472.4px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
     		justify-content: flex-start;
-    		padding: 32px 32px 32px 0px;
-    		box-sizing: border-box;
-    		gap: 48px;
+    		gap: 12px;
+    		font-family: Inter;
   	}
-  	.oNas1 {
+  	.iconbg {
+    		width: 40px;
     		position: relative;
-    		white-space: pre-wrap;
-  	}
-  	.cta {
-    		width: 220px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
+    		border-radius: 50px;
     		height: 40px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		padding: 8px;
-    		box-sizing: border-box;
+    		overflow: hidden;
+    		flex-shrink: 0;
   	}
-  	.menuItems {
-    		width: 670px;
+  	.adres {
+    		position: relative;
+    		line-height: 26px;
+  	}
+  	.ulZota59Container {
+    		width: 244px;
+    		position: relative;
+    		line-height: 26px;
+    		font-weight: 600;
+    		display: inline-block;
+    		height: 40px;
+    		flex-shrink: 0;
+  	}
+  	.text21 {
+    		width: 234px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: center;
+    		gap: 12px;
+  	}
+  	.iconsText7 {
+    		width: 286px;
     		display: flex;
     		flex-direction: row;
     		align-items: center;
     		justify-content: flex-start;
-    		gap: 32px;
+    		gap: 12px;
   	}
-  	.menu {
-    		width: 643px;
+  	.carentgmailcom {
+    		position: relative;
+    		line-height: 26px;
+    		font-weight: 600;
+  	}
+  	.text22 {
+    		align-self: stretch;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: center;
+    		gap: 12px;
+  	}
+  	.iconsText8 {
+    		width: 180px;
     		display: flex;
     		flex-direction: row;
     		align-items: center;
-    		justify-content: center;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
+    		justify-content: flex-start;
+    		gap: 12px;
   	}
-  	.headMenu {
-    		position: absolute;
-    		top: 31.96px;
-    		left: calc(50% - 560px);
-    		width: 1152px;
-    		height: 39.9px;
+  	.text23 {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: center;
+    		gap: 12px;
+  	}
+  	.iconsText6 {
+    		width: 1296px;
     		display: flex;
     		flex-direction: row;
     		align-items: center;
     		justify-content: space-between;
     		gap: 0px;
-    		font-size: 26px;
-    		color: #fe8400;
-    		font-family: 'Arial Black';
   	}
-  	.socialMenuChild {
-    		width: 1px;
+  	.cieszSiYciemContainer1 {
+    		align-self: stretch;
     		position: relative;
-    		border-right: 1px solid #fe8400;
-    		box-sizing: border-box;
-    		height: 39px;
-  	}
-  	.socialMediaLogo {
-    		width: 16px;
-    		position: relative;
-    		height: 16px;
-    		object-fit: cover;
-  	}
-  	.socialMediaLogo1 {
-    		width: 16px;
-    		position: relative;
-    		height: 16px;
+    		font-weight: 800;
+    		display: -webkit-inline-box;
     		overflow: hidden;
-    		flex-shrink: 0;
-    		object-fit: cover;
+    		text-overflow: ellipsis;
+    		-webkit-line-clamp: 4;
+    		-webkit-box-orient: vertical;
   	}
-  	.socials {
+  	.groupIcon3 {
+    		width: 24px;
+    		position: relative;
+    		height: 24px;
+  	}
+  	.socialIcons {
+    		display: flex;
+    		flex-direction: row;
+    		align-items: center;
+    		justify-content: flex-start;
+    		gap: 20px;
+  	}
+  	.textIcons7 {
+    		align-self: stretch;
+    		width: 280px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: space-between;
+    		gap: 0px;
+    		font-size: 16px;
+    		font-family: Montserrat;
+  	}
+  	.przydatneLinki {
+    		position: relative;
+    		font-weight: 600;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		white-space: nowrap;
+  	}
+  	.oNas1 {
+    		position: relative;
+    		line-height: 26px;
+    		white-space: pre-wrap;
+    		display: -webkit-inline-box;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		-webkit-line-clamp: 3;
+    		-webkit-box-orient: vertical;
+  	}
+  	.text25 {
+    		align-self: stretch;
     		display: flex;
     		flex-direction: column;
     		align-items: flex-start;
     		justify-content: flex-start;
-    		gap: 12px;
+    		gap: 16px;
+    		font-size: 16px;
   	}
-  	.socialMenu {
+  	.text24 {
+    		width: 180px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 24px;
+  	}
+  	.minivan {
+    		position: relative;
+    		line-height: 26px;
+    		display: -webkit-inline-box;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		-webkit-line-clamp: 3;
+    		-webkit-box-orient: vertical;
+  	}
+  	.pobierzAplikacj {
+    		width: 233px;
+    		position: relative;
+    		font-weight: 600;
+    		display: inline-block;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		white-space: nowrap;
+    		height: 48px;
+    		flex-shrink: 0;
+  	}
+  	.groupIcon7 {
     		position: absolute;
-    		top: calc(50% - 117.84px);
-    		left: 72px;
-    		width: 16px;
-    		height: 235.7px;
+    		height: 100%;
+    		width: 100%;
+    		top: 0%;
+    		right: 0%;
+    		bottom: 0%;
+    		left: 0%;
+    		max-width: 100%;
+    		overflow: hidden;
+    		max-height: 100%;
+  	}
+  	.buttons2 {
+    		display: flex;
+    		flex-direction: column;
+    		align-items: flex-start;
+    		justify-content: flex-start;
+    		gap: 24px;
+  	}
+  	.textIcons6 {
+    		width: 1296px;
+    		display: flex;
+    		flex-direction: row;
+    		align-items: flex-start;
+    		justify-content: space-between;
+    		gap: 0px;
+    		font-size: 20px;
+  	}
+  	.iconsTextButtons {
     		display: flex;
     		flex-direction: column;
     		align-items: center;
-    		justify-content: center;
-    		gap: 16px;
+    		justify-content: flex-start;
+    		gap: 60px;
   	}
-  	.darkMood {
-    		position: absolute;
-    		height: 58.33%;
-    		width: 44.35%;
-    		top: 20.83%;
-    		left: 0%;
-    		line-height: 28px;
-    		display: inline-block;
+  	.wsbMeritoTworzenieContainer {
+    		position: relative;
+    		font-size: 14px;
+    		line-height: 26px;
+    		font-family: Inter;
+  	}
+  	.footer {
+    		align-self: stretch;
+    		background-color: #000;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    		padding: 60px 72px 40px;
+    		gap: 80px;
+    		z-index: 8;
   	}
   	.groupInner {
     		position: absolute;
@@ -1584,15 +1802,15 @@
     		left: 0px;
     		border-radius: 50px;
     		background-color: rgba(254, 132, 0, 0.05);
-    		width: 95.6px;
+    		width: 94px;
     		height: 48px;
   	}
   	.off1 {
     		position: absolute;
-    		height: 70.59%;
-    		width: 32.88%;
-    		top: 14.71%;
-    		left: 67.16%;
+    		height: 71.47%;
+    		width: 35.85%;
+    		top: 16.14%;
+    		left: 64.14%;
     		display: inline-block;
   	}
   	.rectangleDiv {
@@ -1601,15 +1819,15 @@
     		left: 0px;
     		border-radius: 50px;
     		background-color: #fe8400;
-    		width: 34.6px;
+    		width: 34px;
     		height: 34px;
   	}
   	.offGroup {
     		position: absolute;
     		height: 70.83%;
-    		width: 77.62%;
+    		width: 70.32%;
     		top: 14.58%;
-    		right: 7.49%;
+    		right: 14.79%;
     		bottom: 14.58%;
     		left: 14.89%;
   	}
@@ -1617,43 +1835,31 @@
     		position: absolute;
     		top: 0px;
     		left: 0px;
-    		width: 95.6px;
+    		width: 94px;
     		height: 48px;
-  	}
-  	.on1 {
-    		position: absolute;
-    		top: 0px;
-    		left: 101.69px;
-    		width: 95.6px;
-    		height: 48px;
-    		color: #fff9f9;
   	}
   	.available1 {
+    		width: 94px;
     		position: absolute;
-    		height: 6.48%;
-    		width: 13.7%;
-    		top: 3.78%;
-    		right: 60.59%;
-    		bottom: 89.74%;
-    		left: 25.71%;
-    		font-size: 16px;
+    		margin: 0 !important;
+    		top: 54px;
+    		left: 488px;
+    		height: 48px;
+    		display: none;
+    		z-index: 9;
+    		color: #fff9f9;
     		font-family: Poppins;
-  	}
-  	.heroSection {
-    		position: absolute;
-    		top: 0px;
-    		left: -1px;
-    		width: 1440px;
-    		height: 741px;
-    		font-size: 48px;
-    		font-family: Montserrat;
   	}
   	.home {
     		width: 100%;
     		position: relative;
     		background-color: #fff;
-    		height: 4738px;
     		overflow: hidden;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    		gap: 12px;
     		text-align: left;
     		font-size: 16px;
     		color: #fff;
