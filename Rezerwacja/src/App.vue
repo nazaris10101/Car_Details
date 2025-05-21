@@ -137,7 +137,7 @@
       			</div>
       			<div :class="$style.img">
         				<div :class="$style.iphone1415Pro41" />
-        				<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
+        				<img :class="$style.imgIcon" alt="" src="@/assets/iPhone 14.png" />
         				<div :class="$style.logo1">CARENT</div>
       			</div>
     		</div>
@@ -682,7 +682,7 @@
     		top: 147px;
     		left: 636px;
     		height: 272px;
-    		background-image: url('Frame 130.png');
+    		background-image: url('@/assets/Frame 130.png');
     		background-size: cover;
     		background-repeat: no-repeat;
     		background-position: top;
