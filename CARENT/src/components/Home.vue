@@ -429,21 +429,21 @@
           					<div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
         				</div>
       			</div>
-      			<div :class="$style.headMenu">
-        				<div :class="$style.kuphalLlc">CARENT</div>
-        				<div :class="$style.menu">
-          					<div :class="$style.menuItems">
-            						<div :class="$style.kuphalLlc">Główna</div>
-            						<div :class="$style.oNas1">O nas  </div>
-            						<div :class="$style.kuphalLlc">Rezerwacja</div>
-            						<div :class="$style.kuphalLlc">Samochody</div>
-            						<div :class="$style.kuphalLlc">Kontakt</div>
-            						<div :class="$style.cta">
-              							<div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
+      			  <div :class="$style.headMenu">
+    <div :class="$style.kuphalLlc">CARENT</div>
+    <div :class="$style.menu">
+      <div :class="$style.menuItems">
+        <router-link :to="'/'" :class="$style.kuphalLlc">Główna</router-link>
+        <router-link :to="'/o-nas'" :class="$style.oNas1">O nas</router-link>
+        <router-link :to="'/rezerwacja'" :class="$style.kuphalLlc">Rezerwacja</router-link>
+        <router-link :to="'/samochody'" :class="$style.kuphalLlc">Samochody</router-link>
+        <router-link :to="'/kontakt'" :class="$style.kuphalLlc">Kontakt</router-link>
+        <div :class="$style.cta">
+          <div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
+        </div>
+      </div>
+    </div>
+  </div>
       			<div :class="$style.socialMenu">
         				<div :class="$style.socialMenuChild" />
         				<div :class="$style.socials">

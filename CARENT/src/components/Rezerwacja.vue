@@ -16,21 +16,21 @@
           					<div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
         				</div>
       			</div>
-      			<div :class="$style.headMenu">
-        				<div :class="$style.zalogujSi">CARENT</div>
-        				<div :class="$style.menu">
-          					<div :class="$style.menuItems">
-            						<div :class="$style.zalogujSi">Główna</div>
-            						<div :class="$style.oNas">O nas  </div>
-            						<div :class="$style.zalogujSi">Rezerwacja</div>
-            						<div :class="$style.zalogujSi">Samochody</div>
-            						<div :class="$style.zalogujSi">Kontakt</div>
-            						<div :class="$style.cta">
-              							<div :class="$style.zalogujSi">Zaloguj się | Zarejestruj się</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
+      			  <div :class="$style.headMenu">
+    <div :class="$style.kuphalLlc">CARENT</div>
+    <div :class="$style.menu">
+      <div :class="$style.menuItems">
+        <router-link :to="'/'" :class="$style.kuphalLlc">Główna</router-link>
+        <router-link :to="'/o-nas'" :class="$style.oNas1">O nas</router-link>
+        <router-link :to="'/rezerwacja'" :class="$style.kuphalLlc">Rezerwacja</router-link>
+        <router-link :to="'/samochody'" :class="$style.kuphalLlc">Samochody</router-link>
+        <router-link :to="'/kontakt'" :class="$style.kuphalLlc">Kontakt</router-link>
+        <div :class="$style.cta">
+          <div :class="$style.kuphalLlc">Zaloguj się | Zarejestruj się</div>
+        </div>
+      </div>
+    </div>
+  </div>
       			<div :class="$style.socialMenu">
         				<div :class="$style.socialMenuChild" />
         				<div :class="$style.socials">
