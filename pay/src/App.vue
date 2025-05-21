@@ -2,7 +2,7 @@
   	<div :class="$style.content">
     		<div :class="$style.heroSection">
       			<div :class="$style.heroSectionChild" />
-      			<img :class="$style.mainPictureIcon" alt="" src="Main Picture.png" />
+      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
@@ -34,11 +34,11 @@
       			<div :class="$style.socialMenu">
         				<div :class="$style.socialMenuChild" />
         				<div :class="$style.socials">
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
+          					 <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
         				</div>
         				<div :class="$style.socialMenuChild" />
       			</div>
@@ -61,16 +61,16 @@
           					<b :class="$style.rentalSummary2">Rental Summary</b>
           					<div :class="$style.pricesMayChange">Prices may change depending on the length of the rental and the price of your rental car.</div>
         				</div>
-        				<img :class="$style.lookIcon" alt="" src="Look.png" />
+        				<img :class="$style.lookIcon" alt="" src="@/assets/Look.png" />
         				<div :class="$style.carName">
           					<b :class="$style.porsche911">Porsche 911</b>
           					<div :class="$style.review">
             						<div :class="$style.reviewStar">
-              							<img :class="$style.icActionsStarIcon" alt="" src="ic-actions-star.svg" />
-              							<img :class="$style.icActionsStarIcon" alt="" src="ic-actions-star.svg" />
-              							<img :class="$style.icActionsStarIcon" alt="" src="ic-actions-star.svg" />
-              							<img :class="$style.icActionsStarIcon" alt="" src="ic-actions-star.svg" />
-              							<img :class="$style.icActionsStarIcon" alt="" src="ic-actions-star.svg" />
+              							<img :class="$style.icActionsStarIcon" alt="" src="@/assets/ic-actions-star.svg" />
+              							<img :class="$style.icActionsStarIcon" alt="" src="@/assets/ic-actions-star.svg" />
+              							<img :class="$style.icActionsStarIcon" alt="" src="@/assets/ic-actions-star.svg" />
+              							<img :class="$style.icActionsStarIcon" alt="" src="@/assets/ic-actions-star.svg" />
+              							<img :class="$style.icActionsStarIcon" alt="" src="@/assets/ic-actions-star.svg" />
             						</div>
             						<div :class="$style.reviewer">440+ Reviewer</div>
           					</div>
@@ -140,7 +140,7 @@
           					</div>
           					<div :class="$style.step1Of">Step 2 of 4</div>
           					<div :class="$style.pickUp">
-            						<img :class="$style.markIcon" alt="" src="Mark.svg" />
+            						<img :class="$style.markIcon" alt="" src="@/assets/Mark.svg" />
             						<div :class="$style.pickUp1">Pick - Up</div>
           					</div>
           					<div :class="$style.locations">
@@ -148,7 +148,7 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.yourName1">Select your city</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.date">
@@ -156,7 +156,7 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.selectYourDate1">Select your date</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.time">
@@ -164,11 +164,11 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.selectYourDate1">Select your time</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.dropOff">
-            						<img :class="$style.markIcon" alt="" src="Mark.svg" />
+            						<img :class="$style.markIcon" alt="" src="@/assets/Mark.svg" />
             						<div :class="$style.dropOff1">Drop - Off</div>
           					</div>
           					<div :class="$style.locations2">
@@ -176,7 +176,7 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.yourName1">Select your city</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.date2">
@@ -184,7 +184,7 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.selectYourDate1">Select your date</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.time2">
@@ -192,7 +192,7 @@
             						<div :class="$style.yourName">
               							<div :class="$style.bg1" />
               							<div :class="$style.selectYourDate1">Select your time</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
         				</div>
@@ -204,7 +204,7 @@
           					<div :class="$style.step1Of">Step 3 of 4</div>
           					<div :class="$style.creditCard">
             						<div :class="$style.creditCard1">
-              							<img :class="$style.markIcon" alt="" src="Mark.svg" />
+              							<img :class="$style.markIcon" alt="" src="@/assets/Mark.svg" />
               							<div :class="$style.creditCard2">Credit Card</div>
             						</div>
             						<div :class="$style.cardNumber">
@@ -229,8 +229,8 @@
               							</div>
             						</div>
             						<div :class="$style.visa">
-              							<img :class="$style.visaIncLogo1Icon" alt="" src="Visa_Inc._logo 1.svg" />
-              							<img :class="$style.logomcIcon" alt="" src="logo/mc.svg" />
+              							<img :class="$style.visaIncLogo1Icon" alt="" src="@/assets/Visa_Inc._logo 1.svg" />
+              							<img :class="$style.logomcIcon" alt="" src="@/assets/mc.svg" />
             						</div>
             						<div :class="$style.cvc">
               							<div :class="$style.cvc1">CVC</div>
@@ -242,15 +242,15 @@
           					</div>
           					<div :class="$style.paypal">
             						<div :class="$style.bg15" />
-            						<img :class="$style.icActionsSelectIcon" alt="" src="ic-actions-select.svg" />
+            						
             						<div :class="$style.paypal1">PayPal</div>
-            						<img :class="$style.paypalIcon" alt="" src="PayPal.svg" />
+            						<img :class="$style.paypalIcon" alt="" src="@/assets/PayPal.svg" />
           					</div>
           					<div :class="$style.bitcoin">
             						<div :class="$style.bg15" />
-            						<img :class="$style.icActionsSelectIcon" alt="" src="ic-actions-select.svg" />
+            						
             						<div :class="$style.bitcoin1">Bitcoin</div>
-            						<img :class="$style.bitcoinIcon" alt="" src="Bitcoin.svg" />
+            						<img :class="$style.bitcoinIcon" alt="" src="@/assets/Bitcoin.svg" />
           					</div>
         				</div>
         				<div :class="$style.confirmationRental">
@@ -263,20 +263,20 @@
             						<div :class="$style.spamAgreement">
               							<div :class="$style.bg15" />
               							<div :class="$style.checkboxes">
-                								<img :class="$style.icActionsMultiIcon" alt="" src="ic-actions-multi.svg" />
+                								
               							</div>
               							<div :class="$style.spamAgreement1">I agree with sending an Marketing and newsletter emails. No spam, promissed!</div>
             						</div>
             						<div :class="$style.spamAgreement">
               							<div :class="$style.bg15" />
               							<div :class="$style.checkboxes">
-                								<img :class="$style.icActionsMultiIcon" alt="" src="ic-actions-multi.svg" />
+                								
               							</div>
               							<div :class="$style.iAgreeWith">I agree with our terms and conditions and privacy policy.</div>
             						</div>
           					</div>
           					<div :class="$style.safeData">
-            						<img :class="$style.icSecuritySafetyIcon" alt="" src="ic-security-safety.svg" />
+            						
             						<div :class="$style.safeData1">
               							<div :class="$style.allYourData">All your data are safe</div>
               							<div :class="$style.weAreUsing">We are using the most advanced security to provide you the best experience ever.</div>
@@ -292,13 +292,13 @@
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText">
           					<div :class="$style.logo1">
-            						<img :class="$style.car31Icon" alt="" src="car(3) 1.svg" />
+            						<img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
             						<div :class="$style.text1">
               							<b :class="$style.zalogujSi">CARENT </b>
             						</div>
           					</div>
           					<div :class="$style.iconsText1">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text2">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -308,14 +308,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text3">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text4">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -330,10 +330,10 @@
               							<p :class="$style.cieszSiYciem">samochodom.</p>
             						</div>
             						<div :class="$style.socialIcons">
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
             						</div>
           					</div>
           					<div :class="$style.textButtons">
@@ -358,10 +358,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons">
               							<div :class="$style.appStore">
-                								<img :class="$style.icActionsMultiIcon" alt="" src="Group.svg" />
+                								<img :class="$style.icActionsMultiIcon" alt="" src="@/assets/Group.svg" />
               							</div>
               							<div :class="$style.googlePlay">
-                								<img :class="$style.icActionsMultiIcon" alt="" src="Group.svg" />
+                								<img :class="$style.icActionsMultiIcon" alt="" src="@/assets/Group.svg" />
               							</div>
             						</div>
           					</div>
