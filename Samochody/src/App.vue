@@ -2,7 +2,7 @@
   	<div :class="$style.content">
     		<div :class="$style.heroSection">
       			<div :class="$style.heroSectionChild" />
-      			<img :class="$style.mainPictureIcon" alt="" src="Main Picture.png" />
+      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
@@ -47,25 +47,25 @@
     		<div :class="$style.socialMenu">
       			<div :class="$style.socialMenuChild" />
       			<div :class="$style.socials">
-        				<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-        				<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
-        				<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-        				<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-        				<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
+        				<img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
       			</div>
       			<div :class="$style.socialMenuChild" />
     		</div>
     		<div :class="$style.brand">
-      			<img :class="$style.bmwIcon" alt="" src="BMW.png" />
-      			<img :class="$style.lexusLogoIcon" alt="" src="lexus-logo.png" />
-      			<img :class="$style.bmwIcon" alt="" src="Marcedes.png" />
-      			<img :class="$style.hondaIcon" alt="" src="Honda.png" />
-      			<img :class="$style.hyundaiIcon" alt="" src="Hyundai.png" />
-      			<img :class="$style.nissanIcon" alt="" src="Nissan.png" />
-      			<img :class="$style.toyotaIcon" alt="" src="Toyota.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
+      			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW.png" />
+      			<img :class="$style.lexusLogoIcon" alt="" src="@/assets/lexus-logo.png" />
+      			<img :class="$style.bmwIcon" alt="" src="@/assets/Marcedes.png" />
+      			<img :class="$style.hondaIcon" alt="" src="@/assets/Honda.png" />
+      			<img :class="$style.hyundaiIcon" alt="" src="@/assets/Hyundai.png" />
+      			<img :class="$style.nissanIcon" alt="" src="@/assets/Nissan.png" />
+      			<img :class="$style.toyotaIcon" alt="" src="@/assets/Toyota.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
     		</div>
     		<div :class="$style.content1">
       			<div :class="$style.navBarSide">
@@ -73,7 +73,7 @@
           					<div :class="$style.tYp">T YP</div>
           					<div :class="$style.tYPE1">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/tick-square.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.sport10">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Sport</span>
@@ -82,7 +82,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/tick-square.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.suv12">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>SUV</span>
@@ -91,7 +91,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Ceklist.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
               							<div :class="$style.mpv16">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>MPV</span>
@@ -100,7 +100,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Ceklist.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
               							<div :class="$style.sedan20">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Sedan</span>
@@ -109,7 +109,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Ceklist.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
               							<div :class="$style.sedan20">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Coupe</span>
@@ -118,7 +118,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Ceklist.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
               							<div :class="$style.sport10">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Hatchback</span>
@@ -149,7 +149,7 @@
       			<div :class="$style.pickUp">
         				<div :class="$style.bg" />
         				<div :class="$style.pickUp1">
-          					<img :class="$style.markIcon" alt="" src="mark.svg" />
+          					<img :class="$style.markIcon" alt="" src="@/assets/mark.svg" />
           					<div :class="$style.wynajem">Wynajem</div>
         				</div>
         				<div :class="$style.pickUp2">
@@ -157,7 +157,7 @@
             						<b :class="$style.miejsce">Miejsce</b>
             						<div :class="$style.wybierzSwojeMiastoParent">
               							<div :class="$style.wybierzSwojeMiasto">Wybierz swoje miasto</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.pickUpChild" />
@@ -165,7 +165,7 @@
             						<b :class="$style.dataWynajmu">Data wynajmu</b>
             						<div :class="$style.wybierzSwojeMiastoParent">
               							<div :class="$style.wybierzDat">Wybierz datę</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
           					<div :class="$style.pickUpChild" />
@@ -173,7 +173,7 @@
             						<b :class="$style.dataWynajmu">Data powrotu</b>
             						<div :class="$style.wybierzSwojeMiastoParent">
               							<div :class="$style.wybierzDat">Wybierz datę</div>
-              							<img :class="$style.vuesaxoutlinearrowDownIcon" alt="" src="vuesax/outline/arrow-down.svg" />
+              							
             						</div>
           					</div>
         				</div>
@@ -190,21 +190,21 @@
           					<div :class="$style.price" />
           					<div :class="$style.spesification">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby">
                 								<span :class="$style.osoby1">4 Osoby</span>
               							</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon1" alt="" src="Car.png" />
+          					<img :class="$style.carIcon1" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow" />
         				</div>
         				<div :class="$style.catalog2">
@@ -220,19 +220,19 @@
           					</div>
           					<div :class="$style.spesification">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby2">4 Osoby</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon3" alt="" src="Car.png" />
+          					<img :class="$style.carIcon3" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow1" />
         				</div>
         				<div :class="$style.catalog2">
@@ -245,19 +245,19 @@
           					</div>
           					<div :class="$style.spesification">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby2">4 Osoby</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon5" alt="" src="Car.png" />
+          					<img :class="$style.carIcon5" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow2" />
           					<div :class="$style.price2">
             						<b :class="$style.z45000">Zł 450.00</b>
@@ -278,19 +278,19 @@
           					</div>
           					<div :class="$style.spesification3">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.elektro">Elektro</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity3">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby2">4 Osoby</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon7" alt="" src="Car.png" />
+          					<img :class="$style.carIcon7" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow3" />
         				</div>
         				<div :class="$style.catalog2">
@@ -303,19 +303,19 @@
           					</div>
           					<div :class="$style.spesification">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby2">4 Osoby</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon9" alt="" src="Car.png" />
+          					<img :class="$style.carIcon9" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow4" />
           					<div :class="$style.price1">
             						<b :class="$style.z35000">Zł 350.00</b>
@@ -331,19 +331,19 @@
           					</div>
           					<div :class="$style.spesification">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
               							<div :class="$style.pb954">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="Car.svg" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="vuesax/bold/profile-2user.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
               							<div :class="$style.osoby2">2 Osoby</div>
             						</div>
           					</div>
-          					<img :class="$style.carIcon11" alt="" src="Car.png" />
+          					<img :class="$style.carIcon11" alt="" src="@/assets/Car.png" />
           					<div :class="$style.shadow5" />
           					<div :class="$style.price1">
             						<b :class="$style.z40000">Zł 500.00</b>
@@ -358,13 +358,13 @@
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText">
           					<div :class="$style.logo1">
-            						<img :class="$style.car31Icon" alt="" src="car(3) 1.svg" />
+            						<img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
             						<div :class="$style.text">
               							<b :class="$style.zalogujSi">CARENT </b>
             						</div>
           					</div>
           					<div :class="$style.iconsText1">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text1">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -374,14 +374,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text2">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text3">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -396,10 +396,10 @@
               							<p :class="$style.cieszSiYciem">samochodom.</p>
             						</div>
             						<div :class="$style.socialIcons">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="Group.svg" />
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="Group.svg" />
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="Group.svg" />
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="Group.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/Group.svg" />
             						</div>
           					</div>
           					<div :class="$style.textButtons">
@@ -424,10 +424,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons">
               							<div :class="$style.appStore">
-                								<img :class="$style.groupIcon4" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
               							</div>
               							<div :class="$style.googlePlay">
-                								<img :class="$style.groupIcon4" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
               							</div>
             						</div>
           					</div>
