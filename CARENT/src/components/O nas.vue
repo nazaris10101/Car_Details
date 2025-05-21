@@ -1076,9 +1076,9 @@
               							height: 50px;
             						}
             						.googlePlayIcon {
-              							width: 137.1px;
+              							width: 171.4px;
               							position: relative;
-              							height: 40px;
+              							height: 50px;
             						}
             						.textButtons {
               							display: flex;

@@ -1760,9 +1760,9 @@ a {
     		height: 50px;
   	}
   	.googlePlay {
-    		width: 137.1px;
+    		width: 171.4px;
     		position: relative;
-    		height: 40px;
+    		height: 50px;
   	}
   	.buttons {
     		display: flex;
