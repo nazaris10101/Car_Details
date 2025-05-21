@@ -432,7 +432,7 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText7">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2.svg" />
             						<div :class="$style.text21">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -442,14 +442,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2m.svg" />
             						<div :class="$style.text22">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/telefon+bg.svg" />
             						<div :class="$style.text23">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -492,10 +492,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons2">
               							<div :class="$style.appStoreIcon">
-                								<img :class="$style.groupIcon7" alt="" src="@/assets/Group.svg" />
+                								<img :class="$style.groupIcon7" alt="" src="@/assets/App Store.svg" />
               							</div>
               							<div :class="$style.googlePlayIcon">
-                								<img :class="$style.groupIcon7" alt="" src="@/assets/Group.svg" />
+                								<img :class="$style.groupIcon7" alt="" src="@/assets/Group-4.svg" />
               							</div>
             						</div>
           					</div>

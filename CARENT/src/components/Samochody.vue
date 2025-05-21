@@ -73,7 +73,7 @@
           					<div :class="$style.tYp">T YP</div>
           					<div :class="$style.tYPE1">
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
               							<div :class="$style.sport10">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Sport</span>
@@ -82,7 +82,7 @@
               							</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
+              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
               							<div :class="$style.suv12">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>SUV</span>
@@ -194,7 +194,7 @@
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
@@ -224,7 +224,7 @@
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
@@ -249,7 +249,7 @@
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
@@ -282,7 +282,7 @@
               							<div :class="$style.elektro">Elektro</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity3">
@@ -307,7 +307,7 @@
               							<div :class="$style.pb95">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
@@ -335,7 +335,7 @@
               							<div :class="$style.pb954">PB 95</div>
             						</div>
             						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car.png" />
+              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
               							<div :class="$style.manual">Manual</div>
             						</div>
             						<div :class="$style.capacity">
@@ -364,7 +364,7 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText1">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2.svg" />
             						<div :class="$style.text1">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -374,14 +374,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg-2m.svg" />
             						<div :class="$style.text2">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText2">
-            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/telefon+bg.svg" />
             						<div :class="$style.text3">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -424,10 +424,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons">
               							<div :class="$style.appStore">
-                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/App Store.svg" />
               							</div>
               							<div :class="$style.googlePlay">
-                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group-4.svg" />
               							</div>
             						</div>
           					</div>
