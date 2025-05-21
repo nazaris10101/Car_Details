@@ -1,35 +1,97 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arial+Black:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+body {
+  	margin: 0; line-height: normal;
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+:root {
+	--bg-color: #ffffff;
+	--text-color: #000000;
+	--card-bg: #fafafa;
+	--input-bg: #f5f5f5;
+	--button-bg: #fe8400;
+	--button-text: #141414;
   }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+  
+  html.dark {
+	--bg-color: #141414;
+	--text-color: #ffffff;
+	--card-bg: #1e1e1e;
+	--input-bg: #2c2c2c;
+	--button-bg: #fe8400;
+	--button-text: #000000;
+  }
+html.dark {
+	background-color: #141414;
+	color: white;
+  }
+  
+  html.dark body {
+	background-color: #141414;
+	color: white;
+  }
+  
+  html.dark .carDetails {
+	background-color: #141414 !important;
+	color: white !important;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  :root {
+	--bg: #fff;
+	--text: #000;
+	--card-bg: #fafafa;
   }
-}
+  
+  html.dark {
+	--bg: #141414;
+	--text: #fff;
+	--card-bg: #2a2a2a;
+  }
+  :root {
+	--footer-bg-color: #000;       /* чорний фон */
+	--footer-text-color: #ffffff;  /* білий текст у світлій темі */
+  }
+  
+  html.dark {
+	--footer-bg-color: #000;       /* той самий чорний фон */
+	--footer-text-color: #ff9500;  /* помаранчевий текст у темній темі */
+  }
+  :root {
+	--car-bg: #ffffff;
+	--car-text: #000000;
+  }
+  
+  html.dark {
+	--car-bg: #000000;
+	--car-text: #ffffff;
+  }
+  :root {
+	--icons-text-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  html.dark {
+	--icons-text-color: rgba(255, 255, 255, 0.7);
+  }
+  :root {
+	--menu-text-color: #000000;
+  }
+  
+  html.dark {
+	--menu-text-color: #ffffff;
+  }
+  :root {
+	--subtle-text-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  html.dark {
+	--subtle-text-color: rgba(255, 255, 255, 0.6);
+  }
+  :root {
+	--text-color: #000000;
+  }
+  
+  html.dark {
+	--text-color: #ffffff;
+  }

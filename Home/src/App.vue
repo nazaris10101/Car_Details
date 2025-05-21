@@ -1,21 +1,21 @@
 <template>
   	<div :class="$style.home">
     		<div :class="$style.brand">
-      			<img :class="$style.bmwIcon" alt="" src="BMW.png" />
-      			<img :class="$style.lexusLogoIcon" alt="" src="lexus-logo.png" />
-      			<img :class="$style.bmwIcon" alt="" src="Marcedes.png" />
-      			<img :class="$style.hondaIcon" alt="" src="Honda.png" />
-      			<img :class="$style.hyundaiIcon" alt="" src="Hyundai.png" />
-      			<img :class="$style.nissanIcon" alt="" src="Nissan.png" />
-      			<img :class="$style.toyotaIcon" alt="" src="Toyota.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="KIA.png" />
+      			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW2.png" />
+      			<img :class="$style.lexusLogoIcon" alt="" src="@/assets/lexus-logo.png" />
+      			<img :class="$style.bmwIcon" alt="" src="@/assets/Marcedes.png" />
+      			<img :class="$style.hondaIcon" alt="" src="@/assets/Honda.png" />
+      			<img :class="$style.hyundaiIcon" alt="" src="@/assets/Hyundai.png" />
+      			<img :class="$style.nissanIcon" alt="" src="@/assets/Nissan.png" />
+      			<img :class="$style.toyotaIcon" alt="" src="@/assets/Toyota.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
     		</div>
     		<div :class="$style.infoBlock">
       			<div :class="$style.iconText">
         				<div :class="$style.iconText1">
-          					<img :class="$style.location1Icon" alt="" src="location 1.png" />
+          					<img :class="$style.location1Icon" alt="" src="@/assets/location 1.png" />
           					<div :class="$style.dostpno">Dostępność</div>
         				</div>
         				<div :class="$style.naszaPrzestrzeJestContainer">
@@ -26,8 +26,8 @@
         				<div :class="$style.iconText1">
           					<div :class="$style.car21">
             						<div :class="$style.g582">
-              							<img :class="$style.g584Icon" alt="" src="g584.svg" />
-              							<img :class="$style.g588Icon" alt="" src="g588.png" />
+              							
+              							
             						</div>
           					</div>
           					<div :class="$style.dostpno">Komfort</div>
@@ -36,7 +36,7 @@
       			</div>
       			<div :class="$style.iconText">
         				<div :class="$style.iconText1">
-          					<img :class="$style.location1Icon" alt="" src="wallet(1) 1.png" />
+          					<img :class="$style.location1Icon" alt="" src="@/assets/wallet(1) 1.png" />
           					<div :class="$style.dostpno">Oszczędności</div>
         				</div>
         				<div :class="$style.oferujemyKonkurencyjneCeny">Oferujemy konkurencyjne ceny i elastyczne pakiety wynajmu, dopasowane do Twoich potrzeb.</div>
@@ -45,7 +45,7 @@
     		<div :class="$style.cards">
       			<div :class="$style.card">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -59,15 +59,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -79,7 +79,7 @@
       			</div>
       			<div :class="$style.card">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -93,15 +93,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								>
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -113,7 +113,7 @@
       			</div>
       			<div :class="$style.card">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon2" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon2" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -127,15 +127,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -147,7 +147,7 @@
       			</div>
       			<div :class="$style.card">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -161,15 +161,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">Elektro</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -181,7 +181,7 @@
       			</div>
       			<div :class="$style.card4">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -195,15 +195,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -215,7 +215,7 @@
       			</div>
       			<div :class="$style.card">
         				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon5" alt="" src="Img.png" />
+          					<img :class="$style.imgIcon5" alt="" src="@/assets/Img.png" />
           					<div :class="$style.textIcons">
             						<div :class="$style.text">
               							<div :class="$style.text1">
@@ -229,15 +229,15 @@
             						</div>
             						<div :class="$style.iconsText">
               							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="gear-shift(1) 1.svg" />
+                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
                 								<div :class="$style.automat">Automat</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g17.png" />
+                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
                 								<div :class="$style.automat">PB 95</div>
               							</div>
               							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="g1593.png" />
+                								
                 								<div :class="$style.automat">Air Conditioner</div>
               							</div>
             						</div>
@@ -275,8 +275,8 @@
             						<div :class="$style.kuphalLlc">Kuphal LLC</div>
             						<div :class="$style.emanuelBoyle">Emanuel Boyle</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="Img.png" />
-          					<img :class="$style.icon" alt="" src="“.svg" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					<img :class="$style.icon" alt="" src="@/assets/Img.png" />
         				</div>
         				<div :class="$style.card6">
           					<div :class="$style.textbg">
@@ -288,8 +288,10 @@
             						<div :class="$style.kuphalLlc">Glover - Orn</div>
             						<div :class="$style.emanuelBoyle">River Graves</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="Img.png" />
-          					<img :class="$style.icon" alt="" src="“.svg" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					<img :class="$style.icon" alt="" src="@/assets/Img.png" />
+        				</div>
+							" />
         				</div>
         				<div :class="$style.card6">
           					<div :class="$style.textbg">
@@ -299,8 +301,8 @@
             						<div :class="$style.kuphalLlc">Haag LLC</div>
             						<div :class="$style.emanuelBoyle">Ryder Malone</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="Img.png" />
-          					<img :class="$style.icon" alt="" src="“.svg" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					
         				</div>
       			</div>
     		</div>
@@ -308,13 +310,13 @@
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText6">
           					<div :class="$style.logo">
-            						<img :class="$style.car31Icon" alt="" src="car(3) 1.svg" />
+            						<img :class="$style.car31Icon" alt="" src="@/assets/car(3) 1.svg" />
             						<div :class="$style.text18">
               							<b :class="$style.kuphalLlc">CARENT </b>
             						</div>
           					</div>
           					<div :class="$style.iconsText7">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text19">
               							<div :class="$style.adres">Adres</div>
               							<div :class="$style.ulZota59Container">
@@ -324,14 +326,14 @@
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text20">
               							<div :class="$style.adres">Email </div>
               							<div :class="$style.carentgmailcom">carent@gmail.com</div>
             						</div>
           					</div>
           					<div :class="$style.iconsText8">
-            						<img :class="$style.iconbg" alt="" src="Icon+bg.svg" />
+            						<img :class="$style.iconbg" alt="" src="@/assets/Icon+bg.svg" />
             						<div :class="$style.text21">
               							<div :class="$style.adres">Telefon </div>
               							<div :class="$style.carentgmailcom">+48 22 222 22 00</div>
@@ -346,10 +348,10 @@
               							<p :class="$style.naszaPrzestrzeJest">samochodom.</p>
             						</div>
             						<div :class="$style.socialIcons">
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
-              							<img :class="$style.groupIcon" alt="" src="Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
+              							<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
             						</div>
           					</div>
           					<div :class="$style.textButtons">
@@ -374,10 +376,10 @@
             						<div :class="$style.pobierzAplikacj">Pobierz aplikację</div>
             						<div :class="$style.buttons">
               							<div :class="$style.appStore">
-                								<img :class="$style.groupIcon4" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
               							</div>
               							<div :class="$style.googlePlay">
-                								<img :class="$style.groupIcon4" alt="" src="Group.svg" />
+                								<img :class="$style.groupIcon4" alt="" src="@/assets/Group.svg" />
               							</div>
             						</div>
           					</div>
@@ -391,7 +393,7 @@
     		<div :class="$style.frameParent">
       			<div :class="$style.frameGroup">
         				<div :class="$style.groupParent">
-          					<img :class="$style.groupIcon6" alt="" src="Group.svg" />
+          					<img :class="$style.groupIcon6" alt="" src="@/assets/Group.svg" />
           					<b :class="$style.zarejestrujSiI">Zarejestruj się i odbierz 10% rabatu!</b>
           					<div :class="$style.doczDoNaszejContainer">
             						<p :class="$style.naszaPrzestrzeJest">Dołącz do naszej społeczności i ciesz się wyjątkowymi korzyściami! Zarejestruj się na naszej stronie już dziś, a otrzymasz 10% zniżki na pierwszy wynajem samochodu.</p>
@@ -408,12 +410,12 @@
         				</div>
       			</div>
       			<div :class="$style.discountlabelfr2Wrapper">
-        				<img :class="$style.discountlabelfr2Icon" alt="" src="discountLabelfr 2.png" />
+        				<img :class="$style.discountlabelfr2Icon" alt="" src="@/assets/discountLabelfr 2.png" />
       			</div>
     		</div>
     		<div :class="$style.heroSection">
       			<div :class="$style.heroSectionChild" />
-      			<img :class="$style.mainPictureIcon" alt="" src="Main Picture.png" />
+      			<img :class="$style.mainPictureIcon" alt="" src="@/assets/Main Picture.png" />
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer1">
@@ -445,11 +447,11 @@
       			<div :class="$style.socialMenu">
         				<div :class="$style.socialMenuChild" />
         				<div :class="$style.socials">
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo" alt="" src="Social media logo.png" />
-          					<img :class="$style.socialMediaLogo1" alt="" src="Social media logo.png" />
+          					<img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logofacebook.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logoinstagram.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logox.png" />
+                        <img :class="$style.socialMediaLogo" alt="" src="@/assets/Social media logoviber.png" />
+                        <img :class="$style.socialMediaLogo1" alt="" src="@/assets/Social media logotelegram.png" />
         				</div>
         				<div :class="$style.socialMenuChild" />
       			</div>
@@ -466,7 +468,7 @@
         				</div>
       			</div>
     		</div>
-  	</div>
+  
 </template>
 <style  module>.bmwIcon {
   	width: 47px;
