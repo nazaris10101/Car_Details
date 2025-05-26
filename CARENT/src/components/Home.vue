@@ -1,9 +1,37 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
+import axios from 'axios'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+const cars = ref([])
+
+onMounted(async () => {
+  try {
+    const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
+    console.log('API response:', response.data)
+
+    // Якщо дані — масив:
+    if (Array.isArray(response.data)) {
+      cars.value = response.data.slice(0, 6)
+    }
+    // Якщо API повертає об'єкт з полем cars:
+    else if (Array.isArray(response.data.cars)) {
+      cars.value = response.data.cars.slice(0, 6)
+    }
+    // Якщо повертається 1 машина
+    else {
+      cars.value = [response.data]
+    }
+  } catch (error) {
+    console.error('Помилка при отриманні даних з API:', error)
+  }
+})
 </script>
+
+
 
 <template>
 
@@ -108,211 +136,46 @@ const toggleDark = useToggle(isDark)
       			</div>
     		</div>
     		<div :class="$style.cards">
-      			<div :class="$style.card">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">Mercedes</div>
-                								<div :class="$style.sedan">Sedan</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">250Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">PB 95</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-      			<div :class="$style.card">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">BMW 7</div>
-                								<div :class="$style.sedan">Sport</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">250Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">PB 95</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-      			<div :class="$style.card">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon2" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">Mercedes benz s </div>
-                								<div :class="$style.sedan">Sedan</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">450Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">PB 95</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-      			<div :class="$style.card">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">Tesla Model S Plaid</div>
-                								<div :class="$style.sedan">SUV</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">400Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">Elektro</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-      			<div :class="$style.card4">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">Land Rover </div>
-                								<div :class="$style.sedan">Sedan</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">350Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">PB 95</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-      			<div :class="$style.card">
-        				<div :class="$style.imgTextIcons">
-          					<img :class="$style.imgIcon5" alt="" src="@/assets/Img.png" />
-          					<div :class="$style.textIcons">
-            						<div :class="$style.text">
-              							<div :class="$style.text1">
-                								<div :class="$style.mercedes">Porsche 911 Carrera 4S</div>
-                								<div :class="$style.sedan">SUV</div>
-              							</div>
-              							<div :class="$style.text2">
-                								<div :class="$style.mercedes">500Zł</div>
-                								<div :class="$style.zaDzie">za dzień</div>
-              							</div>
-            						</div>
-            						<div :class="$style.iconsText">
-              							<div :class="$style.iconText6">
-                								<img :class="$style.gearShift11Icon" alt="" src="@/assets/gear-shift(1) 1.svg" />
-                								<div :class="$style.automat">Automat</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g17.png" />
-                								<div :class="$style.automat">PB 95</div>
-              							</div>
-              							<div :class="$style.iconText6">
-                								<img :class="$style.g17Icon" alt="" src="@/assets/g1593.png" />
-                								<div :class="$style.automat">Air Conditioner</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-        				</div>
-      			</div>
-    		</div>
+    <div v-for="car in cars" :key="car._id" :class="$style.card">
+      <div :class="$style.imgTextIcons">
+        <img
+          :class="$style.imgIcon"
+          :alt="car.make"
+          :src="car.imageUrl || `https://car-rental-merito-application.azurewebsites.net/${car.imagePath}`"
+        />
+        <div :class="$style.textIcons">
+          <div :class="$style.text">
+            <div :class="$style.text1">
+              <div :class="$style.carPrice">{{ car.make }}</div>
+              <div :class="$style.sedan">{{ car.bodyType }}</div>
+            </div>
+            <div :class="$style.text2">
+              <div :class="$style.carPrice">{{ car.price }} Zł</div>
+              <div :class="$style.zaDzie">za dzień</div>
+            </div>
+          </div>
+          <div :class="$style.iconsText">
+            <div :class="$style.iconText6">
+              <img :class="$style.gearShift11Icon" alt="Gear" src="@/assets/gear-shift(1) 1.svg" />
+              <div :class="$style.automat">{{ car.transmissionType }}</div>
+            </div>
+            <div :class="$style.iconText6">
+              <img :class="$style.g17Icon" alt="Fuel" src="@/assets/g17.png" />
+              <div :class="$style.automat">{{ car.fuelType }}</div>
+            </div>
+            <div :class="$style.iconText6">
+              <img :class="$style.g17Icon" alt="AC" src="@/assets/g1593.png" />
+              <div :class="$style.automat">Air Conditioner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div :class="$style.button">
+        <div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
+      </div>
+    </div>
+    </div>  
+	</div> 			
     		<div :class="$style.button6">
       			<div :class="$style.zobaczSzczegy">Zobacz wszystkie samochody</div>
     		</div>
@@ -527,7 +390,7 @@ const toggleDark = useToggle(isDark)
         				</div>
       			</div>
     		</div>
-  	</div>
+  	
 </template>
 <style  module>
 body {
@@ -1029,6 +892,12 @@ flex-shrink: 0;
     		text-overflow: ellipsis;
     		white-space: nowrap;
   	}
+	.carPrice {
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fe8400; /* або будь-який колір для ціни */
+}
   	.sedan {
     		position: relative;
     		font-size: 16px;
@@ -1128,7 +997,7 @@ flex-shrink: 0;
   	}
   	.zobaczSzczegy {
     		position: relative;
-    		font-weight: 600;
+    		font-weight: 1600;
   	}
   	.button {
     		align-self: stretch;
