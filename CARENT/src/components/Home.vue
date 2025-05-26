@@ -90,8 +90,9 @@ const toggleDark = useToggle(isDark)
         				<div :class="$style.iconText1">
           					<div :class="$style.car21">
             						<div :class="$style.g582">
-              							<img :class="$style.g584Icon" alt="" src="@/assets/car(2) 1.svg" />
-              							<img :class="$style.g588Icon" alt="" src="@/assets/car(2) 1.svg" />
+              							<img :class="$style.g584Icon" alt="" src="@/assets/car(2) 1.png" />
+										
+              							
             						</div>
           					</div>
           					<div :class="$style.dostpno">Komfort</div>
@@ -922,52 +923,53 @@ font-family: Poppins;
     		-webkit-box-orient: vertical;
   	}
   	.iconText {
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 29px;
+    		width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: center;
   	}
   	.g584Icon {
     		position: absolute;
-    		height: 6.25%;
-    		width: 28.28%;
-    		top: -32.74%;
-    		right: 35.84%;
-    		bottom: 126.49%;
-    		left: 35.88%;
-    		max-width: 100%;
-    		overflow: hidden;
-    		max-height: 100%;
+height: 100%;
+width: 28.28%;
+right: 35.84%;
+bottom: 100%;
+left: 35.88%;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
   	}
   	.g588Icon {
     		position: absolute;
-    		height: 100%;
-    		width: 100%;
-    		top: -100%;
-    		right: 0%;
-    		bottom: 100%;
-    		left: 0%;
-    		max-width: 100%;
-    		overflow: hidden;
-    		max-height: 100%;
-    		object-fit: cover;
+height: 100%;
+width: 100%;
+top: -100%;
+right: 0%;
+bottom: 100%;
+left: 0%;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
+object-fit: cover;	
   	}
   	.g582 {
     		position: absolute;
-    		height: 100%;
-    		width: 100%;
-    		top: 100%;
-    		right: 0%;
-    		bottom: -100%;
-    		left: 0%;
+height: 100%;
+width: 100%;
+top: 100%;
+right: 0%;
+bottom: -100%;
+left: 0%;
   	}
   	.car21 {
-    		width: 64px;
-    		position: relative;
-    		height: 64px;
-    		overflow: hidden;
-    		flex-shrink: 0;
+    		width: 100%;
+position: relative;
+height: 64px;
+overflow: hidden;
+flex-shrink: 0;	
   	}
   	.nowoczesneWyposaenieI {
     		width: 336px;
@@ -993,21 +995,23 @@ font-family: Poppins;
     		-webkit-line-clamp: 3;
     		-webkit-box-orient: vertical;
   	}
-  	.infoBlock {
-    		align-self: stretch;
-    		height: 329px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: space-between;
-    		padding: 60px 72px;
-    		box-sizing: border-box;
-    		gap: 0px;
-    		z-index: 2;
-    		text-align: center;
-    		font-size: 24px;
-    		color: #000;
-  	}
+  
+ .infoBlock {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row; /* розташування в ряд */
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 72px;
+  gap: 48px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--text);
+  flex-wrap: wrap; /* якщо екрани менші — переносить блоки вниз */
+}
+.dostpno, .naszaPrzestrzeJestContainer, .nowoczesneWyposaenieI, .oferujemyKonkurencyjneCeny {
+  color: var(--text);
+}
   	.imgIcon {
     		align-self: stretch;
     		position: relative;
