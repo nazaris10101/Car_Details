@@ -390,13 +390,15 @@ background-color: var(--card-bg);
                  padding: 8px;
                  box-sizing: border-box;
   	}
-  	.menuItems {
-    		width: 890px;
+  	
+    		.menuItems {
+              							width: 890px;
                  display: flex;
                  flex-direction: row;
                  align-items: center;
                  justify-content: flex-start;
                  gap: 30px;
+            			
   	}
   	.menu {
     		width: 590px;

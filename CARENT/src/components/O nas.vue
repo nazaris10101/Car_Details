@@ -452,6 +452,7 @@ background-color: var(--card-bg);
                  align-items: center;
                  justify-content: flex-start;
                  gap: 30px;
+            			
             						}
             						.menu {
               							width: 590px;

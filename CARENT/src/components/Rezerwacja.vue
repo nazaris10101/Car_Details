@@ -13,9 +13,9 @@ const toggleDark = useToggle(isDark)
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
-            						<p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
-            						<p :class="$style.cieszSiYciem">naszym wygodnym</p>
-            						<p :class="$style.cieszSiYciem">samochodom.</p>
+            						<p :class="$style.cieszSiYciemText">Ciesz się życiem dzięki</p>
+            						<p :class="$style.cieszSiYciemText">naszym wygodnym</p>
+            						<p :class="$style.cieszSiYciemText">samochodom.</p>
           					</div>
           					<div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
         				</div>
@@ -240,7 +240,42 @@ const toggleDark = useToggle(isDark)
     		</div>
   	</div>
 </template>
-<style  module>.heroSectionChild {
+<style  module>
+body {
+background-color: #fff;
+color: #000;
+}
+.heroSectionChild {
+background-color: #fff;
+}
+.card {
+background-color: #fafafa;
+color: #000;
+}                 
+html.dark body {
+background-color: #141414;
+color: #fff;
+}
+
+html.dark .heroSectionChild {
+background-color: #1e1e1e;
+}
+
+html.dark .card {
+background-color: #2a2a2a;
+color: #fff;
+}
+body {
+background-color: var(--bg);
+color: var(--text);
+}
+.card {
+background-color: var(--card-bg);
+}
+							html.dark .heroSectionChild {
+    background-color: #ffffff;
+}
+.heroSectionChild {
   	position: absolute;
   	top: 0px;
   	left: 0px;
@@ -284,18 +319,18 @@ const toggleDark = useToggle(isDark)
     		position: relative;
   	}
   	.zalogujSiZarejestrujSiWrapper {
-    		width: 256px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		padding: 12px 24px;
-    		box-sizing: border-box;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
+    		width: 266px;
+                    border-radius: 4px;
+                    background-color: #fe8400;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px 24px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    color: #141414;
+                    font-family: Poppins;
   	}
   	.headerText {
     		position: absolute;
@@ -317,34 +352,35 @@ const toggleDark = useToggle(isDark)
     		white-space: pre-wrap;
   	}
   	.cta {
-    		width: 220px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
-    		height: 40px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		padding: 8px;
-    		box-sizing: border-box;
+    	width: 240px;
+                 border-radius: 4px;
+                 background-color: #fe8400;
+                 height: 50px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 8px;
+                 box-sizing: border-box;
   	}
   	.menuItems {
-    		width: 670px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 32px;
+              							width: 890px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: flex-start;
+                 gap: 30px;
+            			
   	}
   	.menu {
-    		width: 643px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
+    			width: 590px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+color: var(--menu-text-color);
+font-family: Poppins;
   	}
   	.headMenu {
     		position: absolute;
@@ -403,12 +439,13 @@ const toggleDark = useToggle(isDark)
   	}
   	.darkMood {
     		position: absolute;
-    		height: 58.33%;
-    		width: 44.35%;
-    		top: 20.83%;
-    		left: 0%;
-    		line-height: 28px;
-    		display: inline-block;
+    height: 58.33%;
+    width: 44.35%;
+    top: 20.83%;
+    left: 0%;
+    line-height: 28px;
+    display: inline-block;
+    color:  #ffffff !important;  
   	}
   	.groupChild {
     		position: absolute;
@@ -421,12 +458,38 @@ const toggleDark = useToggle(isDark)
   	}
   	.off {
     		position: absolute;
-    		height: 70.59%;
-    		width: 32.88%;
-    		top: 14.71%;
-    		left: 67.16%;
-    		display: inline-block;
+  height: 70.59%;
+  width: 32.88%;
+  top: 14.71%;
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
   	}
+	.textLeft {
+  left: 45px; 
+}
+.textRight {
+  right: 40px; 
+}
+  	.groupItem {
+    		position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50px;
+  background-color: #fe8400;
+  width: 34.6px;
+  height: 34px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
+  	}
+	.active {
+  transform: translateX(48px); 
+}
   	.groupItem {
     		position: absolute;
     		top: 0px;
@@ -460,6 +523,10 @@ const toggleDark = useToggle(isDark)
     		height: 48px;
     		color: #fff9f9;
   	}
+	.cieszSiYciemText{
+              margin: 0;
+                  color: #ffffff !important; 
+				  }
   	.available {
     		position: absolute;
     		height: 6.48%;
@@ -1011,7 +1078,7 @@ const toggleDark = useToggle(isDark)
   	.oNas1 {
     		position: relative;
     		line-height: 26px;
-    		white-space: pre-wrap;
+    		white-space: nowrap;
     		display: -webkit-inline-box;
     		overflow: hidden;
     		text-overflow: ellipsis;
@@ -1098,31 +1165,98 @@ const toggleDark = useToggle(isDark)
   	}
   	.footer {
     		align-self: stretch;
-    		background-color: #000;
-    		height: 565px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		padding: 60px 72px 40px;
-    		box-sizing: border-box;
-    		gap: 80px;
+background-color: var(--footer-bg-color);
+color: var(--footer-text-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 60px 72px 40px;
+gap: 0px;
+font-size: 16px;
   	}
   	.carDetails {
-    		width: 100%;
-    		position: relative;
-    		background-color: #fff;
-    		height: 3142px;
-    		overflow: hidden;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 30px;
-    		text-align: left;
-    		font-size: 16px;
-    		color: #fff;
-    		font-family: 'Work Sans';
-  	}
+    		
+  width: 100%;
+  position: relative;
+  background-color: var(--car-bg);
+  color: var(--car-text); /* це добре — але враховуй наслідки */
+  font-size: 16px; /* не 48px! */
+  font-family: 'Work Sans';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  text-align: left;
+}
+  	
+html.dark .carDetails {
+background-color: #000000; 
+color: white;
+}
 
+
+.dateInput, .textInput, .selhectInput {
+  width: calc(100% - 250px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 35px;
+}
+
+.selectInput {
+  appearance: none;
+  background-color: #fff;
+}
+
+.endAdornmentIcon, .selectarrowIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.reservationMessage {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border: 1px solid #b2ffb2;
+  border-radius: 4px;
+  color: #2d2d2d;
+}
+
+.zarezerwujSamochd {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #fe8400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e67300;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder, .placeholder3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 </style>
