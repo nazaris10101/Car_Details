@@ -16,7 +16,7 @@ body {
   }
   
   html.dark {
-	--bg-color: #141414;
+	--bg-color: #000000;
 	--text-color: #ffffff;
 	--card-bg: #1e1e1e;
 	--input-bg: #2c2c2c;
@@ -34,7 +34,7 @@ html.dark {
   }
   
   html.dark .carDetails {
-	background-color: #141414 !important;
+	background-color: #000000 !important;
 	color: white !important;
   }
 
@@ -45,7 +45,7 @@ html.dark {
   }
   
   html.dark {
-	--bg: #141414;
+	--bg: #000000;
 	--text: #fff;
 	--card-bg: #2a2a2a;
   }
