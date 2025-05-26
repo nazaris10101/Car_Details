@@ -13,9 +13,9 @@ const toggleDark = useToggle(isDark)
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
-            						<p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
-            						<p :class="$style.cieszSiYciem">naszym wygodnym</p>
-            						<p :class="$style.cieszSiYciem">samochodom.</p>
+            						<p :class="$style.cieszSiYciemText">Ciesz się życiem dzięki</p>
+            						<p :class="$style.cieszSiYciemText">naszym wygodnym</p>
+            						<p :class="$style.cieszSiYciemText">samochodom.</p>
           					</div>
           					<div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
         				</div>
@@ -28,7 +28,7 @@ const toggleDark = useToggle(isDark)
     <div :class="$style.menu">
       <div :class="$style.menuItems">
         <router-link :to="'/'" :class="$style.kuphalLlc">Główna</router-link>
-        <router-link :to="'/o-nas'" :class="$style.oNas1">O nas</router-link>
+        <router-link :to="'/o-nas'" :class="$style.oNas1m">O nas</router-link>
         <router-link :to="'/rezerwacja'" :class="$style.kuphalLlc">Rezerwacja</router-link>
         <router-link :to="'/samochody'" :class="$style.kuphalLlc">Samochody</router-link>
         <router-link :to="'/kontakt'" :class="$style.kuphalLlc">Kontakt</router-link>
@@ -314,14 +314,50 @@ const toggleDark = useToggle(isDark)
           					</div>
           					</div>
           					</template>
-          					<style  module>.heroSectionChild {
-            						position: absolute;
-            						top: 0px;
-            						left: 0px;
-            						background-color: #141414;
-            						width: 613px;
-            						height: 741px;
-          					}
+          					<style  module>
+							body {
+background-color: #fff;
+color: #000;
+}
+.heroSectionChild {
+background-color: #fff;
+}
+.card {
+background-color: #fafafa;
+color: #000;
+}                 
+html.dark body {
+background-color: #141414;
+color: #fff;
+}
+
+html.dark .heroSectionChild {
+background-color: #1e1e1e;
+}
+
+html.dark .card {
+background-color: #2a2a2a;
+color: #fff;
+}
+body {
+background-color: var(--bg);
+color: var(--text);
+}
+.card {
+background-color: var(--card-bg);
+}
+							html.dark .heroSectionChild {
+    background-color: #ffffff;
+}
+							
+							.heroSectionChild {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 613px;
+     height: 710px;
+     background-color: #000000; 
+    }
             						.mainPictureIcon {
               							position: absolute;
               							top: 103.86px;
@@ -333,6 +369,12 @@ const toggleDark = useToggle(isDark)
             						.cieszSiYciem {
               							margin: 0;
             						}
+									 .cieszSiYciemdescription {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5; 
+    color: var(--text-color); 
+}
             						.cieszSiYciemContainer {
               							position: relative;
               							font-weight: 800;
@@ -358,18 +400,18 @@ const toggleDark = useToggle(isDark)
               							position: relative;
             						}
             						.zalogujSiZarejestrujSiWrapper {
-              							width: 256px;
-              							border-radius: 4px;
-              							background-color: #fe8400;
-              							display: flex;
-              							flex-direction: row;
-              							align-items: center;
-              							justify-content: center;
-              							padding: 12px 24px;
-              							box-sizing: border-box;
-              							font-size: 16px;
-              							color: #141414;
-              							font-family: Poppins;
+              							 width: 266px;
+                    border-radius: 4px;
+                    background-color: #fe8400;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px 24px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    color: #141414;
+                    font-family: Poppins;
             						}
             						.headerText {
               							position: absolute;
@@ -388,52 +430,53 @@ const toggleDark = useToggle(isDark)
             						}
             						.oNas {
               							position: relative;
-              							white-space: pre-wrap;
+                 white-space: nowrap;
+                overflow-x: auto; 
             						}
             						.cta {
-              							width: 220px;
-              							border-radius: 4px;
-              							background-color: #fe8400;
-              							height: 40px;
-              							display: flex;
-              							flex-direction: row;
-              							align-items: center;
-              							justify-content: center;
-              							padding: 8px;
-              							box-sizing: border-box;
+              							width: 240px;
+                 border-radius: 4px;
+                 background-color: #fe8400;
+                 height: 50px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 8px;
+                 box-sizing: border-box;
             						}
             						.menuItems {
-              							width: 667px;
-              							display: flex;
-              							flex-direction: row;
-              							align-items: center;
-              							justify-content: flex-start;
-              							gap: 32px;
+              							width: 890px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: flex-start;
+                 gap: 30px;
             						}
             						.menu {
-              							width: 679px;
-              							display: flex;
-              							flex-direction: row;
-              							align-items: center;
-              							justify-content: center;
-              							font-size: 16px;
-              							color: #141414;
-              							font-family: Poppins;
+              							width: 590px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+color: var(--menu-text-color);
+font-family: Poppins;
             						}
             						.headMenu {
-              							position: absolute;
-              							top: 31.96px;
-              							left: calc(50% - 560px);
-              							width: 1152px;
-              							height: 39.9px;
-              							display: flex;
-              							flex-direction: row;
-              							align-items: center;
-              							justify-content: space-between;
-              							gap: 0px;
-              							font-size: 26px;
-              							color: #fe8400;
-              							font-family: 'Arial Black';
+              							 position: absolute;
+                    top: 31.96px;
+                    left: calc(50% - 560px);
+                    width: 1152px;
+                    height: 39.9px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 0px;
+                    font-size: 26px;
+                    color: #fe8400;
+                    font-family: 'Arial Black';
             						}
             						.socialMenuChild {
               							width: 1px;
@@ -476,13 +519,14 @@ const toggleDark = useToggle(isDark)
               							gap: 16px;
             						}
             						.darkMood {
-              							position: absolute;
-              							height: 58.33%;
-              							width: 44.35%;
-              							top: 20.83%;
-              							left: 0%;
-              							line-height: 28px;
-              							display: inline-block;
+              							  position: absolute;
+    height: 58.33%;
+    width: 44.35%;
+    top: 20.83%;
+    left: 0%;
+    line-height: 28px;
+    display: inline-block;
+    color:  #ffffff !important;  
             						}
             						.groupChild {
               							position: absolute;
@@ -494,13 +538,40 @@ const toggleDark = useToggle(isDark)
               							height: 48px;
             						}
             						.off {
-              							position: absolute;
-              							height: 70.59%;
-              							width: 32.88%;
-              							top: 14.71%;
-              							left: 67.16%;
-              							display: inline-block;
-            						}
+  position: absolute;
+  height: 70.59%;
+  width: 32.88%;
+  top: 14.71%;
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.textLeft {
+  left: 45px; 
+}
+.textRight {
+  right: 40px; 
+}
+.groupItem {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50px;
+  background-color: #fe8400;
+  width: 34.6px;
+  height: 34px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.active {
+  transform: translateX(48px); 
+}
             						.groupItem {
               							position: absolute;
               							top: 0px;
@@ -551,11 +622,25 @@ const toggleDark = useToggle(isDark)
               							height: 741px;
               							font-family: Montserrat;
             						}
-            						.oNas1 {
-              							position: relative;
-              							font-weight: 500;
-              							white-space: pre-wrap;
-            						}
+									      .z {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-color); 
+}   
+            						.oNas1m {
+  position: relative;
+                    line-height: 26px;
+                    white-space: nowrap;
+                    display: -webkit-inline-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+}
             						.span {
               							color: #9b9b9b;
             						}
@@ -566,7 +651,8 @@ const toggleDark = useToggle(isDark)
               							overflow: hidden;
               							text-overflow: ellipsis;
               							white-space: nowrap;
-              							color: #000;
+              							color: var(--text-color);
+;
             						}
             						.hero {
               							width: 1296px;
@@ -580,13 +666,15 @@ const toggleDark = useToggle(isDark)
               							justify-content: center;
               							gap: 20px;
               							text-align: center;
-              							color: #141414;
+              							color: var(--text-color);
+
               							font-family: Poppins;
             						}
             						.zadowoleniKlienci {
               							position: relative;
               							font-size: 20px;
-              							color: #000;
+              							color: var(--text-color);
+;
             						}
             						.text {
               							display: flex;
@@ -621,7 +709,8 @@ const toggleDark = useToggle(isDark)
               							align-items: flex-end;
               							justify-content: flex-start;
               							font-size: 50px;
-              							color: #000;
+              							color: var(--text-color);
+
             						}
             						.planujeszWakacjePodr {
               							align-self: stretch;
@@ -691,8 +780,13 @@ const toggleDark = useToggle(isDark)
               							justify-content: flex-end;
               							padding: 60px 209px 60px 72px;
               							font-size: 16px;
-              							color: rgba(0, 0, 0, 0.6);
+              							color: var(--text-color);
+
             						}
+									.cieszSiYciemText{
+              margin: 0;
+                  color: #ffffff !important; 
+}
             						.gdzieKadaJazda {
               							width: 381px;
               							position: relative;
@@ -878,7 +972,8 @@ const toggleDark = useToggle(isDark)
               							font-size: 16px;
               							text-transform: capitalize;
               							font-weight: 600;
-              							color: rgba(0, 0, 0, 0.6);
+              							color: var(--text-color);
+
             						}
             						.m {
               							position: relative;
@@ -893,7 +988,8 @@ const toggleDark = useToggle(isDark)
               							gap: 64px;
               							z-index: 3;
               							font-size: 24px;
-              							color: #000;
+              							color: var(--text-color);
+
             						}
             						.banner {
               							width: 1270px;
@@ -924,7 +1020,8 @@ const toggleDark = useToggle(isDark)
               							box-sizing: border-box;
               							gap: 40px;
               							font-size: 50px;
-              							color: #000;
+              							color: var(--text-color);
+
             						}
             						.groupIcon1 {
               							width: 141.29%;
@@ -1392,32 +1489,102 @@ const toggleDark = useToggle(isDark)
               							font-family: Inter;
             						}
             						.footer {
-              							width: 1440px;
-              							background-color: #000;
-              							height: 652px;
-              							display: flex;
-              							flex-direction: column;
-              							align-items: center;
-              							justify-content: flex-start;
-              							padding: 60px 72px 40px;
-              							box-sizing: border-box;
-              							gap: 80px;
-              							font-size: 16px;
+              							
+align-self: stretch;
+background-color: var(--footer-bg-color);
+color: var(--footer-text-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 60px 72px 40px;
+gap: 0px;
+font-size: 16px;
+
             						}
             						.aboutUs {
               							width: 100%;
-              							position: relative;
-              							background-color: #fff;
-              							height: 3999px;
-              							overflow: hidden;
-              							display: flex;
-              							flex-direction: column;
-              							align-items: center;
-              							justify-content: flex-start;
-              							text-align: left;
-              							font-size: 48px;
-              							color: #fff;
-              							font-family: 'Work Sans';
+position: relative;
+background-color: var(--car-bg);
+color: var(--car-text);
+height: 3817px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+text-align: left;
+font-size: 48px;
+font-family: 'Work Sans';
             						}
+									html.dark .carDetails {
+background-color: #000000; 
+color: white;
+}
+
+
+.dateInput, .textInput, .selhectInput {
+  width: calc(100% - 250px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 35px;
+}
+
+.selectInput {
+  appearance: none;
+  background-color: #fff;
+}
+
+.endAdornmentIcon, .selectarrowIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.reservationMessage {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border: 1px solid #b2ffb2;
+  border-radius: 4px;
+  color: #2d2d2d;
+}
+
+.zarezerwujSamochd {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #fe8400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e67300;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder, .placeholder3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+    
           					
           					</style>
