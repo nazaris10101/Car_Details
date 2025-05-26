@@ -13,9 +13,9 @@ const toggleDark = useToggle(isDark)
       			<div :class="$style.headerText">
         				<div :class="$style.cieszSiYciemDzikiNaszymParent">
           					<div :class="$style.cieszSiYciemContainer">
-            						<p :class="$style.cieszSiYciem">Ciesz się życiem dzięki</p>
-            						<p :class="$style.cieszSiYciem">naszym wygodnym</p>
-            						<p :class="$style.cieszSiYciem">samochodom.</p>
+            						<p :class="$style.cieszSiYciemText">Ciesz się życiem dzięki</p>
+            						<p :class="$style.cieszSiYciemText">naszym wygodnym</p>
+            						<p :class="$style.cieszSiYciemText">samochodom.</p>
           					</div>
           					<div :class="$style.carentJestGotowy">Carent jest gotowy zaoferować najlepsze doświadczenie w zakresie wynajmu samochodów.</div>
         				</div>
@@ -28,7 +28,7 @@ const toggleDark = useToggle(isDark)
     <div :class="$style.menu">
       <div :class="$style.menuItems">
         <router-link to="/" :class="$style.kuphalLlc">Główna</router-link>
-        <router-link to="/o-nas" :class="$style.kuphalLlc">O nas</router-link>
+        <router-link to="/o-nas" :class="$style.oNas1">O nas</router-link>
         <router-link to="/rezerwacja" :class="$style.kuphalLlc">Rezerwacja</router-link>
         <router-link to="/samochody" :class="$style.kuphalLlc">Samochody</router-link>
         <router-link to="/kontakt" :class="$style.kuphalLlc">Kontakt</router-link>
@@ -448,25 +448,66 @@ const toggleDark = useToggle(isDark)
     		</div>
   	</div>
 </template>
-<style  module>.heroSectionChild {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	background-color: #141414;
-  	width: 613px;
-  	height: 742px;
+<style  module>
+body {
+background-color: #fff;
+color: #000;
+}
+.heroSectionChild {
+background-color: #fff;
+}
+.card {
+background-color: #fafafa;
+color: #000;
+}                 
+html.dark body {
+background-color: #141414;
+color: #fff;
+}
+
+html.dark .heroSectionChild {
+background-color: #1e1e1e;
+}
+
+html.dark .card {
+background-color: #2a2a2a;
+color: #fff;
+}
+body {
+background-color: var(--bg);
+color: var(--text);
+}
+.card {
+background-color: var(--card-bg);
+}
+							html.dark .heroSectionChild {
+    background-color: #ffffff;
+}
+.heroSectionChild {
+  	 position: absolute;
+     top: 0;
+     left: 0;
+     width: 613px;
+     height: 710px;
+     background-color: #000000; 
 }
   	.mainPictureIcon {
     		position: absolute;
-    		top: 104px;
+    		top: 103.86px;
     		left: 531px;
     		width: 909px;
-    		height: 545px;
+    		height: 544.3px;
     		object-fit: cover;
   	}
   	.cieszSiYciem {
     		margin: 0;
   	}
+	.cieszSiYciemdescription {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5; 
+    color: var(--text-color); 
+	}
   	.cieszSiYciemContainer {
     		position: relative;
     		font-weight: 800;
@@ -492,87 +533,136 @@ const toggleDark = useToggle(isDark)
     		position: relative;
   	}
 	.zalogujSiZarejestrujSiWrapper {
-    		width: 256px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		padding: 12px 24px;
-    		box-sizing: border-box;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
+    		width: 266px;
+                    border-radius: 4px;
+                    background-color: #fe8400;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px 24px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    color: #141414;
+                    font-family: Poppins;
   	}
   	.headerText {
     		position: absolute;
-    		top: 149px;
-    		left: 160px;
-    		background-color: rgba(0, 0, 0, 0.15);
-    		display: flex;
-    		flex-direction: column;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		padding: 32px 32px 32px 0px;
-    		gap: 48px;
+              							top: 148.8px;
+              							left: 160px;
+              							background-color: rgba(0, 0, 0, 0.15);
+              							width: 615px;
+              							height: 472.4px;
+              							display: flex;
+              							flex-direction: column;
+              							align-items: flex-start;
+              							justify-content: flex-start;
+              							padding: 32px 32px 32px 0px;
+              							box-sizing: border-box;
+              							gap: 48px;
   	}
   	.oNas {
     		position: relative;
     		white-space: pre-wrap;
+			overflow-x: auto; 
   	}
   	.cta {
-    		width: 220px;
-    		border-radius: 4px;
-    		background-color: #fe8400;
-    		height: 40px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		padding: 8px;
-    		box-sizing: border-box;
+    		width: 240px;
+                 border-radius: 4px;
+                 background-color: #fe8400;
+                 height: 50px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 8px;
+                 box-sizing: border-box;
   	}
   	.menuItems {
-    		width: 670px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		gap: 32px;
+    		width: 890px;
+                 display: flex;
+                 flex-direction: row;
+                 align-items: center;
+                 justify-content: flex-start;
+                 gap: 30px;
   	}
   	.menu {
-    		width: 643px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: center;
-    		font-size: 16px;
-    		color: #141414;
-    		font-family: Poppins;
+    		width: 590px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+color: var(--menu-text-color);
+font-family: Poppins;
   	}
   	.headMenu {
     		position: absolute;
-    		top: 32px;
-    		left: calc(50% - 560px);
-    		width: 1152px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: space-between;
-    		gap: 0px;
-    		font-size: 26px;
-    		color: #fe8400;
-    		font-family: 'Arial Black';
+                    top: 31.96px;
+                    left: calc(50% - 560px);
+                    width: 1152px;
+                    height: 39.9px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 0px;
+                    font-size: 26px;
+                    color: #fe8400;
+                    font-family: 'Arial Black';
 			}
+			.socialMenuChild {
+              							width: 1px;
+              							position: relative;
+              							border-right: 1px solid #fe8400;
+              							box-sizing: border-box;
+              							height: 39px;
+            						}
+            						.socialMediaLogo {
+              							width: 16px;
+              							position: relative;
+              							height: 16px;
+              							object-fit: cover;
+            						}
+            						.socialMediaLogo1 {
+              							width: 16px;
+              							position: relative;
+              							height: 16px;
+              							overflow: hidden;
+              							flex-shrink: 0;
+              							object-fit: cover;
+            						}
+            						.socials {
+              							display: flex;
+              							flex-direction: column;
+              							align-items: flex-start;
+              							justify-content: flex-start;
+              							gap: 12px;
+            						}
+            						.socialMenu {
+  position: absolute;
+  top: 200px; /* або інше значення, яке підійде до розмітки */
+  left: 24px;
+  width: 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+            						
   	.darkMood {
-    		position: absolute;
-    		height: 55.83%;
-    		width: 44.33%;
-    		top: 17.48%;
-    		left: 0%;
-    		line-height: 28px;
-    		display: inline-block;
+    		  position: absolute;
+    height: 58.33%;
+    width: 44.35%;
+    top: 20.83%;
+    left: 0%;
+    line-height: 28px;
+    display: inline-block;
+    color:  #ffffff !important;  
   	}
   	.groupChild {
     		position: absolute;
@@ -585,21 +675,47 @@ const toggleDark = useToggle(isDark)
   	}
   	.off {
     		position: absolute;
-    		height: 67.65%;
-    		width: 32.88%;
-    		top: 9.72%;
-    		left: 67.12%;
-    		display: inline-block;
+  height: 70.59%;
+  width: 32.88%;
+  top: 14.71%;
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
   	}
+	.textLeft {
+  left: 45px; 
+}
+.textRight {
+  right: 40px;
+  }
   	.groupItem {
-    		position: absolute;
-    		top: 0px;
-    		left: 0px;
-    		border-radius: 50px;
-    		background-color: #fe8400;
-    		width: 34px;
-    		height: 34px;
+    		  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50px;
+  background-color: #fe8400;
+  width: 34.6px;
+  height: 34px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
   	}
+	.active {
+  transform: translateX(48px); 
+}
+            						.groupItem {
+              							position: absolute;
+              							top: 0px;
+              							left: 0px;
+              							border-radius: 50px;
+              							background-color: #fe8400;
+              							width: 34.6px;
+              							height: 34px;
+										}
   	.offParent {
     		position: absolute;
     		height: 70.83%;
@@ -626,29 +742,23 @@ const toggleDark = useToggle(isDark)
   	}
   	.available {
     		position: absolute;
-    		height: 6.47%;
-    		width: 13.47%;
-    		top: 3.77%;
-    		right: 61.25%;
-    		bottom: 89.76%;
-    		left: 25.28%;
-    		font-size: 16px;
-    		font-family: Poppins;
+              							height: 6.48%;
+              							width: 13.7%;
+              							top: 3.78%;
+              							right: 60.59%;
+              							bottom: 89.74%;
+              							left: 25.71%;
+              							font-size: 16px;
+              							font-family: Poppins;
   	}
   	.heroSection {
-    		position: absolute;
-    		top: 0px;
-    		left: 0px;
-    		width: 1440px;
-    		height: 742px;
+    		align-self: stretch;
+            position: relative;
+            height: 741px;
+            font-family: Montserrat;
   	}
-  	.socialMenuChild {
-    		width: 1px;
-    		position: relative;
-    		border-right: 1px solid #fe8400;
-    		box-sizing: border-box;
-    		height: 39px;
-  	}
+  
+  	
   	.socialMediaLogo {
     		width: 16px;
     		position: relative;
@@ -670,16 +780,8 @@ const toggleDark = useToggle(isDark)
     		justify-content: flex-start;
     		gap: 12px;
   	}
-  	.socialMenu {
-    		position: absolute;
-    		top: calc(50% - 1603px);
-    		left: 88px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: center;
-    		gap: 16px;
-  	}
+
+  	
   	.bmwIcon {
     		width: 47px;
     		position: relative;
@@ -723,7 +825,7 @@ const toggleDark = useToggle(isDark)
     		object-fit: cover;
   	}
   	.brand {
-    		position: absolute;
+    		position: relative;
     		top: 756px;
     		left: 14px;
     		width: 1421px;
@@ -756,6 +858,16 @@ const toggleDark = useToggle(isDark)
   	}
   	.sport10TxtContainer {
     		width: 100%;
+  	}
+	.oNas1 {
+    		position: relative;
+    		line-height: 26px;
+    		white-space: nowrap;
+    		display: -webkit-inline-box;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		-webkit-line-clamp: 3;
+    		-webkit-box-orient: vertical;
   	}
   	.sport10 {
     		width: 144px;
@@ -927,7 +1039,7 @@ a {
   	}
   	.showMoreCar {
     		width: 116px;
-    		position: relative;
+    		position: absolute;
     		letter-spacing: -0.02em;
     		line-height: 150%;
     		font-weight: 600;
@@ -937,6 +1049,10 @@ a {
     		height: 24px;
     		flex-shrink: 0;
   	}
+	.cieszSiYciemText{
+              margin: 0;
+                  color: #ffffff !important; 
+				  }
   	.showMore1 {
     		width: 156px;
     		border-radius: 4px;
@@ -964,7 +1080,7 @@ a {
     		flex-shrink: 0;
   	}
   	.showMore {
-    		position: absolute;
+    		position: relative;
     		top: 1492px;
     		left: 822px;
     		display: flex;
@@ -1001,7 +1117,7 @@ a {
     		flex-shrink: 0;
   	}
   	.pickUp1 {
-    		position: absolute;
+    		position: relative;
     		top: 24px;
     		left: 24px;
     		display: flex;
@@ -1053,7 +1169,7 @@ a {
   	}
   	.pickUpChild {
     		width: 1px;
-    		position: relative;
+    		position: absolute;
     		border-right: 1px solid rgba(195, 212, 233, 0.4);
     		box-sizing: border-box;
     		height: 49px;
@@ -1714,7 +1830,7 @@ a {
   	.oNas1 {
     		position: relative;
     		line-height: 26px;
-    		white-space: pre-wrap;
+    		white-space: nowrap;
     		display: -webkit-inline-box;
     		overflow: hidden;
     		text-overflow: ellipsis;
@@ -1809,33 +1925,109 @@ a {
     		line-height: 26px;
     		font-family: Inter;
     		color: #fff9f9;
-  	}
-  	.footer {
-    		position: absolute;
-    		top: 2971px;
-    		left: -2px;
-    		background-color: #000;
-    		width: 1443px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		padding: 60px 72px 40px;
-    		box-sizing: border-box;
-    		gap: 80px;
-    		font-size: 16px;
-    		font-family: 'Work Sans';
+  	}.footer {
+		align-self: stretch;
+background-color: var(--footer-bg-color);
+color: var(--footer-text-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 900px 72px 40px;
+gap: 0px;
+font-size: 16px;
   	}
   	.content {
-    		width: 100%;
-    		position: relative;
-    		background-color: #f6f7f9;
-    		height: 3506px;
-    		overflow: hidden;
-    		text-align: left;
-    		font-size: 48px;
-    		color: #fff;
-    		font-family: Montserrat;
-  	}
+  width: 100%;
+position: relative;
+background-color: var(--car-bg);
+color: var(--car-text);
+height: 2317px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+text-align: left;
+font-size: 48px;
+font-family: 'Work Sans';
+}
+html.dark .carDetails {
+background-color: #000000; 
+color: white;
+}
 
+
+.dateInput, .textInput, .selhectInput {
+  width: calc(100% - 250px); 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-right: 35px;
+}
+
+.selectInput {
+  appearance: none;
+  background-color: #fff;
+}
+
+.endAdornmentIcon, .selectarrowIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.reservationMessage {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border: 1px solid #b2ffb2;
+  border-radius: 4px;
+  color: #2d2d2d;
+}
+
+.zarezerwujSamochd {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #fe8400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e67300;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder, .placeholder3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+html.dark .socialMenu {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html.dark .socialMediaLogo,
+html.dark .socialMediaLogo1 {
+  filter: brightness(1.2) invert(0); /* або invert(1) якщо іконки темні */
+}
 </style>

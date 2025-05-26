@@ -50,7 +50,7 @@ const toggleDark = useToggle(isDark)
         				<div :class="$style.socialMenuChild" />
       			</div>
       			<div :class="$style.available">
-  <div :class="$style.darkMood">Dark Mode</div>
+					  <div :class="$style.darkMood">Dark Mode</div>
   <div :class="$style.on" @click="toggleDark()">
     <div :class="$style.rectangleParent">
       <div :class="$style.groupChild"></div>
@@ -62,6 +62,8 @@ const toggleDark = useToggle(isDark)
     </div>
   </div>
 </div>
+
+
     		</div>
     		<div :class="$style.hero">
       			<div :class="$style.oNas1">O nas  </div>
@@ -313,6 +315,7 @@ const toggleDark = useToggle(isDark)
             						</div>
           					</div>
           					</div>
+						
           					</template>
           					<style  module>
 							body {
@@ -508,16 +511,17 @@ font-family: Poppins;
               							gap: 12px;
             						}
             						.socialMenu {
-              							position: absolute;
-              							top: calc(50% - 117.84px);
-              							left: 72px;
-              							width: 16px;
-              							height: 235.7px;
-              							display: flex;
-              							flex-direction: column;
-              							align-items: center;
-              							justify-content: center;
-              							gap: 16px;
+              							 position: absolute;
+  top: 200px; /* або інше значення, яке підійде до розмітки */
+  left: 24px;
+  width: 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
             						}
             						
             						.darkMood {
@@ -583,6 +587,8 @@ font-family: Poppins;
               							width: 34.6px;
               							height: 34px;
             						}
+									
+
             						.offParent {
               							position: absolute;
               							height: 70.83%;
@@ -1502,7 +1508,6 @@ justify-content: flex-start;
 padding: 60px 72px 40px;
 gap: 0px;
 font-size: 16px;
-
             						}
             						.aboutUs {
               							width: 100%;

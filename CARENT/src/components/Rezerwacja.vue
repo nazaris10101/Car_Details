@@ -279,7 +279,7 @@ background-color: var(--card-bg);
   	position: absolute;
   	top: 0px;
   	left: 0px;
-  	background-color: #141414;
+  	background-color: #000000;
   	width: 613px;
   	height: 741px;
 }
@@ -426,16 +426,17 @@ font-family: Poppins;
     		gap: 12px;
   	}
   	.socialMenu {
-    		position: absolute;
-    		top: calc(50% - 64.5px);
-    		left: 84.41px;
-    		width: 16px;
-    		height: 235.7px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: center;
-    		gap: 16px;
+    		 position: absolute;
+  top: 200px; /* або інше значення, яке підійде до розмітки */
+  left: 24px;
+  width: 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
   	}
   	.darkMood {
     		position: absolute;
