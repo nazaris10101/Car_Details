@@ -198,7 +198,7 @@ function showAllCars() {
             						<div :class="$style.zalogujSi">Kuphal LLC</div>
             						<div :class="$style.emanuelBoyle">Emanuel Boyle</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img-5.png" />
           					
         				</div>
         				<div :class="$style.card6">
@@ -211,7 +211,7 @@ function showAllCars() {
             						<div :class="$style.zalogujSi">Glover - Orn</div>
             						<div :class="$style.emanuelBoyle">River Graves</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img-4.png" />
           					
         				</div>
         				<div :class="$style.card6">
@@ -222,7 +222,7 @@ function showAllCars() {
             						<div :class="$style.zalogujSi">Haag LLC</div>
             						<div :class="$style.emanuelBoyle">Ryder Malone</div>
           					</div>
-          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img.png" />
+          					<img :class="$style.imgIcon6" alt="" src="@/assets/Img-6.png" />
           					
         				</div>
       			</div>
@@ -1124,15 +1124,17 @@ flex-shrink: 0;
     		z-index: 4;
     		font-family: Inter;
   	}
-  	.opinieNaszychKlientw {
-    		width: 773px;
-    		position: relative;
-    		display: -webkit-inline-box;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		-webkit-line-clamp: 2;
-    		-webkit-box-orient: vertical;
-  	}
+  .opinieNaszychKlientw {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: var(--text); /* або конкретно #000 чи #fff */
+  display: block;
+}
+
+
   	.wynajcieAutaWContainer {
     		position: absolute;
     		top: 103px;
@@ -1245,20 +1247,19 @@ flex-shrink: 0;
     		font-size: 20px;
   	}
   	.testimonials {
-    		align-self: stretch;
-    		height: 639px;
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    		justify-content: flex-start;
-    		padding: 60px 72px;
-    		box-sizing: border-box;
-    		gap: 40px;
-    		z-index: 5;
-    		text-align: center;
-    		font-size: 50px;
-    		color: #000;
-  	}
+  align-self: stretch;
+  padding: 60px 72px;
+  gap: 40px;
+  z-index: 5;
+  text-align: center;
+  font-size: 50px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 60px; /* Відступ перед наступним блоком */
+}
   	.groupIcon {
     		width: 141.29%;
     		position: absolute;
@@ -1353,15 +1354,15 @@ flex-shrink: 0;
     		z-index: 1;
   	}
 	.frameParent {
-  width: 100%; /* або max-width: 1296px; */
+  width: 100%;
   max-width: 1296px;
   border-radius: 20px;
   background-color: #fe890a;
-  height: 427px;
+  min-height: 427px; /* динамічна висота */
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /* центрує вміст */
+  justify-content: center;
   padding: 58px 86px;
   box-sizing: border-box;
   position: relative;
