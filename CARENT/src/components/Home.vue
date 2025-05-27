@@ -79,7 +79,7 @@ onMounted(async () => {
         				<div :class="$style.socialMenuChild" />
       			</div>
       			<div :class="$style.available">
-  <div :class="$style.darkMood">Dark Mode</div>
+					  <div :class="$style.darkMood">Dark Mode</div>
   <div :class="$style.on" @click="toggleDark()">
     <div :class="$style.rectangleParent">
       <div :class="$style.groupChild"></div>
@@ -91,6 +91,7 @@ onMounted(async () => {
     </div>
   </div>
 </div>
+
     		</div>
     		<div :class="$style.brand">
       			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW.png" />
@@ -533,6 +534,7 @@ font-size: 16px;
 color: var(--menu-text-color);
 font-family: Poppins;
   	}
+
   	.headMenu {
     		position: absolute;
     		top: 31.96px;

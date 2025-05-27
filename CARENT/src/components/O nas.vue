@@ -511,7 +511,7 @@ font-family: Poppins;
               							gap: 12px;
             						}
             						.socialMenu {
-              							 position: absolute;
+    		position: absolute;
   top: 200px; /* або інше значення, яке підійде до розмітки */
   left: 24px;
   width: 16px;
@@ -522,10 +522,9 @@ font-family: Poppins;
   justify-content: center;
   gap: 16px;
   z-index: 10;
-            						}
-            						
-            						.darkMood {
-              							  position: absolute;
+  	}
+  .darkMood {
+    		position: absolute;
     height: 58.33%;
     width: 44.35%;
     top: 20.83%;
@@ -533,18 +532,18 @@ font-family: Poppins;
     line-height: 28px;
     display: inline-block;
     color:  #ffffff !important;  
-            						}
-            						.groupChild {
-              							position: absolute;
-              							top: 0px;
-              							left: 0px;
-              							border-radius: 50px;
-              							background-color: rgba(254, 132, 0, 0.05);
-              							width: 95.6px;
-              							height: 48px;
-            						}
-            						.off {
-  position: absolute;
+  	}
+  	.groupChild {
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		border-radius: 50px;
+    		background-color: rgba(0, 0, 0, 0.05);
+    		width: 95.6px;
+    		height: 48px;
+  	}
+  	.off {
+    		position: absolute;
   height: 70.59%;
   width: 32.88%;
   top: 14.71%;
@@ -552,16 +551,15 @@ font-family: Poppins;
   font-size: 16px;
   color: #ffffff;
   transition: transform 0.3s ease;
-}
-
-.textLeft {
+  	}
+		.textLeft {
   left: 45px; 
 }
 .textRight {
   right: 40px; 
 }
-.groupItem {
-  position: absolute;
+  	.groupItem {
+    		position: absolute;
   top: 0px;
   left: 0px;
   border-radius: 50px;
@@ -574,19 +572,11 @@ font-family: Poppins;
   justify-content: center;
   font-size: 14px;
   color: #ffffff;
-}
-.active {
-  transform: translateX(48px); 
-}
-            						.groupItem {
-              							position: absolute;
-              							top: 0px;
-              							left: 0px;
-              							border-radius: 50px;
-              							background-color: #fe8400;
-              							width: 34.6px;
-              							height: 34px;
-            						}
+  	}
+	.active {
+  transform: translateX(48px);
+  } 
+            						
 									
 
             						.offParent {
@@ -599,11 +589,11 @@ font-family: Poppins;
               							left: 14.89%;
             						}
             						.rectangleParent {
-              							position: absolute;
-              							top: 0px;
-              							left: 0px;
-              							width: 95.6px;
-              							height: 48px;
+              						position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		width: 94px;
+    		height: 48px;
             						}
             						.on {
               							position: absolute;
@@ -625,10 +615,12 @@ font-family: Poppins;
               							font-family: Poppins;
             						}
             						.heroSection {
-              							align-self: stretch;
-              							position: relative;
-              							height: 741px;
-              							font-family: Montserrat;
+              								width: 1440px;
+    		position: relative;
+    		height: 741px;
+    		z-index: 0;
+    		font-size: 48px;
+    		font-family: Montserrat;
             						}
 									      .z {
     position: relative;
@@ -1514,7 +1506,7 @@ font-size: 16px;
 position: relative;
 background-color: var(--car-bg);
 color: var(--car-text);
-height: 3817px;
+height: 3917px;
 overflow: hidden;
 display: flex;
 flex-direction: column;

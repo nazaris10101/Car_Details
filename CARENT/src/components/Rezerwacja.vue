@@ -540,9 +540,10 @@ font-family: Poppins;
     		font-family: Poppins;
   	}
   	.heroSection {
-    		align-self: stretch;
+    		width: 1440px;
     		position: relative;
     		height: 741px;
+    		z-index: 0;
     		font-size: 48px;
     		font-family: Montserrat;
   	}

@@ -689,8 +689,8 @@ font-family: Poppins;
 .textRight {
   right: 40px;
   }
-  	.groupItem {
-    		  position: absolute;
+.groupItem {
+    		position: absolute;
   top: 0px;
   left: 0px;
   border-radius: 50px;
@@ -704,18 +704,11 @@ font-family: Poppins;
   font-size: 14px;
   color: #ffffff;
   	}
+  	
 	.active {
   transform: translateX(48px); 
 }
-            						.groupItem {
-              							position: absolute;
-              							top: 0px;
-              							left: 0px;
-              							border-radius: 50px;
-              							background-color: #fe8400;
-              							width: 34.6px;
-              							height: 34px;
-										}
+            						
   	.offParent {
     		position: absolute;
     		height: 70.83%;
@@ -732,13 +725,22 @@ font-family: Poppins;
     		width: 94px;
     		height: 48px;
   	}
-  	.on {
+		.groupItem {
     		position: absolute;
     		top: 0px;
-    		left: 100px;
-    		width: 94px;
-    		height: 48px;
-    		color: #fff9f9;
+    		left: 0px;
+    		border-radius: 50px;
+    		background-color: #fe8400;
+    		width: 34.6px;
+    		height: 34px;
+		}
+  	.on {
+    		position: absolute;
+              							top: 0px;
+              							left: 101.69px;
+              							width: 95.6px;
+              							height: 48px;
+              							color: #fff9f9;
   	}
   	.available {
     		position: absolute;
@@ -752,10 +754,12 @@ font-family: Poppins;
               							font-family: Poppins;
   	}
   	.heroSection {
-    		align-self: stretch;
-            position: relative;
-            height: 741px;
-            font-family: Montserrat;
+    		width: 1440px;
+    		position: relative;
+    		height: 741px;
+    		z-index: 0;
+    		font-size: 48px;
+    		font-family: Montserrat;
   	}
   
   	
