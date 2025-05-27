@@ -333,7 +333,14 @@ html.dark body {
 background-color: #141414;
 color: #fff;
 }
+html:not(.dark) .iconBg {
+  filter: brightness(0) saturate(100%);
+}
 
+/* Темний режим — біла іконка */
+html.dark .iconBg {
+  filter: brightness(1000%) saturate(0%);
+}
 html.dark .heroSectionChild {
 background-color: #1e1e1e;
 }
@@ -722,13 +729,11 @@ font-family: Poppins;
               							-webkit-box-orient: vertical;
             						}
             						.iconBg {
-              							width: 32px;
-              							position: relative;
-              							border-radius: 50px;
-              							height: 32px;
-              							overflow: hidden;
-              							flex-shrink: 0;
-            						}
+              							width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease;
+}
+            						
             						.szerokiWybrPojazdw {
               							flex: 1;
               							position: relative;
