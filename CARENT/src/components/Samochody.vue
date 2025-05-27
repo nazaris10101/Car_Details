@@ -1,8 +1,19 @@
 <script setup>
 import { useDark, useToggle } from '@vueuse/core'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 
+const cars = ref([])
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+onMounted(async () => {
+  try {
+    const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
+    cars.value = response.data.cars.slice(0, 6) // лише перші 6 машин
+  } catch (error) {
+    console.error('Błąd podczas pobierania samochodów:', error)
+  }
+})
 </script>
 
 <template>
@@ -148,12 +159,7 @@ const toggleDark = useToggle(isDark)
           					</div>
         				</div>
       			</div>
-      			<div :class="$style.showMore">
-        				<div :class="$style.showMore1">
-          					<div :class="$style.showMoreCar">Show more car</div>
-        				</div>
-        				<div :class="$style.car">120 Car</div>
-      			</div>
+      			
       			<div :class="$style.pickUp">
         				<div :class="$style.bg" />
         				<div :class="$style.pickUp1">
@@ -186,182 +192,47 @@ const toggleDark = useToggle(isDark)
           					</div>
         				</div>
       			</div>
-      			<div :class="$style.catalogue1">
-        				<div :class="$style.catalog1">
-          					<div :class="$style.buttonRental">
-            						<div :class="$style.wynajmij">Wynajmij </div>
-          					</div>
-          					<div :class="$style.carName">
-            						<b :class="$style.mercedes">Mercedes</b>
-            						<b :class="$style.sport1">Sport</b>
-          					</div>
-          					<div :class="$style.price" />
-          					<div :class="$style.spesification">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.pb95">PB 95</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby">
-                								<span :class="$style.osoby1">4 Osoby</span>
-              							</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon1" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow" />
-        				</div>
-        				<div :class="$style.catalog2">
-          					<div :class="$style.buttonRental1">
-            						<div :class="$style.wynajmij">Wynajmij</div>
-          					</div>
-          					<div :class="$style.carName1">
-            						<b :class="$style.mercedes">BMW 7</b>
-            						<b :class="$style.sport1">Sport</b>
-          					</div>
-          					<div :class="$style.price1">
-            						<b :class="$style.z25000">Zł 250.00</b>
-          					</div>
-          					<div :class="$style.spesification">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.pb95">PB 95</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby2">4 Osoby</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon3" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow1" />
-        				</div>
-        				<div :class="$style.catalog2">
-          					<div :class="$style.buttonRental1">
-            						<div :class="$style.wynajmij">Wynajmij</div>
-          					</div>
-          					<div :class="$style.carName1">
-            						<b :class="$style.mercedesBenzS">Mercedes benz  S </b>
-            						<b :class="$style.sport1">Sport</b>
-          					</div>
-          					<div :class="$style.spesification">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.pb95">PB 95</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby2">4 Osoby</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon5" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow2" />
-          					<div :class="$style.price2">
-            						<b :class="$style.z45000">Zł 450.00</b>
-          					</div>
-        				</div>
-      			</div>
-      			<div :class="$style.catalogue2">
-        				<div :class="$style.catalog2">
-          					<div :class="$style.buttonRental1">
-            						<div :class="$style.wynajmij">Wynajmij</div>
-          					</div>
-          					<div :class="$style.carName1">
-            						<b :class="$style.teslaModelS">Tesla Model S Plaid</b>
-            						<b :class="$style.sport1">SUV</b>
-          					</div>
-          					<div :class="$style.price1">
-            						<b :class="$style.z40000">Zł 400.00</b>
-          					</div>
-          					<div :class="$style.spesification3">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.elektro">Elektro</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity3">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby2">4 Osoby</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon7" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow3" />
-        				</div>
-        				<div :class="$style.catalog2">
-          					<div :class="$style.buttonRental1">
-            						<div :class="$style.wynajmij">Wynajmij</div>
-          					</div>
-          					<div :class="$style.carName1">
-            						<b :class="$style.landRover">Land Rover </b>
-            						<b :class="$style.sport1">SUV</b>
-          					</div>
-          					<div :class="$style.spesification">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.pb95">PB 95</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby2">4 Osoby</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon9" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow4" />
-          					<div :class="$style.price1">
-            						<b :class="$style.z35000">Zł 350.00</b>
-          					</div>
-        				</div>
-        				<div :class="$style.catalog2">
-          					<div :class="$style.buttonRental1">
-            						<div :class="$style.wynajmij">Wynajmij</div>
-          					</div>
-          					<div :class="$style.carName1">
-            						<b :class="$style.porsche911Carrera">Porsche 911 Carrera 4S</b>
-            						<b :class="$style.sport4">Sport</b>
-          					</div>
-          					<div :class="$style.spesification">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/gas-station.svg" />
-              							<div :class="$style.pb954">PB 95</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Car-2.png" />
-              							<div :class="$style.manual">Manual</div>
-            						</div>
-            						<div :class="$style.capacity">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/profile-2user.svg" />
-              							<div :class="$style.osoby2">2 Osoby</div>
-            						</div>
-          					</div>
-          					<img :class="$style.carIcon11" alt="" src="@/assets/Car.png" />
-          					<div :class="$style.shadow5" />
-          					<div :class="$style.price1">
-            						<b :class="$style.z40000">Zł 500.00</b>
-          					</div>
-        				</div>
-      			</div>
-      			<div :class="$style.price6">
-        				<b :class="$style.z250001">Zł 250.00</b>
-      			</div>
-    		</div>
+      			
+    <div :class="$style.catalogue1">
+    <div v-for="car in cars" :key="car._id" :class="$style.catalog1">
+      <div :class="$style.buttonRental">
+        <div :class="$style.wynajmij">Wynajmij</div>
+      </div>
+
+      <div :class="$style.carName">
+        <b :class="$style.mercedes">{{ car.make }}</b>
+        <b :class="$style.sport1">{{ car.model }}</b>
+      </div>
+
+      <div :class="$style.price">{{ car.hourlyPrice }} zł/h</div>
+
+      <div :class="$style.spesification">
+        <div :class="$style.sport">
+          <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/gas-station.svg" />
+          <div :class="$style.pb95">{{ car.fuelType }}</div>
+        </div>
+        <div :class="$style.sport">
+          <img :class="$style.ceklistIcon" src="@/assets/Car-2.png" />
+          <div :class="$style.manual">{{ car.gearboxType }}</div>
+        </div>
+        <div :class="$style.capacity">
+          <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/profile-2user.svg" />
+          <div :class="$style.osoby">
+            <span :class="$style.osoby1">{{ car.capacity }} Osoby</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🖼 Динамічне фото з API -->
+      <img
+        :class="$style.carIcon1"
+        :src="car.imageUrl"
+        :alt="`${car.make} ${car.model}`"
+      />
+
+      <div :class="$style.shadow" />
+    </div>
+  </div>
     		<div :class="$style.footer">
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText">
@@ -447,6 +318,8 @@ const toggleDark = useToggle(isDark)
       			</div>
     		</div>
   	</div>
+	</div>
+
 </template>
 <style  module>
 body {
@@ -1366,15 +1239,19 @@ a {
     		height: 13px;
   	}
   	.catalog1 {
-    		width: 317px;
-    		position: relative;
-    		border-radius: 10px;
-    		background-color: #fff;
-    		height: 388px;
-    		overflow: hidden;
-    		flex-shrink: 0;
-    		font-size: 16px;
-  	}
+  width: 317px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #ffffff;
+  height: 388px;
+  overflow: hidden;
+  font-size: 16px;
+
+  /* Важливо: дозволити переноси */
+  flex-shrink: 0;
+}
+
+  	
   	.buttonRental1 {
     		position: absolute;
     		top: 320px;
@@ -1503,16 +1380,17 @@ a {
     		color: #1a202c;
   	}
   	.catalogue1 {
-    		position: absolute;
-    		top: 168px;
-    		left: 376px;
-    		width: 1021px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		gap: 32px;
-  	}
+  position: absolute;
+  top: 168px;
+  left: 376px;
+  width: 1021px;
+
+  display: flex;
+  flex-wrap: wrap;              /* ⬅️ Дозволяє переносити рядки */
+  gap: 32px;
+  justify-content: flex-start;  /* або center, якщо хочеш центровано */
+}
+
   	.teslaModelS {
     		width: 181px;
     		position: relative;
@@ -1691,16 +1569,19 @@ a {
     		color: #1a202c;
   	}
   	.content1 {
-    		position: absolute;
-    		top: 742px;
-    		left: 0px;
-    		background-color: #f6f7f9;
-    		width: 1440px;
-    		height: 1013px;
-    		overflow: hidden;
-    		font-size: 20px;
-    		font-family: 'Plus Jakarta Sans';
-  	}
+  position: relative;         /* або взагалі видали позиціонування */
+  background-color: var(--car-bg); /* адаптується до теми */
+  width: 100%;
+  padding: 48px 24px;         /* додає внутрішній відступ */
+  font-size: 20px;
+  font-family: 'Plus Jakarta Sans';
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;            /* щоб контент не виходив за межі */
+}
+
+  	
   	.car31Icon {
     		width: 48px;
     		position: relative;
@@ -1937,25 +1818,26 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
-padding: 900px 72px 40px;
+padding: 1000px 72px 40px;
 gap: 0px;
 font-size: 16px;
   	}
-  	.content {
+  .content {
   width: 100%;
-position: relative;
-background-color: var(--car-bg);
-color: var(--car-text);
-height: 2317px;
-overflow: hidden;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-text-align: left;
-font-size: 48px;
-font-family: 'Work Sans';
+  position: relative;
+  background-color: var(--car-bg);
+  color: var(--car-text);
+  min-height: 100vh;       /* мінімальна висота на весь екран */
+  height: auto;            /* автоматична висота відповідно до вмісту */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 48px;
+  font-family: 'Work Sans';
 }
+
 html.dark .carDetails {
 background-color: #000000; 
 color: white;
