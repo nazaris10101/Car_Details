@@ -160,16 +160,13 @@ function showAllCars() {
         <div :class="$style.iconsText">
           <div :class="$style.iconText6">
             <img :class="$style.gearShift11Icon" alt="Gear" src="@/assets/gear-shift(1) 1.svg" />
-            <div :class="$style.automat">{{ car.transmissionType }}</div>
+            <div :class="$style.automat">{{ car.gearboxType }}</div>
           </div>
           <div :class="$style.iconText6">
             <img :class="$style.g17Icon" alt="Fuel" src="@/assets/g17.png" />
             <div :class="$style.automat">{{ car.fuelType }}</div>
           </div>
-          <div :class="$style.iconText6">
-            <img :class="$style.g17Icon" alt="AC" src="@/assets/g1593.png" />
-            <div :class="$style.automat">Air Conditioner</div>
-          </div>
+          
         </div>
       </div>
     </div>
