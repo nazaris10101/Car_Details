@@ -9,7 +9,7 @@ const toggleDark = useToggle(isDark)
 onMounted(async () => {
   try {
     const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
-    cars.value = response.data.cars.slice(0, 6) // лише перші 6 машин
+    cars.value = response.data.cars
   } catch (error) {
     console.error('Błąd podczas pobierania samochodów:', error)
   }
@@ -96,7 +96,7 @@ onMounted(async () => {
               							<div :class="$style.sport10">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Sport</span>
-                  									<span :class="$style.span">  (10)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -105,7 +105,7 @@ onMounted(async () => {
               							<div :class="$style.suv12">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>SUV</span>
-                  									<span :class="$style.span">  (12)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -114,7 +114,7 @@ onMounted(async () => {
               							<div :class="$style.mpv16">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>MPV</span>
-                  									<span :class="$style.span">  (16)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -123,7 +123,7 @@ onMounted(async () => {
               							<div :class="$style.sedan20">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Sedan</span>
-                  									<span :class="$style.span">  (20)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -132,7 +132,7 @@ onMounted(async () => {
               							<div :class="$style.sedan20">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Coupe</span>
-                  									<span :class="$style.span">  (14)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -141,7 +141,7 @@ onMounted(async () => {
               							<div :class="$style.sport10">
                 								<span :class="$style.sport10TxtContainer">
                   									<span>Hatchback</span>
-                  									<span :class="$style.span">  (14)</span>
+                  									<span :class="$style.span">  </span>
                 								</span>
               							</div>
             						</div>
@@ -1810,7 +1810,8 @@ a {
     		line-height: 26px;
     		font-family: Inter;
     		color: #fff9f9;
-  	}.footer {
+			}
+  	.footer {
 		align-self: stretch;
 background-color: var(--footer-bg-color);
 color: var(--footer-text-color);
@@ -1818,10 +1819,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
-padding: 1000px 72px 40px;
+padding: 1800px 72px 40px;
 gap: 0px;
 font-size: 16px;
   	}
+
+  	
   .content {
   width: 100%;
   position: relative;
