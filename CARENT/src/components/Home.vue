@@ -13,18 +13,8 @@ onMounted(async () => {
     const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
     console.log('API response:', response.data)
 
-    // Якщо дані — масив:
-    if (Array.isArray(response.data)) {
-      cars.value = response.data.slice(0, 6)
-    }
-    // Якщо API повертає об'єкт з полем cars:
-    else if (Array.isArray(response.data.cars)) {
-      cars.value = response.data.cars.slice(0, 6)
-    }
-    // Якщо повертається 1 машина
-    else {
-      cars.value = [response.data]
-    }
+    // Виправлено доступ до масиву машин
+    cars.value = response.data.cars.slice(0, 6)
   } catch (error) {
     console.error('Помилка при отриманні даних з API:', error)
   }
@@ -151,8 +141,9 @@ onMounted(async () => {
               <div :class="$style.sedan">{{ car.bodyType }}</div>
             </div>
             <div :class="$style.text2">
-              <div :class="$style.carPrice">{{ car.price }} Zł</div>
-              <div :class="$style.zaDzie">za dzień</div>
+              <div :class="$style.carPrice">{{ car.hourlyPrice }} Zł</div>
+
+              <div :class="$style.zaDzie">za godzinę</div>
             </div>
           </div>
           <div :class="$style.iconsText">
