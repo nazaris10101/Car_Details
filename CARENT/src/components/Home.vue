@@ -103,7 +103,7 @@ function showAllCars() {
       			<img :class="$style.hyundaiIcon" alt="" src="@/assets/Hyundai.png" />
       			<img :class="$style.nissanIcon" alt="" src="@/assets/Nissan.png" />
       			<img :class="$style.toyotaIcon" alt="" src="@/assets/Toyota.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA-4.png" />
       			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA-2.png" />
       			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA-3.png" />
     		</div>
@@ -166,6 +166,10 @@ function showAllCars() {
             <img :class="$style.g17Icon" alt="Fuel" src="@/assets/g17.png" />
             <div :class="$style.automat">{{ car.fuelType }}</div>
           </div>
+		  <div :class="$style.iconText6">
+  <img :class="$style.g17Icon" alt="AC" src="@/assets/g3353.png" />
+  <div :class="$style.automat">{{ car.color }}</div>
+</div>
           
         </div>
       </div>
