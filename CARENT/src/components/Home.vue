@@ -1,25 +1,28 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
 import axios from 'axios'
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-
 const cars = ref([])
+const visibleCars = ref([])   // ті, що відображаються
+const showAll = ref(false)
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
-    console.log('API response:', response.data)
-
-    // Виправлено доступ до масиву машин
-    cars.value = response.data.cars.slice(0, 6)
-  } catch (error) {
-    console.error('Помилка при отриманні даних з API:', error)
+    const res = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
+    cars.value = res.data?.cars || []
+    visibleCars.value = cars.value.slice(0, 6)  // спочатку тільки 6
+  } catch (err) {
+    console.error('API error:', err)
   }
 })
+
+function showAllCars() {
+  visibleCars.value = cars.value
+  showAll.value = true
+}
 </script>
+
+
 
 
 
@@ -81,7 +84,7 @@ onMounted(async () => {
     </div>
   </div>
 </div>
-
+</div>
     		</div>
     		<div :class="$style.brand">
       			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW.png" />
@@ -127,50 +130,51 @@ onMounted(async () => {
       			</div>
     		</div>
     		<div :class="$style.cards">
-    <div v-for="car in cars" :key="car._id" :class="$style.card">
-      <div :class="$style.imgTextIcons">
-        <img
-          :class="$style.imgIcon"
-          :alt="car.make"
-          :src="car.imageUrl || `https://car-rental-merito-application.azurewebsites.net/${car.imagePath}`"
-        />
-        <div :class="$style.textIcons">
-          <div :class="$style.text">
-            <div :class="$style.text1">
-              <div :class="$style.carPrice">{{ car.make }}</div>
-              <div :class="$style.sedan">{{ car.bodyType }}</div>
-            </div>
-            <div :class="$style.text2">
-              <div :class="$style.carPrice">{{ car.hourlyPrice }} Zł</div>
-
-              <div :class="$style.zaDzie">za godzinę</div>
-            </div>
+  <div v-for="car in visibleCars" :key="car._id" :class="$style.card">
+    <div :class="$style.imgTextIcons">
+      <img
+        :class="$style.imgIcon"
+        :alt="car.make"
+        :src="car.imageUrl || `https://car-rental-merito-application.azurewebsites.net/${car.imagePath}`"
+      />
+      <div :class="$style.textIcons">
+        <div :class="$style.text">
+          <div :class="$style.text1">
+            <div :class="$style.carPrice">{{ car.make }}</div>
+            <div :class="$style.sedan">{{ car.bodyType }}</div>
           </div>
-          <div :class="$style.iconsText">
-            <div :class="$style.iconText6">
-              <img :class="$style.gearShift11Icon" alt="Gear" src="@/assets/gear-shift(1) 1.svg" />
-              <div :class="$style.automat">{{ car.transmissionType }}</div>
-            </div>
-            <div :class="$style.iconText6">
-              <img :class="$style.g17Icon" alt="Fuel" src="@/assets/g17.png" />
-              <div :class="$style.automat">{{ car.fuelType }}</div>
-            </div>
-            <div :class="$style.iconText6">
-              <img :class="$style.g17Icon" alt="AC" src="@/assets/g1593.png" />
-              <div :class="$style.automat">Air Conditioner</div>
-            </div>
+          <div :class="$style.text2">
+            <div :class="$style.carPrice">{{ car.hourlyPrice }} Zł</div>
+            <div :class="$style.zaDzie">za godzinę</div>
+          </div>
+        </div>
+        <div :class="$style.iconsText">
+          <div :class="$style.iconText6">
+            <img :class="$style.gearShift11Icon" alt="Gear" src="@/assets/gear-shift(1) 1.svg" />
+            <div :class="$style.automat">{{ car.transmissionType }}</div>
+          </div>
+          <div :class="$style.iconText6">
+            <img :class="$style.g17Icon" alt="Fuel" src="@/assets/g17.png" />
+            <div :class="$style.automat">{{ car.fuelType }}</div>
+          </div>
+          <div :class="$style.iconText6">
+            <img :class="$style.g17Icon" alt="AC" src="@/assets/g1593.png" />
+            <div :class="$style.automat">Air Conditioner</div>
           </div>
         </div>
       </div>
-      <div :class="$style.button">
-        <div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-      </div>
     </div>
-    </div>  
-	</div> 			
-    		<div :class="$style.button6">
-      			<div :class="$style.zobaczSzczegy">Zobacz wszystkie samochody</div>
-    		</div>
+    <div :class="$style.button">
+      <div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
+    </div>
+  </div>
+</div>
+
+<!-- Кнопка для показу всіх авто -->
+<div v-if="!showAll && cars.length > 6" :class="$style.button6" @click="showAllCars">
+  <div :class="$style.zobaczSzczegy">Zobacz wszystkie samochody</div>
+</div>
+
     		<div :class="$style.testimonials">
       			<b :class="$style.opinieNaszychKlientw">Opinie naszych klientów</b>
       			<div :class="$style.cards1">
@@ -1075,7 +1079,7 @@ flex-shrink: 0;
   	}
   	.cards {
     		width: 1296px;
-    		height: 1051px;
+    		
     		display: flex;
     		flex-direction: row;
     		align-items: flex-start;
