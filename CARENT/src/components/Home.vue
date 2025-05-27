@@ -1,26 +1,35 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
 import axios from 'axios'
 
-const cars = ref([])
-const visibleCars = ref([])   // ті, що відображаються
-const showAll = ref(false)
+// Темна тема (VueUse)
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 
+// Список авто
+const cars = ref([])             // усі авто з API
+const visibleCars = ref([])      // ті, що відображаються на екрані
+const showAll = ref(false)       // чи показати всі
+
+// Отримання даних
 onMounted(async () => {
   try {
     const res = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
     cars.value = res.data?.cars || []
-    visibleCars.value = cars.value.slice(0, 6)  // спочатку тільки 6
+    visibleCars.value = cars.value.slice(0, 6) // показати тільки перші 6 авто
   } catch (err) {
-    console.error('API error:', err)
+    console.error('Помилка при завантаженні авто:', err)
   }
 })
 
+// Обробка кнопки "Zobacz wszystkie samochody"
 function showAllCars() {
   visibleCars.value = cars.value
   showAll.value = true
 }
 </script>
+
 
 
 
@@ -640,15 +649,17 @@ font-family: Poppins;
   transform: translateX(48px);
   } 
 .button6 {
-  position: absolute;
-  top: 2400px; 
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 40px auto 0;
   background-color: white;
   border-radius: 8px;
   padding: 16px 32px;
   cursor: pointer;
-}	
+  width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 
@@ -1078,19 +1089,24 @@ flex-shrink: 0;
     		object-fit: cover;
   	}
   	.cards {
-    		width: 1296px;
-    		
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		flex-wrap: wrap;
-    		align-content: flex-start;
-    		gap: 24px;
-    		z-index: 3;
-    		font-size: 24px;
-    		color: #000;
-  	}
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto; /* Центрує блок по горизонталі */
+  padding: 0 16px; /* Щоб не залипав до країв на менших екранах */
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  justify-content: center; /* Центрує картки, можна змінити на flex-start */
+  align-content: flex-start;
+
+  z-index: 3;
+  font-size: 24px;
+  color: #000;
+}
+
   	.button6 {
     		width: 264px;
     		border-radius: 12px;
@@ -1336,20 +1352,24 @@ flex-shrink: 0;
     		z-index: 1;
   	}
 	.frameParent {
- width: 1296px;
-    		border-radius: 20px;
-    		background-color: #fe890a;
-    		height: 427px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: center;
-    		justify-content: flex-start;
-    		padding: 58px 86px;
-    		box-sizing: border-box;
-    		position: relative;
-    		z-index: 6;
-    		font-size: 50px
+  width: 100%; /* або max-width: 1296px; */
+  max-width: 1296px;
+  border-radius: 20px;
+  background-color: #fe890a;
+  height: 427px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* центрує вміст */
+  padding: 58px 86px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 6;
+  font-size: 50px;
+  margin: 0 auto; /* центрує блок */
 }
+
+
   	
   	.iphone1415Pro41 {
     		position: absolute;
