@@ -101,8 +101,8 @@ onMounted(async () => {
       			<img :class="$style.nissanIcon" alt="" src="@/assets/Nissan.png" />
       			<img :class="$style.toyotaIcon" alt="" src="@/assets/Toyota.png" />
       			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA-2.png" />
+      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA-3.png" />
     		</div>
     		<div :class="$style.infoBlock">
       			<div :class="$style.iconText">
@@ -640,8 +640,21 @@ font-family: Poppins;
   color: #ffffff;
   	}
 	.active {
-  transform: translateX(48px); 
-}
+  transform: translateX(48px);
+  } 
+.button6 {
+  position: absolute;
+  top: 2400px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+}	
+
+
+
   	.groupItem {
     		position: absolute;
     		top: 0px;
@@ -667,6 +680,8 @@ font-family: Poppins;
     		width: 95.6px;
     		height: 48px;
   	}
+	
+	
   	.on {
     		position: absolute;
     		top: 0px;
@@ -1323,8 +1338,8 @@ flex-shrink: 0;
     		background-position: top;
     		z-index: 1;
   	}
-  	.frameParent {
-    		width: 1296px;
+	.frameParent {
+ width: 1296px;
     		border-radius: 20px;
     		background-color: #fe890a;
     		height: 427px;
@@ -1336,8 +1351,9 @@ flex-shrink: 0;
     		box-sizing: border-box;
     		position: relative;
     		z-index: 6;
-    		font-size: 50px;
-  	}
+    		font-size: 50px
+}
+  	
   	.iphone1415Pro41 {
     		position: absolute;
     		top: 0px;
