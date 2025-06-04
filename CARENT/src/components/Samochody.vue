@@ -1,20 +1,35 @@
 <script setup>
 import { useDark, useToggle } from '@vueuse/core'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 
-const cars = ref([])
+// Темна тема
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+// Дані авто
+const cars = ref([])
+
+// Фільтр по типу кузова
+const selectedBodyType = ref('') // '' — всі авто
+
+// Завантаження даних з API
 onMounted(async () => {
   try {
     const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
-    cars.value = response.data.cars
+    cars.value = response.data.cars // ✅ ТУТ!
   } catch (error) {
     console.error('Błąd podczas pobierania samochodów:', error)
   }
 })
+
+// Фільтрація
+const filteredCars = computed(() => {
+  if (!selectedBodyType.value) return cars.value
+  return cars.value.filter(car => car.bodyType === selectedBodyType.value)
+})
 </script>
+
 
 <template>
   	<div :class="$style.content">
@@ -74,77 +89,41 @@ onMounted(async () => {
       			</div>
       			<div :class="$style.socialMenuChild" />
     		</div>
-    		<div :class="$style.brand">
-      			<img :class="$style.bmwIcon" alt="" src="@/assets/BMW.png" />
-      			<img :class="$style.lexusLogoIcon" alt="" src="@/assets/lexus-logo.png" />
-      			<img :class="$style.bmwIcon" alt="" src="@/assets/Marcedes.png" />
-      			<img :class="$style.hondaIcon" alt="" src="@/assets/Honda.png" />
-      			<img :class="$style.hyundaiIcon" alt="" src="@/assets/Hyundai.png" />
-      			<img :class="$style.nissanIcon" alt="" src="@/assets/Nissan.png" />
-      			<img :class="$style.toyotaIcon" alt="" src="@/assets/Toyota.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
-      			<img :class="$style.kiaIcon" alt="" src="@/assets/KIA.png" />
-    		</div>
+    		
     		<div :class="$style.content1">
       			<div :class="$style.navBarSide">
         				<div :class="$style.tYPE">
-          					<div :class="$style.tYp">T YP</div>
+          					<div :class="$style.tYp">TYP</div>
           					<div :class="$style.tYPE1">
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-              							<div :class="$style.sport10">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>Sport</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-              							<div :class="$style.suv12">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>SUV</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
-              							<div :class="$style.mpv16">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>MPV</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
-              							<div :class="$style.sedan20">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>Sedan</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
-              							<div :class="$style.sedan20">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>Coupe</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
-            						<div :class="$style.sport">
-              							<img :class="$style.ceklistIcon" alt="" src="@/assets/Ceklist.svg" />
-              							<div :class="$style.sport10">
-                								<span :class="$style.sport10TxtContainer">
-                  									<span>Hatchback</span>
-                  									<span :class="$style.span">  </span>
-                								</span>
-              							</div>
-            						</div>
+<!-- SUV -->
+<div :class="$style.sport" @click="selectedBodyType = 'SUV'">
+  <img v-if="selectedBodyType === 'SUV'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
+  <div :class="$style.suv12"><span>SUV</span></div>
+</div>
+
+<!-- MPV -->
+<div :class="$style.sport" @click="selectedBodyType = 'MPV'">
+  <img v-if="selectedBodyType === 'MPV'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
+  <div :class="$style.mpv16"><span>MPV</span></div>
+</div>
+
+<!-- Sedan -->
+<div :class="$style.sport" @click="selectedBodyType = 'Sedan'">
+  <img v-if="selectedBodyType === 'Sedan'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
+  <div :class="$style.sedan20"><span>Sedan</span></div>
+</div>
+
+<!-- Coupe -->
+<div :class="$style.sport" @click="selectedBodyType = 'Coupe'">
+  <img v-if="selectedBodyType === 'Coupe'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
+  <div :class="$style.sedan20"><span>Coupe</span></div>
+</div>
+
+<!-- Hatchback -->
+<div :class="$style.sport" @click="selectedBodyType = 'Hatchback'">
+  <img v-if="selectedBodyType === 'Hatchback'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
+  <div :class="$style.sport10"><span>Hatchback</span></div>
+</div>
           					</div>
         				</div>
         				<div :class="$style.pRICE">
@@ -194,45 +173,45 @@ onMounted(async () => {
       			</div>
       			
     <div :class="$style.catalogue1">
-    <div v-for="car in cars" :key="car._id" :class="$style.catalog1">
-      <div :class="$style.buttonRental">
-        <div :class="$style.wynajmij">Wynajmij</div>
-      </div>
-
-      <div :class="$style.carName">
-        <b :class="$style.mercedes">{{ car.make }}</b>
-        <b :class="$style.sport1">{{ car.model }}</b>
-      </div>
-
-      <div :class="$style.price">{{ car.hourlyPrice }} zł/h</div>
-
-      <div :class="$style.spesification">
-        <div :class="$style.sport">
-          <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/gas-station.svg" />
-          <div :class="$style.pb95">{{ car.fuelType }}</div>
-        </div>
-        <div :class="$style.sport">
-          <img :class="$style.ceklistIcon" src="@/assets/Car-2.png" />
-          <div :class="$style.manual">{{ car.gearboxType }}</div>
-        </div>
-        <div :class="$style.capacity">
-          <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/profile-2user.svg" />
-          <div :class="$style.osoby">
-            <span :class="$style.osoby1">{{ car.capacity }} Osoby</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 🖼 Динамічне фото з API -->
-      <img
-        :class="$style.carIcon1"
-        :src="car.imageUrl"
-        :alt="`${car.make} ${car.model}`"
-      />
-
-      <div :class="$style.shadow" />
+  <div v-for="car in filteredCars" :key="car._id" :class="$style.catalog1">
+    <div :class="$style.buttonRental">
+      <div :class="$style.wynajmij">Wynajmij</div>
     </div>
+
+    <div :class="$style.carName">
+      <b :class="$style.mercedes">{{ car.make }}</b>
+      <b :class="$style.sport1">{{ car.model }}</b>
+    </div>
+
+    <div :class="$style.price">{{ car.hourlyPrice }} zł/h</div>
+
+    <div :class="$style.spesification">
+      <div :class="$style.sport">
+        <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/gas-station.svg" />
+        <div :class="$style.pb95">{{ car.fuelType }}</div>
+      </div>
+      <div :class="$style.sport">
+        <img :class="$style.ceklistIcon" src="@/assets/Car-2.png" />
+        <div :class="$style.manual">{{ car.gearboxType }}</div>
+      </div>
+      <div :class="$style.capacity">
+        <img :class="$style.vuesaxboldtickSquareIcon" src="@/assets/profile-2user.svg" />
+        <div :class="$style.osoby">
+          <span :class="$style.osoby1">{{ car.capacity }} Osoby</span>
+        </div>
+      </div>
+    </div>
+
+    <img
+      :class="$style.carIcon1"
+      :src="car.imageUrl"
+      :alt="`${car.make} ${car.model}`"
+    />
+
+    <div :class="$style.shadow" />
   </div>
+</div>
+
     		<div :class="$style.footer">
       			<div :class="$style.iconsTextButtons">
         				<div :class="$style.iconsText">
@@ -318,7 +297,8 @@ onMounted(async () => {
       			</div>
     		</div>
   	</div>
-	</div>
+</div>	
+	
 
 </template>
 <style  module>
@@ -1162,12 +1142,21 @@ a {
     		color: #000;
   	}
   	.price {
-    		position: absolute;
-    		top: 320px;
-    		left: 24px;
-    		width: 128px;
-    		height: 44px;
-  	}
+  position: absolute;
+  top: 320px;
+  left: 24px;
+  width: 128px;
+  height: 44px;
+
+  /* Додай ці властивості: */
+  color: #000; /* або #fff — залежно від фону */
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2; /* щоб бути над тлом чи тінню */
+}
   	.pb95 {
     		width: 38px;
     		position: relative;
