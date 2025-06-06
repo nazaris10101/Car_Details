@@ -20,27 +20,28 @@ const sendEmail = () => {
   }
 
   emailjs.send(
-    'YOUR_SERVICE_ID',
-    'YOUR_TEMPLATE_ID',
+    'service_16knfzf',        // ✅ Service ID
+    'template_k9c9npi',       // ✅ Template ID
     {
-      from_name: name.value,
-      reply_to: email.value,
-      message: message.value
+      name: name.value,       // ← точно як у шаблоні: {{name}}
+      email: email.value,     // ← як у шаблоні: {{email}}
+      message: message.value  // ← як у шаблоні: {{message}}
     },
-    'YOUR_USER_ID'
+    'jabZK8ZQna0Xo1sH4'       // ✅ Public Key
   ).then(() => {
     successMessage.value = 'Wiadomość została wysłana.'
     errorMessage.value = ''
     name.value = ''
     email.value = ''
     message.value = ''
-  }, (error) => {
-    errorMessage.value = 'Błąd wysyłania wiadomości. Spróbuj ponownie.'
+  }).catch((error) => {
+    errorMessage.value = 'Błąd podczas wysyłania wiadomości.'
     successMessage.value = ''
-    console.error(error)
+    console.error('EmailJS Error:', error)
   })
 }
 </script>
+
 
 
 <template>
@@ -778,6 +779,39 @@ font-family: Poppins;
     		font-weight: 600;
     		color: #de6e4b;
   	}
+	.success {
+  margin-top: 350px;
+  padding: 12px 16px;
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 5px solid #28a745;
+  border-radius: 6px;
+  font-weight: 500;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.error {
+  margin-top:350px;
+  padding: 12px 16px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 5px solid #dc3545;
+  border-radius: 6px;
+  font-weight: 500;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   	.ulZota59 {
     		position: absolute;
     		top: 24px;
