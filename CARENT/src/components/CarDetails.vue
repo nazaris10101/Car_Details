@@ -1505,15 +1505,15 @@ font-family: Poppins;
                     white-space: nowrap;
               }
               .oNas1 {
-                    position: relative;
-                    line-height: 26px;
-                    white-space: pre-wrap;
-                    display: -webkit-inline-box;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-              }
+    		position: relative;
+    		line-height: 26px;
+    		white-space: nowrap;
+    		display: -webkit-inline-box;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		-webkit-line-clamp: 3;
+    		-webkit-box-orient: vertical;
+            }
               .text15 {
                     align-self: stretch;
                     display: flex;
