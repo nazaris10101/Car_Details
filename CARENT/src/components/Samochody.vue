@@ -91,41 +91,28 @@ const filteredCars = computed(() => {
     		</div>
     		
     		<div :class="$style.content1">
-      			<div :class="$style.navBarSide">
-        				<div :class="$style.tYPE">
-          					<div :class="$style.tYp">TYP</div>
-          					<div :class="$style.tYPE1">
-<!-- SUV -->
-<div :class="$style.sport" @click="selectedBodyType = 'SUV'">
-  <img v-if="selectedBodyType === 'SUV'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-  <div :class="$style.suv12"><span>SUV</span></div>
-</div>
-
-<!-- MPV -->
-<div :class="$style.sport" @click="selectedBodyType = 'MPV'">
-  <img v-if="selectedBodyType === 'MPV'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-  <div :class="$style.mpv16"><span>MPV</span></div>
-</div>
-
-<!-- Sedan -->
-<div :class="$style.sport" @click="selectedBodyType = 'Sedan'">
-  <img v-if="selectedBodyType === 'Sedan'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-  <div :class="$style.sedan20"><span>Sedan</span></div>
-</div>
-
-<!-- Coupe -->
-<div :class="$style.sport" @click="selectedBodyType = 'Coupe'">
-  <img v-if="selectedBodyType === 'Coupe'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-  <div :class="$style.sedan20"><span>Coupe</span></div>
-</div>
-
-<!-- Hatchback -->
-<div :class="$style.sport" @click="selectedBodyType = 'Hatchback'">
-  <img v-if="selectedBodyType === 'Hatchback'" :class="$style.vuesaxboldtickSquareIcon" alt="" src="@/assets/tick-square.svg" />
-  <div :class="$style.sport10"><span>Hatchback</span></div>
-</div>
-          					</div>
-        				</div>
+  <div :class="$style.navBarSide">
+    <div :class="$style.tYPE">
+      <div :class="$style.tYp">TYP</div>
+      <div :class="$style.tYPE1">
+        <div
+          v-for="type in ['SUV', 'MPV', 'Sedan', 'Coupe', 'Hatchback']"
+          :key="type"
+          :class="$style.filterOption"
+          @click="selectedBodyType = type"
+        >
+          <div :class="$style.checkbox">
+            <img
+              v-if="selectedBodyType === type"
+              :class="$style.checkIcon"
+              src="@/assets/tick-square.svg"
+              alt="✓"
+            />
+          </div>
+          <span :class="$style.typeLabel">{{ type }}</span>
+        </div>
+      </div>
+    </div>
         				<div :class="$style.pRICE">
           					<div :class="$style.tYp">CENA</div>
           					<div :class="$style.pRICERANGE">
@@ -614,6 +601,49 @@ font-family: Poppins;
     		justify-content: flex-start;
     		gap: 12px;
   	}
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filterOption:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html.dark .filterOption:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--button-bg);
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.dark .checkbox {
+  background-color: #1e1e1e;
+}
+
+.checkIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.typeLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: black
+}
 
   	
   	.bmwIcon {
