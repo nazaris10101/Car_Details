@@ -695,7 +695,7 @@ font-family: Poppins;
   	}
   	.edytujWrapper {
     		width: 1416px;
-    		height: 613px;
+    		height: 713px;
     		display: flex;
     		flex-direction: row;
     		align-items: flex-start;
@@ -1231,14 +1231,23 @@ color: white;
 }
 
 
-.dateInput, .textInput, .selhectInput {
-  width: calc(100% - 250px); 
-  padding: 8px;
+.dateInput,
+.textInput,
+.selectInput {
+  width: 100%;
+  flex: 1;
+  padding: 12px 16px;
   margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  padding-right: 35px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
 }
+
 
 .selectInput {
   appearance: none;
