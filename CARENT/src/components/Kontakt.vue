@@ -1,9 +1,47 @@
 <script setup>
+import { ref } from 'vue'
+import emailjs from 'emailjs-com'
 import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const successMessage = ref('')
+const errorMessage = ref('')
+
+const sendEmail = () => {
+  if (!name.value || !email.value || !message.value) {
+    errorMessage.value = 'Wszystkie pola są wymagane.'
+    successMessage.value = ''
+    return
+  }
+
+  emailjs.send(
+    'YOUR_SERVICE_ID',
+    'YOUR_TEMPLATE_ID',
+    {
+      from_name: name.value,
+      reply_to: email.value,
+      message: message.value
+    },
+    'YOUR_USER_ID'
+  ).then(() => {
+    successMessage.value = 'Wiadomość została wysłana.'
+    errorMessage.value = ''
+    name.value = ''
+    email.value = ''
+    message.value = ''
+  }, (error) => {
+    errorMessage.value = 'Błąd wysyłania wiadomości. Spróbuj ponownie.'
+    successMessage.value = ''
+    console.error(error)
+  })
+}
 </script>
+
 
 <template>
   	<div :class="$style.carDetails">
@@ -64,71 +102,82 @@ const toggleDark = useToggle(isDark)
 </div>
     		</div>
     		<div :class="$style.desktop13Wrapper">
-      			<div :class="$style.desktop13">
-        				<div :class="$style.leftSide">
-          					<div :class="$style.submit">
-            						<img :class="$style.submitBackgroundIcon" alt="" src="@/assets/background.svg" />
-            						<div :class="$style.submit1">Wysłać</div>
-          					</div>
-          					<div :class="$style.inputFields">
-            						<div :class="$style.nameInputDark2">
-              							<div :class="$style.background" />
-              							<div :class="$style.name">
-                								<div :class="$style.name1">Imię i nazwisko</div>
-              							</div>
-            						</div>
-            						<div :class="$style.nameInputDark2">
-              							<div :class="$style.background" />
-              							<div :class="$style.email">
-                								<div :class="$style.email1">Email</div>
-              							</div>
-            						</div>
-            						<div :class="$style.contentInputDark2">
-              							<div :class="$style.background2" />
-              							<div :class="$style.content">Treść</div>
-            						</div>
-            						<div :class="$style.newsletterSignupDark" />
-          					</div>
-          					<div :class="$style.skontaktujSiZ">Skontaktuj się z nami</div>
-        				</div>
-        				<div :class="$style.rightSide">
-          					<div :class="$style.describtion">
-            						<div :class="$style.introduction">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</div>
-            						<div :class="$style.location">
-              							<img :class="$style.mapsIcon" alt="" src="@/assets/Maps.png" />
-              							<div :class="$style.text">
-                								<div :class="$style.carent">CARENT </div>
-                								<b :class="$style.ulZota59">ul. Złota 59</b>
-                								<div :class="$style.warszawa00120">
-                  									<b>Warszawa</b>
-                  									<span> </span>
-                								</div>
-              							</div>
-            						</div>
-            						<div :class="$style.informations">
-              							<div :class="$style.email2">
-                								<img :class="$style.emailIcon" alt="" src="@/assets/Email Icon.svg" />
-                								<b :class="$style.zalogujSi">carent@gmail.com</b>
-              							</div>
-              							<div :class="$style.phone">
-                								<img :class="$style.phoneIcon" alt="" src="@/assets/Phone Icon.svg" />
-                								<b :class="$style.zalogujSi">+48 22 222 22 00</b>
-              							</div>
-              							<div :class="$style.location1">
-                								<img :class="$style.locationIcon" alt="" src="@/assets/Location Icon.svg" />
-                								<b :class="$style.zalogujSi">ul. Złota 59 </b>
-              							</div>
-            						</div>
-          					</div>
-          					<div :class="$style.socialMediaIcons">
-            						<img :class="$style.instagramIcon" alt="" src="@/assets/Instagram.svg" />
-            						<img :class="$style.twitterIcon" alt="" src="@/assets/Twitter.svg" />
-            						<img :class="$style.facebookIcon" alt="" src="@/assets/Facebook.svg" />
-            						<img :class="$style.youtubeIcon" alt="" src="@/assets/Youtube.svg" />
-          					</div>
-        				</div>
-      			</div>
-    		</div>
+  <div :class="$style.desktop13">
+    <div :class="$style.leftSide">
+      <div :class="$style.submit" @click="sendEmail">
+        <img :class="$style.submitBackgroundIcon" alt="" src="@/assets/background.svg" />
+        <div :class="$style.submit1">Wysłać</div>
+      </div>
+
+      <div :class="$style.inputFields">
+        <div :class="$style.nameInputDark2">
+          <div :class="$style.background" />
+          <div :class="$style.name">
+            <input v-model="name" type="text" placeholder="Imię i nazwisko" :class="$style.textInput" />
+          </div>
+        </div>
+
+        <div :class="$style.nameInputDark2">
+          <div :class="$style.background" />
+          <div :class="$style.email">
+            <input v-model="email" type="email" placeholder="Email" :class="$style.textInput" />
+          </div>
+        </div>
+
+        <div :class="$style.contentInputDark2">
+          <div :class="$style.background2" />
+          <div :class="$style.content">
+            <textarea v-model="message" placeholder="Treść" rows="4" :class="$style.textInput" />
+          </div>
+        </div>
+
+        <div :class="$style.newsletterSignupDark" />
+      </div>
+
+      <div :class="$style.skontaktujSiZ">Skontaktuj się z nami</div>
+
+      <div v-if="successMessage" :class="$style.success">{{ successMessage }}</div>
+      <div v-if="errorMessage" :class="$style.error">{{ errorMessage }}</div>
+    </div>
+
+    <div :class="$style.rightSide">
+      <div :class="$style.describtion">
+        <div :class="$style.introduction">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</div>
+        <div :class="$style.location">
+          <img :class="$style.mapsIcon" alt="" src="@/assets/Maps.png" />
+          <div :class="$style.text">
+            <div :class="$style.carent">CARENT </div>
+            <b :class="$style.ulZota59">ul. Złota 59</b>
+            <div :class="$style.warszawa00120">
+              <b>Warszawa</b><span> </span>
+            </div>
+          </div>
+        </div>
+        <div :class="$style.informations">
+          <div :class="$style.email2">
+            <img :class="$style.emailIcon" alt="" src="@/assets/Email Icon.svg" />
+            <b :class="$style.zalogujSi">carent@gmail.com</b>
+          </div>
+          <div :class="$style.phone">
+            <img :class="$style.phoneIcon" alt="" src="@/assets/Phone Icon.svg" />
+            <b :class="$style.zalogujSi">+48 22 222 22 00</b>
+          </div>
+          <div :class="$style.location1">
+            <img :class="$style.locationIcon" alt="" src="@/assets/Location Icon.svg" />
+            <b :class="$style.zalogujSi">ul. Złota 59 </b>
+          </div>
+        </div>
+      </div>
+      <div :class="$style.socialMediaIcons">
+        <img :class="$style.instagramIcon" alt="" src="@/assets/Instagram.svg" />
+        <img :class="$style.twitterIcon" alt="" src="@/assets/Twitter.svg" />
+        <img :class="$style.facebookIcon" alt="" src="@/assets/Facebook.svg" />
+        <img :class="$style.youtubeIcon" alt="" src="@/assets/Youtube.svg" />
+      </div>
+    </div>
+  </div>
+</div>`
+
     		<div :class="$style.frameParent">
       			<div :class="$style.frameGroup">
         				<div :class="$style.groupParent">
@@ -604,9 +653,9 @@ font-family: Poppins;
     		width: 90.8px;
     		height: 30.8px;
   	}
-  	.background {
+  .background {
     		position: absolute;
-    		height: 77.27%;
+    		height: 100%;
     		width: 100%;
     		top: 22.73%;
     		right: 0%;
@@ -1405,13 +1454,25 @@ color: white;
 }
 
 
-.dateInput, .textInput, .selhectInput {
-  width: calc(100% - 250px); 
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding-right: 35px;
+.textInput {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #000;
+  outline: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid transparent;
+}
+.name,
+.email,
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .selectInput {
