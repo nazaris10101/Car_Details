@@ -1,9 +1,27 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 import { useDark, useToggle } from '@vueuse/core'
 
+// 🌙 Темна тема
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+// 📦 Список авто з API
+const carList = ref([])
+const selectedCar = ref('')
+
+// 📡 Завантаження авто
+onMounted(async () => {
+  try {
+    const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
+    carList.value = response.data.cars // або просто .data — залежно від API
+  } catch (error) {
+    console.error('Błąd podczas pobierania samochodów:', error)
+  }
+})
 </script>
+
 
 <template>
   	<div :class="$style.carDetails">
@@ -94,11 +112,21 @@ const toggleDark = useToggle(isDark)
         </div>
 
         <!-- 🚗 Samochód -->
-        <div :class="$style.input2">
-          <div :class="$style.content">
-            <div :class="$style.placeholder">Samochód</div>
-          </div>
-        </div>
+<div :class="$style.input2">
+  <div :class="$style.content">
+    <div :class="$style.placeholder">Samochód</div>
+    <select v-model="selectedCar" :class="$style.selectInput">
+      <option value="" disabled selected>Wybierz samochód</option>
+      <option
+        v-for="car in carList"
+        :key="car._id"
+        :value="car.make + ' ' + car.model"
+      >
+        {{ car.make }} {{ car.model }}
+      </option>
+    </select>
+  </div>
+</div>
 
         <!-- 📍 Miejsce wynajmu -->
         <div :class="$style.input">
