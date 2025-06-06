@@ -139,38 +139,7 @@ const filteredCars = computed(() => {
         				</div>
       			</div>
       			
-      			<div :class="$style.pickUp">
-        				<div :class="$style.bg" />
-        				<div :class="$style.pickUp1">
-          					<img :class="$style.markIcon" alt="" src="@/assets/mark.svg" />
-          					<div :class="$style.wynajem">Wynajem</div>
-        				</div>
-        				<div :class="$style.pickUp2">
-          					<div :class="$style.locations">
-            						<b :class="$style.miejsce">Miejsce</b>
-            						<div :class="$style.wybierzSwojeMiastoParent">
-              							<div :class="$style.wybierzSwojeMiasto">Wybierz swoje miasto</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.pickUpChild" />
-          					<div :class="$style.date">
-            						<b :class="$style.dataWynajmu">Data wynajmu</b>
-            						<div :class="$style.wybierzSwojeMiastoParent">
-              							<div :class="$style.wybierzDat">Wybierz datę</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.pickUpChild" />
-          					<div :class="$style.date">
-            						<b :class="$style.dataWynajmu">Data powrotu</b>
-            						<div :class="$style.wybierzSwojeMiastoParent">
-              							<div :class="$style.wybierzDat">Wybierz datę</div>
-              							
-            						</div>
-          					</div>
-        				</div>
-      			</div>
+      			
       			
     <div :class="$style.catalogue1">
   <div v-for="car in filteredCars" :key="car._id" :class="$style.catalog1">
@@ -303,24 +272,30 @@ const filteredCars = computed(() => {
 </template>
 <style  module>
 body {
-background-color: #fff;
-color: #000;
+background-color: #000000;
+color: #000000;
 }
 .heroSectionChild {
-background-color: #fff;
+background-color: var(--hero-bg);
 }
 .card {
 background-color: #fafafa;
 color: #000;
 }                 
 html.dark body {
-background-color: #141414;
+background-color: #000000;
 color: #fff;
 }
 
-html.dark .heroSectionChild {
-background-color: #1e1e1e;
+
+:root {
+  --hero-bg: #fff;
 }
+
+html.dark {
+  --hero-bg: #1e1e1e;
+}
+
 
 html.dark .card {
 background-color: #2a2a2a;
@@ -334,16 +309,18 @@ color: var(--text);
 background-color: var(--card-bg);
 }
 							html.dark .heroSectionChild {
-    background-color: #ffffff;
+    background-color: var(--hero-bg);
 }
 .heroSectionChild {
-  	 position: absolute;
-     top: 0;
-     left: 0;
-     width: 613px;
-     height: 710px;
-     background-color: #000000; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 613px;
+  height: 710px;
+  background-color: #000000; /* ⛔️ ЗАЙВЕ */
 }
+
+
   	.mainPictureIcon {
     		position: absolute;
     		top: 103.86px;
@@ -609,7 +586,7 @@ font-family: Poppins;
   	.heroSection {
     		width: 1440px;
     		position: relative;
-    		height: 741px;
+    		height: 690px;
     		z-index: 0;
     		font-size: 48px;
     		font-family: Montserrat;
@@ -883,7 +860,7 @@ a {
   	}
   	.navBarSide {
     		position: absolute;
-    		top: 16px;
+    		top: 20px;
     		left: 0px;
     		background-color: #fff;
     		border-right: 1px solid #f3f5f7;
@@ -1227,7 +1204,7 @@ a {
     		width: 260px;
     		height: 13px;
   	}
-  	.catalog1 {
+    	.catalog1 {
   width: 317px;
   position: relative;
   border-radius: 10px;
@@ -1318,7 +1295,7 @@ a {
     		width: 317px;
     		position: relative;
     		border-radius: 10px;
-    		background-color: #fff;
+    		background-color: var(--card-bg);
     		height: 388px;
     		overflow: hidden;
     		flex-shrink: 0;
@@ -1368,16 +1345,17 @@ a {
     		justify-content: flex-start;
     		color: #1a202c;
   	}
-  	.catalogue1 {
+ 	 	.catalogue1 {
   position: absolute;
-  top: 168px;
+  top: 18px;
   left: 376px;
   width: 1021px;
 
   display: flex;
   flex-wrap: wrap;              /* ⬅️ Дозволяє переносити рядки */
   gap: 32px;
-  justify-content: flex-start;  /* або center, якщо хочеш центровано */
+  justify-content: flex-start;
+ 
 }
 
   	.teslaModelS {
@@ -1528,16 +1506,18 @@ a {
     		height: 16px;
   	}
   	.catalogue2 {
-    		position: absolute;
-    		top: 578px;
-    		left: 382px;
-    		width: 1015px;
-    		display: flex;
-    		flex-direction: row;
-    		align-items: flex-start;
-    		justify-content: flex-start;
-    		gap: 32px;
-  	}
+  position: absolute;
+  top: 578px;
+  left: 382px;
+  width: 1015px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+  	
   	.z250001 {
     		width: 140px;
     		position: relative;
@@ -1561,12 +1541,12 @@ a {
   position: relative;         /* або взагалі видали позиціонування */
   background-color: var(--car-bg); /* адаптується до теми */
   width: 100%;
-  padding: 48px 24px;         /* додає внутрішній відступ */
-  font-size: 20px;
+  padding: 0px 24px;         /* додає внутрішній відступ */
+  font-size: 0px;
   font-family: 'Plus Jakarta Sans';
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 0	px;
   flex-wrap: wrap;            /* щоб контент не виходив за межі */
 }
 
@@ -1808,7 +1788,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
-padding: 1800px 72px 40px;
+padding: 1850px 72px 40px;
 gap: 0px;
 font-size: 16px;
   	}
@@ -1908,4 +1888,20 @@ html.dark .socialMediaLogo,
 html.dark .socialMediaLogo1 {
   filter: brightness(1.2) invert(0); /* або invert(1) якщо іконки темні */
 }
+
+.sport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+.vuesaxboldtickSquareIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 </style>
