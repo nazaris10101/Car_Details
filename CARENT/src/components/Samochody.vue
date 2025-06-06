@@ -16,7 +16,8 @@ const selectedBodyType = ref('') // '' — всі авто
 // Завантаження даних з API
 onMounted(async () => {
   try {
-    const response = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
+    const response = await axios.get('https://carent.site/proxy.php')
+
     cars.value = response.data.cars // ✅ ТУТ!
   } catch (error) {
     console.error('Błąd podczas pobierania samochodów:', error)

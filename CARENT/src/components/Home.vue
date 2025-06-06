@@ -15,11 +15,11 @@ const showAll = ref(false)       // чи показати всі
 // Отримання даних
 onMounted(async () => {
   try {
-    const res = await axios.get('https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars')
-    cars.value = res.data?.cars || []
-    visibleCars.value = cars.value.slice(0, 6) // показати тільки перші 6 авто
+    const response = await axios.get('https://carent.site/proxy.php')
+    cars.value = response.data?.cars || []
+    visibleCars.value = cars.value.slice(0, 6)
   } catch (err) {
-    console.error('Помилка при завантаженні авто:', err)
+    console.error('❌ Помилка при завантаженні авто:', err)
   }
 })
 
