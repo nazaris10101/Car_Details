@@ -130,9 +130,9 @@ const filteredCars = computed(() => {
       			
     <div :class="$style.catalogue1">
   <div v-for="car in filteredCars" :key="car._id" :class="$style.catalog1">
-    <div :class="$style.buttonRental">
-      <div :class="$style.wynajmij">Wynajmij</div>
-    </div>
+    <router-link :to="`/samochody/${car._id}`" :class="$style.buttonRental">
+      <div :class="$style.wynajmij">Zobacz szczegóły</div>
+    </router-link>
 
     <div :class="$style.carName">
       <b :class="$style.mercedes">{{ car.make }}</b>
