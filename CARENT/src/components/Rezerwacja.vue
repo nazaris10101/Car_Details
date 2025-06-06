@@ -63,47 +63,79 @@ const toggleDark = useToggle(isDark)
   </div>
 </div>
     		</div>
-    		<div :class="$style.edytujWrapper">
-      			<div :class="$style.edytuj">
-        				<div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
-        				<div :class="$style.inputs">
-          					<div :class="$style.input">
-            						<div :class="$style.content">
-              							<div :class="$style.placeholder">Data wynajmu</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.input">
-            						<div :class="$style.content">
-              							<div :class="$style.placeholder">Data powrotu</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.input2">
-            						<div :class="$style.content">
-              							<div :class="$style.placeholder">Samochód</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.input">
-            						<div :class="$style.content">
-              							<div :class="$style.placeholder">Miejsce wynajmu</div>
-              							
-            						</div>
-          					</div>
-          					<div :class="$style.input4">
-            						<div :class="$style.content">
-              							<div :class="$style.placeholder4">imię i nazwisko</div>
-              							
-            						</div>
-          					</div>
-        				</div>
-        				<div :class="$style.button">
-          					<div :class="$style.zarezerwuj">Zarezerwuj</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div :class="$style.frameParent">
+    		
+  <div :class="$style.edytujWrapper">
+    <div :class="$style.edytuj">
+      <div :class="$style.zarezerwujSamochd">Zarezerwuj samochód</div>
+      <div :class="$style.inputs">
+        
+        <!-- 📅 Data wynajmu -->
+        <div :class="$style.input">
+          <div :class="$style.content">
+            <div :class="$style.placeholder">Data wynajmu</div>
+            <input
+              type="date"
+              v-model="rentalDate"
+              :class="$style.dateInput"
+            />
+          </div>
+        </div>
+
+        <!-- 📅 Data powrotu -->
+        <div :class="$style.input">
+          <div :class="$style.content">
+            <div :class="$style.placeholder">Data powrotu</div>
+            <input
+              type="date"
+              v-model="returnDate"
+              :class="$style.dateInput"
+            />
+          </div>
+        </div>
+
+        <!-- 🚗 Samochód -->
+        <div :class="$style.input2">
+          <div :class="$style.content">
+            <div :class="$style.placeholder">Samochód</div>
+          </div>
+        </div>
+
+        <!-- 📍 Miejsce wynajmu -->
+        <div :class="$style.input">
+          <div :class="$style.content">
+            <div :class="$style.placeholder">Miejsce wynajmu</div>
+            <select v-model="selectedCity" :class="$style.selectInput">
+              <option value="" disabled selected>Wybierz miasto</option>
+              <option value="Warszawa">Warszawa</option>
+              <option value="Kraków">Kraków</option>
+              <option value="Wrocław">Wrocław</option>
+              <option value="Gdańsk">Gdańsk</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 👤 Imię i nazwisko -->
+        <div :class="$style.input4">
+          <div :class="$style.content">
+            <input
+              type="text"
+              v-model="fullName"
+              :class="$style.textInput"
+              placeholder="Wpisz swoje imię i nazwisko"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <div :class="$style.button">
+        <div :class="$style.zarezerwuj">Zarezerwuj</div>
+      </div>
+    </div>
+  </div>
+
+
+    	<div :class="$style.frameParent">
       			<div :class="$style.frameGroup">
         				<div :class="$style.groupParent">
           					<img :class="$style.groupIcon" alt="" src="@/assets/Group.svg" />
@@ -237,8 +269,8 @@ const toggleDark = useToggle(isDark)
         				</div>
       			</div>
       			<div :class="$style.text9"> </div>
-    		</div>
-  	</div>
+    	</div>
+  	</div>	
 </template>
 <style  module>
 body {
