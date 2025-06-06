@@ -174,9 +174,10 @@ function showAllCars() {
         </div>
       </div>
     </div>
-    <div :class="$style.button">
-      <div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
-    </div>
+    <router-link :to="`/samochody/${car._id}`" :class="$style.button">
+  <div :class="$style.zobaczSzczegy">Zobacz szczegóły</div>
+</router-link>
+
   </div>
 </div>
 
