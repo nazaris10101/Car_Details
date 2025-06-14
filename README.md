@@ -10,14 +10,18 @@ https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 ## 🌐 Link
 https://carent.site
 ## 🚀 Główne funkcje
-Szczegóły samochodu: Uzyskanie informacji o konkretnym aucie na podstawie ID.
+🔍 Szczegóły samochodu – pobieranie i wyświetlanie danych na podstawie carId z API.
+🌙 Tryb ciemny – dynamiczny przełącznik motywu z płynną animacją (VueUse useDark).
+📬 Formularz kontaktowy – umożliwia szybki kontakt z klientem, zintegrowany z serwisem EmailJS.
 ##
-##    🛠️ Technologie
- • Frontend: Vue 3 z Vite
- • Backend: Node.js + Express
- • Baza danych: MongoDB
- • Hosting: Azure
- • Omijanie CORS: CORS Anywhere
+##    🛠 Technologie
+Vue 3 (Composition API)
+Vue Router
+Axios (do komunikacji z API)
+CSS Modules
+VueUse (Dark Mode)
+EmailJS (formularz kontaktowy)
+
 
 ## Zalecana konfiguracja IDE
 
