@@ -11,7 +11,9 @@ https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 https://carent.site
 ## 🚀 Główne funkcje
 🔍 Szczegóły samochodu – pobieranie i wyświetlanie danych na podstawie carId z API.
+
 🌙 Tryb ciemny – dynamiczny przełącznik motywu z płynną animacją (VueUse useDark).
+
 📬 Formularz kontaktowy – umożliwia szybki kontakt z klientem, zintegrowany z serwisem EmailJS.
 ##
 ##    🛠 Technologie
