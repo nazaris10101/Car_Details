@@ -5,6 +5,8 @@ https://www.figma.com/design/kpzfaTC8tAaOpjRRMG2wFx/Konto-u%C5%BCytkownika?node-
 
 https://www.figma.com/design/MyjRz0G3Waov18l9CXqKdo/Administrator-systemu?node-id=0-1&t=jpkr2IiJNhcOWrSW-1
 
+https://drive.google.com/drive/folders/1QEp4ns7mSIYPIsaAUtX56PB-ykP7LToi?usp=share_link
+
 ## 🌐 Link do API
 https://car-rental-merito-application.azurewebsites.net/api/cars/get-all-cars
 ## 🌐 Link
